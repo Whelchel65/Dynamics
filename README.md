@@ -1,2 +1,0 @@
-# Dynamics
-Business Central Code

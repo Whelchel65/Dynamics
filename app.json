@@ -1,0 +1,28 @@
+{
+"id": "AE4898B1-F15C-4478-9336-F8809D1E1301",
+"name": "My Customizations",
+"publisher": "WSI Production",
+"version": "1.0.0.109",
+"runtime": "8.0",
+"target": "Cloud",
+"platform": "1.0.0.0",
+"application": "19.0.0.0",
+"resourceExposurePolicy": {
+  "allowDebugging": true,
+  "allowDownloadingSource": true,
+  "includeSourceInSymbolFile": true
+},
+"dependencies": [
+  {
+    "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
+    "name": "Base Application",
+    "version": "21.2.49946.51032",
+    "publisher": "Microsoft"
+  }],
+"idRanges": [
+  {
+    "from": 50500,
+    "to": 51500
+  }
+]
+}
