@@ -16,6 +16,13 @@ pageextension 50500 "SODItem_Card" extends "Item Card"
                 ApplicationArea = all;
             }
         }
+        AddAfter("Base Unit of Measure")
+        {
+            field("PackQTY_SOD"; Rec."PackQTY")
+            {
+                ApplicationArea = all;
+            }
+        }
 
 
     }

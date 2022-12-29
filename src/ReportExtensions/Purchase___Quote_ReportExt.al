@@ -1,4 +1,4 @@
-Reportextension 50500 "SODPurchase___Quote" extends "Purchase - Quote"
+Reportextension 50501 "SODPurchase___Quote" extends "Purchase - Quote"
 {
 
     dataset

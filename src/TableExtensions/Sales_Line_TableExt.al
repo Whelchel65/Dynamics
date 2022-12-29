@@ -8,6 +8,11 @@ tableextension 50502 "SODSales_Line" extends "Sales Line"
             Caption = 'LineNumber';
             DataClassification = ToBeClassified;
         }
+        field(50501;"PkgLbl"; Text[50])
+        {
+            Caption = 'Package Label';
+            DataClassification = ToBeClassified;
+        }
 
     }
 }

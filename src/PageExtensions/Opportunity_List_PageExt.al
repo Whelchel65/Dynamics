@@ -1,4 +1,4 @@
-pageextension 50509 "SODOpportunity_List" extends "Opportunity List"
+pageextension 50515 "SODOpportunity_List" extends "Opportunity List"
 {
     layout
     {

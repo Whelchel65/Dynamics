@@ -1,4 +1,4 @@
-pageextension 50504 "SODPurchase_Order" extends "Purchase Order"
+pageextension 50507 "SODPurchase_Order" extends "Purchase Order"
 {
     layout
     {

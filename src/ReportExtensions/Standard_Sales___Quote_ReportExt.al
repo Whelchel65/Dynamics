@@ -1,4 +1,4 @@
-Reportextension 50502 "SODStandard_Sales___Quote" extends "Standard Sales - Quote"
+Reportextension 50503 "SODStandard_Sales___Quote" extends "Standard Sales - Quote"
 {
 
     dataset

@@ -1,4 +1,4 @@
-Reportextension 50501 "SODOrder" extends "Order"
+Reportextension 50502 "SODOrder" extends "Order"
 {
 
     dataset

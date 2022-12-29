@@ -1,4 +1,4 @@
-Reportextension 50503 "SODStandard_Purchase___Order" extends "Standard Purchase - Order"
+Reportextension 50505 "SODStandard_Purchase___Order" extends "Standard Purchase - Order"
 {
 
     dataset
