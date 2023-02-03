@@ -1,4 +1,4 @@
-Reportextension 50507 "SODPicking_List_by_Order" extends "Picking List by Order"
+Reportextension 50510 "SODPicking_List_by_Order" extends "Picking List by Order"
 {
 
     dataset
@@ -12,18 +12,6 @@ Reportextension 50507 "SODPicking_List_by_Order" extends "Picking List by Order"
         add("<Sales Line Comment>")
         {
             column("PkgLbl__Sales_Line_Comment__Lbl_SOD"; "<Sales Line Comment>".FieldCaption("PkgLbl"))
-            {
-            }
-        }
-        add("Sales Header")
-        {
-            column("PckNmbr_Sales_Header_SOD"; "Sales Header"."PckNmbr")
-            {
-            }
-        }
-        add("Sales Header")
-        {
-            column("PckNmbr_Sales_Header_Lbl_SOD"; "Sales Header".FieldCaption("PckNmbr"))
             {
             }
         }

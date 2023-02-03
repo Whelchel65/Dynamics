@@ -1,4 +1,4 @@
-Reportextension 50504 "SODStandard_Sales___Order_Conf" extends "Standard Sales - Order Conf."
+Reportextension 50507 "SODStandard_Sales___Order_Conf" extends "Standard Sales - Order Conf."
 {
 
     dataset

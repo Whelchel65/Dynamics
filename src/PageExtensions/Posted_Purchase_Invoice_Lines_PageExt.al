@@ -1,10 +1,10 @@
-pageextension 50518 "SODSales_Lines" extends "Sales Lines"
+pageextension 50520 "SODPosted_Purchase_Invoice_Lin" extends "Posted Purchase Invoice Lines"
 {
     layout
     {
         AddAfter("Description")
         {
-            field("PkgLbl_SOD"; Rec."PkgLbl")
+            field("CostCode_SOD"; Rec."CostCode")
             {
                 ApplicationArea = all;
             }

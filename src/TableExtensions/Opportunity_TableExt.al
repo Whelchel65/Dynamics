@@ -1,4 +1,4 @@
-tableextension 50506 "SODOpportunity" extends "Opportunity"
+tableextension 50509 "SODOpportunity" extends "Opportunity"
 {
 
     fields

@@ -16,14 +16,7 @@ pageextension 50503 "SODSales_Order" extends "Sales Order"
                 ApplicationArea = all;
             }
         }
-        AddAfter("Package Tracking No.")
-        {
-            field("PckNmbr_SOD"; Rec."PckNmbr")
-            {
-                ApplicationArea = all;
-            }
-        }
-        AddBefore("Quote No.")
+        AddBefore("Work Description")
         {
             field("CustPO_SOD"; Rec."CustPO")
             {
