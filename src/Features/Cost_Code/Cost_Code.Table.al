@@ -2,6 +2,7 @@ table 50540 "Cost_CodeSOD"
 {
     TableType = Normal;
     Caption = 'Cost Code Table';
+    LookupPageId = 50540;
     fields
     {
 

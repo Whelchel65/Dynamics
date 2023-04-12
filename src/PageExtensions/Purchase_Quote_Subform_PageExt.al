@@ -1,4 +1,4 @@
-pageextension 50510 "SODPurchase_Quote_Subform" extends "Purchase Quote Subform"
+pageextension 50511 "SODPurchase_Quote_Subform" extends "Purchase Quote Subform"
 {
     layout
     {

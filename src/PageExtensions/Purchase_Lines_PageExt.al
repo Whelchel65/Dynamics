@@ -1,4 +1,4 @@
-pageextension 50519 "SODPurchase_Lines" extends "Purchase Lines"
+pageextension 50520 "SODPurchase_Lines" extends "Purchase Lines"
 {
     layout
     {

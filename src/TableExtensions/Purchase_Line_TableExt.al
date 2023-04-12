@@ -14,7 +14,7 @@ tableextension 50504 "SODPurchase_Line" extends "Purchase Line"
         {
             Caption = 'CostCode';
             DataClassification = ToBeClassified;
-            TableRelation = "Cost_CodeSOD"."CostCode";
+            TableRelation = "Cost_CodeSOD".CostCode;
         }
 
     }

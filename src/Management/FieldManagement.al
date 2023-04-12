@@ -172,7 +172,7 @@ codeunit 50500 "Field Transfers Mgt. SOD"
 
       end;
       [EventSubscriber(ObjectType::Codeunit,codeunit::"Sales-Post",'OnBeforeInsertInvoiceHeader','',true,true)]
-      local procedure OnBeforeInsertInvoiceHeader(SalesHeader: Record "Sales Header";SalesInvHeader: Record "Sales Invoice Header")
+      local procedure OnBeforeInsertInvoiceHeader(SalesHeader: Record "Sales Header";var SalesInvHeader: Record "Sales Invoice Header")
       begin
         "SalesInvHeader"."QBREF" := "SalesHeader"."QBREF";
 
@@ -327,6 +327,11 @@ codeunit 50500 "Field Transfers Mgt. SOD"
       begin
 
       end;
+      [EventSubscriber(ObjectType::Table, Database::"Assembly Header", 'OnValidateItemNoOnAfterGetDefaultBin','',true,true)]
+      local procedure OnValidateItemNoOnAfterGetDefaultBin(Item: Record Item; var AssemblyHeader: Record "Assembly Header")
+      begin
+
+      end;
       [EventSubscriber(ObjectType::Page, Page::"Posted Sales Inv. - Update", 'OnAfterRecordChanged', '', true, true)]
       local procedure OnAfterRecordChangedSalesInvoice(xSalesInvoiceHeader: Record "Sales Invoice Header"; var SalesInvoiceHeader: Record "Sales Invoice Header"; var IsChanged: Boolean)
       begin
@@ -357,4 +362,78 @@ codeunit 50500 "Field Transfers Mgt. SOD"
      begin
 
      end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Assembly-Post", 'OnPostOnBeforePostedAssemblyHeaderInsert', '', true,true)]
+    local procedure OnPostOnBeforePostedAssemblyHeaderInsert(AssemblyHeader: Record "Assembly Header";var PostedAssemblyHeader: Record "Posted Assembly Header")
+    begin
+
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Jnl.-Post Line", 'OnBeforeInsertCapLedgEntry', '', true,true)]
+    local procedure OnBeforeInsertCapLedgEntry(ItemJournalLine: Record "Item Journal Line";var CapLedgEntry: Record "Capacity Ledger Entry")
+    begin
+
+    end;
+    [EventSubscriber(ObjectType::Table, Database::"Production BOM Line", 'OnAfterValidateEvent', 'No.', true, true)]
+    local procedure ProdBOMLineOnAfterValidateEvent(var Rec: Record "Production BOM Line";CurrFieldNo: Integer)
+    var
+        Item: Record Item;
+    begin
+        if Rec.Type = Rec.Type::Item then
+            if Item.Get(Rec."No.") then begin
+
+            end;
+    end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Time Sheet Management", 'OnBeforeToTimeSheetLineInsert', '', true,true)]
+   local procedure OnBeforeToTimeSheetLineInsert(FromTimeSheetLine: Record "Time Sheet Line"; var ToTimeSheetLine: Record "Time Sheet Line")
+   begin
+
+   end;
+procedure DataCaption(VarRec: Variant): Text
+    var
+        Ref: RecordRef;
+        i: Integer;
+        AddedFields: Integer;
+        Fref: FieldRef;
+        Result: Text;
+        UsedFields: Dictionary of [Integer, Text];
+        UsedFieldTypes: Dictionary of [Text, Text];
+    begin
+        Ref.GetTable(VarRec);
+        for i := 1 to Ref.KeyIndex(1).FieldCount() do begin
+            Fref := Ref.FieldIndex(i);
+            UsedFields.Add(Fref.Number(), Fref.Name());
+            if not UsedFieldTypes.ContainsKey(format(Fref.Type())) then
+                UsedFieldTypes.Add(Format(Fref.Type()), format(Fref.Type()));
+            if Result <> '' then
+                result += ' ' + FRef.Caption + ': ' + format(FRef.Value())
+            else
+                Result += FRef.Caption + ': ' + format(Fref.Value());
+        end;
+        for i := 1 to Ref.FieldCount() do begin
+            Fref := Ref.FieldIndex(i);
+            if not UsedFields.ContainsKey(Fref.Number()) then begin
+                case Fref.Type of
+                    FieldType::Text:
+                        begin
+                            if Result <> '' then
+                                result += ' ' + FRef.Caption + ': ' + format(FRef.Value())
+                            else
+                                Result += FRef.Caption + ': ' + format(Fref.Value());
+                        end;
+                    else begin
+                            if not UsedFieldTypes.ContainsKey(format(Fref.Type())) then begin
+                                if Result <> '' then
+                                    result += ' ' + FRef.Caption + ': ' + format(FRef.Value())
+                                else
+                                    Result += FRef.Caption + ': ' + format(Fref.Value());
+                                UsedFieldTypes.Add(Format(Fref.Type()), format(Fref.Type()));
+                            end;
+                        end;
+                end;
+                AddedFields += 1;
+                if AddedFields > 4 then
+                    exit(Result);
+            end;
+        end;
+        exit(Result);
+    end;
 }

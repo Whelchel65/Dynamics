@@ -17,7 +17,7 @@ pageextension 50501 "SODItem_List" extends "Item List"
                 Enabled = false;
             }
         }
-        AddAfter("Vendor Item No.")
+        AddBefore("Type")
         {
             field("ManfName_SOD"; Rec."ManfName")
             {

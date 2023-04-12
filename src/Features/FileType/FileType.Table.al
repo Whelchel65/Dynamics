@@ -2,6 +2,7 @@ table 50560 "FileTypeSOD"
 {
     TableType = Normal;
     Caption = 'File Type';
+    LookupPageId = 50560;
     fields
     {
 

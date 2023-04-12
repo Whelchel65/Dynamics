@@ -2,6 +2,7 @@ table 50550 "ManufacturersSOD"
 {
     TableType = Normal;
     Caption = 'Manufacturers';
+    LookupPageId = 50550;
     fields
     {
 

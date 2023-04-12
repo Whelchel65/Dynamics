@@ -7,7 +7,7 @@ tableextension 50506 "SODPurch__Inv__Line" extends "Purch. Inv. Line"
         {
             Caption = 'CostCode';
             DataClassification = ToBeClassified;
-            TableRelation = "Cost_CodeSOD"."CostCode";
+            TableRelation = "Cost_CodeSOD".CostCode;
         }
 
     }

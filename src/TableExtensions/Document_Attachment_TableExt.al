@@ -1,4 +1,4 @@
-tableextension 50508 "SODDocument_Attachment" extends "Document Attachment"
+tableextension 50509 "SODDocument_Attachment" extends "Document Attachment"
 {
 
     fields
@@ -7,7 +7,7 @@ tableextension 50508 "SODDocument_Attachment" extends "Document Attachment"
         {
             Caption = 'FileType';
             DataClassification = ToBeClassified;
-            TableRelation = "FileTypeSOD"."FileType";
+            TableRelation = FileTypeSOD.FileType;
         }
 
     }

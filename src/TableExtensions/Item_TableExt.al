@@ -14,7 +14,7 @@ tableextension 50500 "SODItem" extends "Item"
         {
             Caption = 'Manufacturer';
             DataClassification = ToBeClassified;
-            TableRelation = "ManufacturersSOD"."Name";
+            TableRelation = ManufacturersSOD.Name;
         }
         field(50505;"ManfPartNum"; Text[50])
         {
