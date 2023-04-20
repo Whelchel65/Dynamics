@@ -32,7 +32,7 @@ pageextension 50507 "SODPurchase_Order" extends "Purchase Order"
                 Mgt : codeunit "Field Transfers Mgt. SOD";
                 Lines: Record "Purchase Line";
             begin
-                if not (Rec."Expected Receipt Date" > 0D) then begin
+                if not (Rec."Expected Receipt Date" > CalcDate('<1W>',Today())) then begin
                     Error('Ensure Date is Accurate',Mgt.DataCaption(Rec));
                 end;
                 if not (Rec.SentToVendor > 0D) then begin

@@ -20,7 +20,6 @@ pageextension 50526 "SODPurchase_Order_List" extends "Purchase Order List"
         {
             field("SentToVendor_SOD"; Rec."SentToVendor")
             {
-                Style = Unfavorable;
                 ApplicationArea = all;
             }
         }
