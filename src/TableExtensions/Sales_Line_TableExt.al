@@ -13,6 +13,11 @@ tableextension 50502 "SODSales_Line" extends "Sales Line"
             Caption = 'Package Label';
             DataClassification = ToBeClassified;
         }
+        field(50502;"LDTIME"; Text[50])
+        {
+            Caption = 'Lead Time';
+            DataClassification = ToBeClassified;
+        }
 
     }
 }

@@ -13,6 +13,11 @@ tableextension 50503 "SODPurchase_Header" extends "Purchase Header"
             Caption = 'Date Sent to Vendor';
             DataClassification = ToBeClassified;
         }
+        field(50502;"JOBNO"; Text[50])
+        {
+            Caption = 'Job No';
+            DataClassification = ToBeClassified;
+        }
 
     }
 }

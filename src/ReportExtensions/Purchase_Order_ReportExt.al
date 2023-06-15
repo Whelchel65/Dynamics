@@ -1,4 +1,4 @@
-Reportextension 50509 "SODPurchase_Order" extends "Purchase Order"
+Reportextension 50510 "SODPurchase_Order" extends "Purchase Order"
 {
 
     dataset

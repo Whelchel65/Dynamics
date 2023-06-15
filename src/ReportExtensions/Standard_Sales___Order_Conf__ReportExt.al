@@ -3,6 +3,18 @@ Reportextension 50507 "SODStandard_Sales___Order_Conf" extends "Standard Sales -
 
     dataset
     {
+        add("Line")
+        {
+            column("LDTIME_Line_SOD"; "Line"."LDTIME")
+            {
+            }
+        }
+        add("Line")
+        {
+            column("LDTIME_Line_Lbl_SOD"; "Line".FieldCaption("LDTIME"))
+            {
+            }
+        }
         add("Header")
         {
             column("CustPO_Header_SOD"; "Header"."CustPO")

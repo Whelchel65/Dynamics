@@ -1,4 +1,4 @@
-pageextension 50510 "SODSales_Quote_Subform" extends "Sales Quote Subform"
+pageextension 50511 "SODSales_Quote_Subform" extends "Sales Quote Subform"
 {
     layout
     {
@@ -12,6 +12,13 @@ pageextension 50510 "SODSales_Quote_Subform" extends "Sales Quote Subform"
         AddBefore("No.")
         {
             field("LineNumber_SOD"; Rec."LineNumber")
+            {
+                ApplicationArea = all;
+            }
+        }
+        AddAfter("Description")
+        {
+            field("LDTIME_SOD"; Rec."LDTIME")
             {
                 ApplicationArea = all;
             }

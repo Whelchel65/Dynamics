@@ -1,4 +1,4 @@
-page 50570 "API P50570 SOD"
+page 50572 "API P50572 SOD"
 {
     PageType = API;
 
@@ -45,7 +45,7 @@ page 50570 "API P50570 SOD"
                 field(allowdeferralpostingto; Rec."Allow Deferral Posting To")
                 {
                 }
-                field("salespers_purch_code"; Rec."Salespers./Purch. Code")
+                field(salespers_purch_code; Rec."Salespers./Purch. Code")
                 {
                 }
                 field(approverid; Rec."Approver ID")
@@ -69,7 +69,7 @@ page 50570 "API P50570 SOD"
                 field(email; Rec."E-Mail")
                 {
                 }
-                field("phoneno_"; Rec."Phone No.")
+                field(phoneno_; Rec."Phone No.")
                 {
                 }
                 field(requestamountapprovallimit; Rec."Request Amount Approval Limit")
@@ -87,10 +87,10 @@ page 50570 "API P50570 SOD"
                 field(salesinvoicepostingpolicy; Rec."Sales Invoice Posting Policy")
                 {
                 }
-                field("purch_invoicepostingpolicy"; Rec."Purch. Invoice Posting Policy")
+                field(purch_invoicepostingpolicy; Rec."Purch. Invoice Posting Policy")
                 {
                 }
-                field("timesheetadmin_"; Rec."Time Sheet Admin.")
+                field(timesheetadmin_; Rec."Time Sheet Admin.")
                 {
                 }
                 field(allowfapostingfrom; Rec."Allow FA Posting From")
@@ -99,13 +99,13 @@ page 50570 "API P50570 SOD"
                 field(allowfapostingto; Rec."Allow FA Posting To")
                 {
                 }
-                field("salesresp_ctr_filter"; Rec."Sales Resp. Ctr. Filter")
+                field(salesresp_ctr_filter; Rec."Sales Resp. Ctr. Filter")
                 {
                 }
-                field("purchaseresp_ctr_filter"; Rec."Purchase Resp. Ctr. Filter")
+                field(purchaseresp_ctr_filter; Rec."Purchase Resp. Ctr. Filter")
                 {
                 }
-                field("serviceresp_ctr_filter"; Rec."Service Resp. Ctr. Filter")
+                field(serviceresp_ctr_filter; Rec."Service Resp. Ctr. Filter")
                 {
                 }
                 field(systemid; Rec."SystemId")

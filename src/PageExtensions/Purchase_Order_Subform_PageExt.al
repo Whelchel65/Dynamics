@@ -1,4 +1,4 @@
-pageextension 50508 "SODPurchase_Order_Subform" extends "Purchase Order Subform"
+pageextension 50509 "SODPurchase_Order_Subform" extends "Purchase Order Subform"
 {
     layout
     {

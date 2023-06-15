@@ -16,6 +16,13 @@ pageextension 50507 "SODPurchase_Order" extends "Purchase Order"
                 ApplicationArea = all;
             }
         }
+        AddAfter("Posting Description")
+        {
+            field("JOBNO_SOD"; Rec."JOBNO")
+            {
+                ApplicationArea = all;
+            }
+        }
         modify("Expected Receipt Date")
         {
             ShowMandatory = true;

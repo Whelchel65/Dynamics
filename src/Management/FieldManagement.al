@@ -387,6 +387,31 @@ codeunit 50500 "Field Transfers Mgt. SOD"
    begin
 
    end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Gen. Journal Line", 'OnSetJournalLineFieldsFromApplicationOnAfterFindFirstCustLedgEntryWithAppliesToID', '', true, true)]
+   local procedure OnSetJournalLineFieldsFromApplicationOnAfterFindFirstCustLedgEntryWithAppliesToID(CustLedgEntry: Record "Cust. Ledger Entry"; var GenJournalLine: Record "Gen. Journal Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Gen. Journal Line", 'OnSetJournalLineFieldsFromApplicationOnAfterFindFirstCustLedgEntryWithAppliesToDocNo', '', true, true)]
+   local procedure OnSetJournalLineFieldsFromApplicationOnAfterFindFirstCustLedgEntryWithAppliesToDocNo(CustLedgEntry: Record "Cust. Ledger Entry"; var GenJournalLine: Record "Gen. Journal Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Gen. Journal Line", 'OnSetJournalLineFieldsFromApplicationOnAfterFindFirstVendLedgEntryWithAppliesToID', '', true, true)]
+   local procedure OnSetJournalLineFieldsFromApplicationOnAfterFindFirstVendLedgEntryWithAppliesToID(VendLedgEntry: Record "Vendor Ledger Entry"; var GenJournalLine: Record "Gen. Journal Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Gen. Journal Line", 'OnSetJournalLineFieldsFromApplicationOnAfterFindFirstVendLedgEntryWithAppliesToDocNo', '', true, true)]
+   local procedure OnSetJournalLineFieldsFromApplicationOnAfterFindFirstVendLedgEntryWithAppliesToDocNo(VendLedgEntry: Record "Vendor Ledger Entry"; var GenJournalLine: Record "Gen. Journal Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Gen. Journal Line", 'OnSetJournalLineFieldsFromApplicationOnAfterFindFirstEmplLedgEntryWithAppliesToID', '', true, true)]
+   local procedure OnSetJournalLineFieldsFromApplicationOnAfterFindFirstEmplLedgEntryWithAppliesToID(CustLedgEntry: Record "Employee Ledger Entry"; var GenJournalLine: Record "Gen. Journal Line")
+   begin
+
+   end;
 procedure DataCaption(VarRec: Variant): Text
     var
         Ref: RecordRef;

@@ -1,4 +1,4 @@
-pageextension 50512 "SODPosted_Sales_Invoice" extends "Posted Sales Invoice"
+pageextension 50513 "SODPosted_Sales_Invoice" extends "Posted Sales Invoice"
 {
     layout
     {

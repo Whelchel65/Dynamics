@@ -1,10 +1,10 @@
-pageextension 50514 "SODPosted_Purchase_Receipt" extends "Posted Purchase Receipt"
+pageextension 50508 "SODPurchase_List" extends "Purchase List"
 {
     layout
     {
         AddAfter("No.")
         {
-            field("Order No._SOD"; Rec."Order No.")
+            field("JOBNO_SOD"; Rec."JOBNO")
             {
                 ApplicationArea = all;
             }

@@ -1,4 +1,4 @@
-Reportextension 50511 "SODVendor_Purchases_by_Item" extends "Vendor Purchases by Item"
+Reportextension 50512 "SODVendor_Purchases_by_Item" extends "Vendor Purchases by Item"
 {
 
     dataset

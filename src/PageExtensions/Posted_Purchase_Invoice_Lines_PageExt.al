@@ -1,10 +1,10 @@
-pageextension 50521 "SODPosted_Purchase_Invoice_Lin" extends "Posted Purchase Invoice Lines"
+pageextension 50522 "SODPosted_Purchase_Invoice_Lin" extends "Posted Purchase Invoice Lines"
 {
     layout
     {
         AddAfter("Description")
         {
-            field("CostCode_SOD"; Rec."CostCode")
+            field("CCLOOKUP_SOD"; Rec."CCLOOKUP")
             {
                 ApplicationArea = all;
             }

@@ -27,6 +27,18 @@ Reportextension 50506 "SODStandard_Sales___Quote" extends "Standard Sales - Quot
             {
             }
         }
+        add("Line")
+        {
+            column("LDTIME_Line_SOD"; "Line"."LDTIME")
+            {
+            }
+        }
+        add("Line")
+        {
+            column("LDTIME_Line_Lbl_SOD"; "Line".FieldCaption("LDTIME"))
+            {
+            }
+        }
 
     }
 }
