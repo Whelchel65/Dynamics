@@ -5,6 +5,18 @@ Reportextension 50507 "SODStandard_Sales___Order_Conf" extends "Standard Sales -
     {
         add("Line")
         {
+            column("LineNumber_Line_SOD"; "Line"."LineNumber")
+            {
+            }
+        }
+        add("Line")
+        {
+            column("LineNumber_Line_Lbl_SOD"; "Line".FieldCaption("LineNumber"))
+            {
+            }
+        }
+        add("Line")
+        {
             column("LDTIME_Line_SOD"; "Line"."LDTIME")
             {
             }
