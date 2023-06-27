@@ -2,7 +2,7 @@
 "id": "AE4898B1-F15C-4478-9336-F8809D1E1301",
 "name": "My Customizations",
 "publisher": "WSI Production",
-"version": "1.0.0.212",
+"version": "1.0.0.237",
 "runtime": "8.0",
 "target": "Cloud",
 "platform": "1.0.0.0",
@@ -22,7 +22,7 @@
   {
     "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
     "name": "Base Application",
-    "version": "22.1.55890.57483",
+    "version": "22.1.55890.58154",
     "publisher": "Microsoft"
   }],
 "idRanges": [
