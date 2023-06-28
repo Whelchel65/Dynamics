@@ -16,10 +16,6 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Setup_Number; Rec.Setup_Number)
-                {
-                    ApplicationArea = All;
-                }
             }
 
 

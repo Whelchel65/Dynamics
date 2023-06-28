@@ -22,6 +22,11 @@ table 50631 "Service_Tickets LineSOD"
             Caption = 'Line Notes';
             DataClassification = ToBeClassified;
         }
+        field(505121; Line_Date; Date)
+        {
+            Caption = 'Line Date';
+            DataClassification = ToBeClassified;
+        }
 
         field(99999; "Line No."; Integer)
         {

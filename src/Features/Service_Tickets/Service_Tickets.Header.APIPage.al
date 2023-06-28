@@ -63,10 +63,6 @@ page 50636 "API Service_Tickets HeaderSOD"
                 {
                     Caption = 'Date_Service_Completed';
                 }
-                field(line_no; Rec."Line_No")
-                {
-                    Caption = 'Line No';
-                }
                 field(sharepoint_url; Rec."Sharepoint_URL")
                 {
                     Caption = 'Sharepoint URL';

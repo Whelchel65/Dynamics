@@ -26,7 +26,7 @@ table 50630 "Service_Tickets HeaderSOD"
         {
             Caption = 'Ticket Stage';
             DataClassification = ToBeClassified;
-            OptionMembers = "Customer Request"," Request Intake"," Troubleshoot"," Sales Quote"," Procurement"," In House Production"," On-Site Production"," Shipping"," Invoice";
+            OptionMembers = "Customer Request"," Request Intake"," Troubleshoot"," Sales Quote"," Procurement"," In House Production"," Onsite Service"," Shipping"," Invoice";
         }
         field(505104; Job_No; Code[20])
         {
@@ -53,11 +53,6 @@ table 50630 "Service_Tickets HeaderSOD"
         field(505109; Date_Service_Completed; Date)
         {
             Caption = 'Date_Service_Completed';
-            DataClassification = ToBeClassified;
-        }
-        field(505110; Line_No; Code[20])
-        {
-            Caption = 'Line No';
             DataClassification = ToBeClassified;
         }
         field(505113; Sharepoint_URL; Text[100])

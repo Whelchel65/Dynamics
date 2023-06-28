@@ -35,10 +35,6 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Service_Tickets Number series';
                 }
-                field(setup_number; Rec."Setup_Number")
-                {
-                    Caption = 'Setup Number series';
-                }
             }
         }
     }

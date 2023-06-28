@@ -39,6 +39,10 @@ page 50637 "API Service_Tickets LineSOD"
                 {
                     Caption = 'Line Notes';
                 }
+                field(line_date; Rec."Line_Date")
+                {
+                    Caption = 'Line Date';
+                }
             }
         }
     }

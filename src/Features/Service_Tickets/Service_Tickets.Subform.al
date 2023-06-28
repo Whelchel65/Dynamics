@@ -15,6 +15,10 @@ page 50632 "Service_TicketsListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(Line_Date; Rec.Line_Date)
+                {
+                    ApplicationArea = All;
+                }
                 field(Line_Notes; Rec.Line_Notes)
                 {
                     ApplicationArea = All;

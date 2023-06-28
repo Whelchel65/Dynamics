@@ -41,7 +41,6 @@ page 50630 "Service_TicketsList"
                 field(Date_Originated; Rec.Date_Originated)
                 {
                     ApplicationArea = All;
-                    Editable = false;
                 }
                 field(Date_Initial_Responded; Rec.Date_Initial_Responded)
                 {
@@ -52,10 +51,6 @@ page 50630 "Service_TicketsList"
                 {
                     ApplicationArea = All;
                     ShowMandatory = true;
-                }
-                field(Line_No; Rec.Line_No)
-                {
-                    ApplicationArea = All;
                 }
 
             }

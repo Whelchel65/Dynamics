@@ -40,7 +40,6 @@ page 50631 "Service_TicketsCard"
                 field(Date_Originated; Rec.Date_Originated)
                 {
                     ApplicationArea = All;
-                    Editable = false;
                 }
                 field(Date_Initial_Responded; Rec.Date_Initial_Responded)
                 {
@@ -51,10 +50,6 @@ page 50631 "Service_TicketsCard"
                 {
                     ApplicationArea = All;
                     ShowMandatory = true;
-                }
-                field(Line_No; Rec.Line_No)
-                {
-                    ApplicationArea = All;
                 }
                 field(Sharepoint_URL; Rec.Sharepoint_URL)
                 {
