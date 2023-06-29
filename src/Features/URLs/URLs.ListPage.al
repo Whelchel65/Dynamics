@@ -1,30 +1,36 @@
-page 50632 "Service_TicketsListPart"
+page 50650 "URLsList"
 {
-    PageType = ListPart;
-    SourceTable = "Service_Tickets LineSOD";
-    Caption = 'Tasks, Notes, Communications';
-    AutoSplitKey = true;
-
+    PageType = List;
+    SourceTable = "URLsSOD";
+    Caption = 'URLs to Flows';
+    UsageCategory = Lists;
+    ApplicationArea = all;
     layout
     {
         area(content)
         {
             repeater(Rep)
             {
-                field(Type; Rec.Type)
+                field(Number; Rec.Number)
                 {
                     ApplicationArea = All;
                 }
-                field(Line_Date; Rec.Line_Date)
+                field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
                 }
-                field(Line_Notes; Rec.Line_Notes)
+                field(URL; Rec.URL)
                 {
                     ApplicationArea = All;
                 }
 
             }
+        }
+    }
+    actions
+    {
+        area(processing)
+        {
         }
     }
 }

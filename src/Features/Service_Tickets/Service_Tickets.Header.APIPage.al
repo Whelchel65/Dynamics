@@ -95,6 +95,22 @@ page 50636 "API Service_Tickets HeaderSOD"
                 {
                     Caption = 'Contact State';
                 }
+                field(user_responsible; Rec."User_Responsible")
+                {
+                    Caption = 'User Responsible';
+                }
+                field(escalation; Rec."Escalation")
+                {
+                    Caption = 'Escalation';
+                }
+                field(urgency; Rec."Urgency")
+                {
+                    Caption = 'Urgency';
+                }
+                field(send_escalation; Rec."Send_Escalation")
+                {
+                    Caption = 'Send Escalation';
+                }
             }
         }
     }

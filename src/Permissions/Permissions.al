@@ -14,5 +14,7 @@ permissionset 50500 "My Customizations"
                   tabledata "SetupSOD" = RIMD,
                   table "SetupSOD" = X,
                   tabledata "Tag_NumberSOD" = RIMD,
-                  table "Tag_NumberSOD" = X;
+                  table "Tag_NumberSOD" = X,
+                  tabledata "URLsSOD" = RIMD,
+                  table "URLsSOD" = X;
 }

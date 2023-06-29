@@ -108,6 +108,31 @@ table 50630 "Service_Tickets HeaderSOD"
             Editable = false;
             CalcFormula = lookup(Contact."Country/Region Code" where("No." = field(Contact)));
         }
+        field(505122; User_Responsible; Code[20])
+        {
+            Caption = 'User Responsible';
+            DataClassification = ToBeClassified;
+            TableRelation = "Salesperson/Purchaser".Code;
+        }
+        field(505123;Escalation; Option)
+        {
+            Caption = 'Escalation';
+            DataClassification = ToBeClassified;
+            OptionMembers = "","Andrew","Randy","Sean","John","Ben","Poe","-";
+        }
+        field(505124;Urgency; Option)
+        {
+            Caption = 'Urgency';
+            DataClassification = ToBeClassified;
+            OptionMembers = "Medium","Low","High","Urgent";
+        }
+        field(505125;"Send_Escalation"; Text[400])
+        {
+            Caption = 'Send Escalation';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup(URLsSOD.URL where(Description = filter('Escalation Flow')));
+        }
 
 
     }

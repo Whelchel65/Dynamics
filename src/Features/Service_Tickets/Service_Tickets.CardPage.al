@@ -24,9 +24,32 @@ page 50631 "Service_TicketsCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Notes; Rec.Notes)
+                {
+                    ApplicationArea = All;
+                    MultiLine = true;
+                }
+                field(Urgency; Rec.Urgency)
+                {
+                    ApplicationArea = All;
+                }
                 field(Ticket_Stage; Rec.Ticket_Stage)
                 {
                     ApplicationArea = All;
+                }
+                field(User_Responsible; Rec.User_Responsible)
+                {
+                    ApplicationArea = All;
+                }
+                field(Escalation; Rec.Escalation)
+                {
+                    ApplicationArea = All;
+                }
+                field(Send_Escalation; Rec.Send_Escalation)
+                {
+                    ApplicationArea = All;
+                    Style = StrongAccent;
+                    Editable = false;
                 }
                 field(Job_No; Rec.Job_No)
                 {
@@ -37,16 +60,7 @@ page 50631 "Service_TicketsCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Date_Originated; Rec.Date_Originated)
-                {
-                    ApplicationArea = All;
-                }
                 field(Date_Initial_Responded; Rec.Date_Initial_Responded)
-                {
-                    ApplicationArea = All;
-                    ShowMandatory = true;
-                }
-                field(Date_Service_Completed; Rec.Date_Service_Completed)
                 {
                     ApplicationArea = All;
                     ShowMandatory = true;
@@ -56,10 +70,14 @@ page 50631 "Service_TicketsCard"
                     ApplicationArea = All;
                     Style = StrongAccent;
                 }
-                field(Notes; Rec.Notes)
+                field(Date_Originated; Rec.Date_Originated)
                 {
                     ApplicationArea = All;
-                    MultiLine = true;
+                }
+                field(Date_Service_Completed; Rec.Date_Service_Completed)
+                {
+                    ApplicationArea = All;
+                    ShowMandatory = true;
                 }
             }
             group("Contact InformationGrp")

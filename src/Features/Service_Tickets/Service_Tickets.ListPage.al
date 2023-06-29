@@ -12,6 +12,11 @@ page 50630 "Service_TicketsList"
         {
             repeater(Rep)
             {
+                field(Contact_Name; Rec.Contact_Name)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                }
                 field(Ticket_No; Rec.Ticket_No)
                 {
                     ApplicationArea = All;
@@ -22,6 +27,10 @@ page 50630 "Service_TicketsList"
                     ShowMandatory = true;
                 }
                 field(Status; Rec.Status)
+                {
+                    ApplicationArea = All;
+                }
+                field(Urgency; Rec.Urgency)
                 {
                     ApplicationArea = All;
                 }
@@ -41,11 +50,6 @@ page 50630 "Service_TicketsList"
                 field(Date_Originated; Rec.Date_Originated)
                 {
                     ApplicationArea = All;
-                }
-                field(Date_Initial_Responded; Rec.Date_Initial_Responded)
-                {
-                    ApplicationArea = All;
-                    ShowMandatory = true;
                 }
                 field(Date_Service_Completed; Rec.Date_Service_Completed)
                 {

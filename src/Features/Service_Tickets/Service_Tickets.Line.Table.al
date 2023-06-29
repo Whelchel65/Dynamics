@@ -15,7 +15,7 @@ table 50631 "Service_Tickets LineSOD"
         {
             Caption = 'Type';
             DataClassification = ToBeClassified;
-            OptionMembers = "Note","Email","Call";
+            OptionMembers = "Note","Email","Call","Task";
         }
         field(505112; Line_Notes; Text[500])
         {
