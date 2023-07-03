@@ -20,6 +20,10 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Work_Packages_Number; Rec.Work_Packages_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 

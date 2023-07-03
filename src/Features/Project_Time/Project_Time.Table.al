@@ -16,11 +16,10 @@ table 50660 "Project_TimeSOD"
             Caption = 'Employee';
             DataClassification = ToBeClassified;
         }
-        field(3; Job_No; Code[50])
+        field(3; Job_No; Text[50])
         {
             Caption = 'Job No';
             DataClassification = ToBeClassified;
-            TableRelation = Job."No.";
         }
         field(4; Parent_Task; Text[100])
         {

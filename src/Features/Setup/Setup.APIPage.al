@@ -39,6 +39,10 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Project_Time Number series';
                 }
+                field(work_packages_number; Rec."Work_Packages_Number")
+                {
+                    Caption = 'Work_Packages Number series';
+                }
             }
         }
     }

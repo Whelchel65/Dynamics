@@ -18,5 +18,9 @@ permissionset 50500 "My Customizations"
                   tabledata "Tag_NumberSOD" = RIMD,
                   table "Tag_NumberSOD" = X,
                   tabledata "URLsSOD" = RIMD,
-                  table "URLsSOD" = X;
+                  table "URLsSOD" = X,
+                  tabledata "Work_Packages HeaderSOD" = RIMD,
+                  tabledata "Work_Packages LineSOD" = RIMD,
+                  tabledata "Posted Work_Packages HeaderSOD" = RIMD,
+                  tabledata "Posted Work_Packages LineSOD" = RIMD;
 }

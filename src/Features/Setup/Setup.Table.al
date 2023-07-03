@@ -23,6 +23,12 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(4; Work_Packages_Number; Code[20])
+        {
+            Caption = 'Work_Packages Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }
