@@ -41,16 +41,6 @@ page 50631 "Service_TicketsCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Escalation; Rec.Escalation)
-                {
-                    ApplicationArea = All;
-                }
-                field(Send_Escalation; Rec.Send_Escalation)
-                {
-                    ApplicationArea = All;
-                    Style = StrongAccent;
-                    Editable = false;
-                }
                 field(Job_No; Rec.Job_No)
                 {
                     ApplicationArea = All;
@@ -60,19 +50,19 @@ page 50631 "Service_TicketsCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Date_Initial_Responded; Rec.Date_Initial_Responded)
+                field(Date_Originated; Rec.Date_Originated)
                 {
                     ApplicationArea = All;
-                    ShowMandatory = true;
                 }
                 field(Sharepoint_URL; Rec.Sharepoint_URL)
                 {
                     ApplicationArea = All;
                     Style = StrongAccent;
                 }
-                field(Date_Originated; Rec.Date_Originated)
+                field(Date_Initial_Responded; Rec.Date_Initial_Responded)
                 {
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field(Date_Service_Completed; Rec.Date_Service_Completed)
                 {

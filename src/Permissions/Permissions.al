@@ -9,6 +9,8 @@ permissionset 50500 "My Customizations"
                   table "FileTypeSOD" = X,
                   tabledata "ManufacturersSOD" = RIMD,
                   table "ManufacturersSOD" = X,
+                  tabledata "Project_TimeSOD" = RIMD,
+                  table "Project_TimeSOD" = X,
                   tabledata "Service_Tickets HeaderSOD" = RIMD,
                   tabledata "Service_Tickets LineSOD" = RIMD,
                   tabledata "SetupSOD" = RIMD,

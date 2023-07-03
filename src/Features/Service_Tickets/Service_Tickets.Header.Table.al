@@ -63,7 +63,7 @@ table 50630 "Service_Tickets HeaderSOD"
         }
         field(505114; Notes; Text[1500])
         {
-            Caption = 'Notes';
+            Caption = 'Initial Notes';
             DataClassification = ToBeClassified;
         }
         field(505115;"Contact_Name"; Text[100])
@@ -124,7 +124,7 @@ table 50630 "Service_Tickets HeaderSOD"
         {
             Caption = 'Urgency';
             DataClassification = ToBeClassified;
-            OptionMembers = "Medium","Low","High","Urgent";
+            OptionMembers = "","Low","High","Urgent";
         }
         field(505125;"Send_Escalation"; Text[400])
         {

@@ -35,6 +35,10 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Service_Tickets Number series';
                 }
+                field(project_time_number; Rec."Project_Time_Number")
+                {
+                    Caption = 'Project_Time Number series';
+                }
             }
         }
     }

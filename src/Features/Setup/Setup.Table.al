@@ -17,6 +17,12 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(3; Project_Time_Number; Code[20])
+        {
+            Caption = 'Project_Time Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }

@@ -69,7 +69,7 @@ page 50636 "API Service_Tickets HeaderSOD"
                 }
                 field(notes; Rec."Notes")
                 {
-                    Caption = 'Notes';
+                    Caption = 'Initial Notes';
                 }
                 field(contact_name; Rec."Contact_Name")
                 {
