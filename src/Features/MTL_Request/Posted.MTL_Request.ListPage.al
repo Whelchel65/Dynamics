@@ -1,48 +1,48 @@
-page 50674 "Posted Work_PackagesCard"
+page 50683 "Posted MTL_RequestList"
 {
-    PageType = Document;
-    SourceTable = "Posted Work_Packages HeaderSOD";
-    Caption = 'Posted Work Package Card';
+    PageType = List;
+    SourceTable = "Posted MTL_Request HeaderSOD";
+    Caption = 'Posted Material Request List';
+    CardPageId = "Posted MTL_RequestCard";
     Editable = false;
-
+    UsageCategory = Lists;
+    ApplicationArea = all;
     layout
     {
         area(content)
         {
-            group(GeneralGrp)
+            repeater(Rep)
             {
-                Caption = 'General';
-                field(WP_No; Rec.WP_No)
+                field(Request_No; Rec.Request_No)
                 {
                     ApplicationArea = All;
                 }
-                field(Description; Rec.Description)
+                field(Vendor; Rec.Vendor)
                 {
                     ApplicationArea = All;
+                }
+                field(Vendor_Name; Rec.Vendor_Name)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
                 }
                 field(Status; Rec.Status)
                 {
                     ApplicationArea = All;
                 }
-                field(Notes; Rec.Notes)
-                {
-                    ApplicationArea = All;
-                    MultiLine = true;
-                }
-                field(Drawing_No; Rec.Drawing_No)
+                field(Importance; Rec.Importance)
                 {
                     ApplicationArea = All;
                 }
-                field(Drawing_Attachment; Rec.Drawing_Attachment)
+                field(User; Rec.User)
                 {
                     ApplicationArea = All;
                 }
-            }
+                field(Date_Needed; Rec.Date_Needed)
+                {
+                    ApplicationArea = All;
+                }
 
-            part(LinesPart; "Posted Work_PackagesListPart")
-            {
-                ApplicationArea = all;
-                SubPageLink = "WP_No" = FIELD("WP_No");
             }
         }
     }

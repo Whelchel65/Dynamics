@@ -1,17 +1,17 @@
-table 50670 "Work_Packages HeaderSOD"
+table 50690 "Quality HeaderSOD"
 {
     TableType = Normal;
-    Caption = 'Work Package';
-    LookupPageId = 50670;
+    Caption = 'Quality';
+    LookupPageId = 50690;
     fields
     {
 
-        field(1; WP_No; Code[20])
+        field(1; Quality_No; Code[20])
         {
-            Caption = 'WP No';
+            Caption = 'Quality No';
             DataClassification = ToBeClassified;
         }
-        field(2; Description; Text[100])
+        field(2; Description; Text[200])
         {
             Caption = 'Description';
             DataClassification = ToBeClassified;
@@ -20,29 +20,41 @@ table 50670 "Work_Packages HeaderSOD"
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "Work Queue"," Work Package Needed"," Package Complete"," Information Needed";
+            OptionMembers = "","In Production","Ready for Inspection","Rework Needed","Approved";
         }
-        field(4; Notes; Text[2000])
+        field(4; SharePoint_Link; Text[250])
+        {
+            Caption = 'SharePoint Link';
+            DataClassification = ToBeClassified;
+            ExtendedDataType = URL;
+        }
+        field(5; Drawing_Number; Text[50])
+        {
+            Caption = 'Drawing Number';
+            DataClassification = ToBeClassified;
+        }
+        field(6; Notes; Text[2000])
         {
             Caption = 'Notes';
             DataClassification = ToBeClassified;
         }
-        field(5; Drawing_No; Text[50])
+        field(12; Employee; Text[50])
         {
-            Caption = 'Drawing No';
+            Caption = 'Work Performed By';
             DataClassification = ToBeClassified;
         }
-        field(9; Drawing_Attachment; Media)
+        field(14; Job_No; Code[20])
         {
-            Caption = 'Drawing Attachment';
+            Caption = 'Job No';
             DataClassification = ToBeClassified;
+            TableRelation = Job."No.";
         }
 
 
     }
     keys
     {
-        key(PK;WP_No)
+        key(PK;Quality_No)
         {
             Clustered = true;
         }
@@ -50,9 +62,9 @@ table 50670 "Work_Packages HeaderSOD"
     }
     trigger OnDelete()
     var
-        Lines: Record "Work_Packages LineSOD";
+        Lines: Record "Quality LineSOD";
     begin
-       Lines.SetRange("WP_No",Rec."WP_No");
+       Lines.SetRange("Quality_No",Rec."Quality_No");
        Lines.DeleteAll();
     end;
     trigger OnInsert()
@@ -66,21 +78,21 @@ table 50670 "Work_Packages HeaderSOD"
         OnBeforeInsert(Rec, IsHandled);
         if IsHandled then
             exit;
-        if Rec."WP_No" = '' then begin
+        if Rec."Quality_No" = '' then begin
             Setup.Get();
-            Setup.TestField("Work_Packages_Number");
-            NoSeriesMgt.InitSeries(Setup.Work_Packages_Number, '', 0D, WP_No, NewNoSeries);
+            Setup.TestField("Quality_Number");
+            NoSeriesMgt.InitSeries(Setup.Quality_Number, '', 0D, Quality_No, NewNoSeries);
         end;
     end;
-   local procedure OnBeforeInsert(var Rec: Record "Work_Packages HeaderSOD"; var IsHandled: Boolean)
+   local procedure OnBeforeInsert(var Rec: Record "Quality HeaderSOD"; var IsHandled: Boolean)
    begin
    end;
 
-    procedure Post(Doc : Record "Work_Packages HeaderSOD")
+    procedure Post(Doc : Record "Quality HeaderSOD")
     var
-        DocLine : Record "Work_Packages LineSOD";
-        PostedDoc : Record "Posted Work_Packages HeaderSOD";
-        PostedLine: Record "Posted Work_Packages LineSOD";
+        DocLine : Record "Quality LineSOD";
+        PostedDoc : Record "Posted Quality HeaderSOD";
+        PostedLine: Record "Posted Quality LineSOD";
         IsHandled : Boolean;
     begin
         OnBeforePosting(Doc,IsHandled);
@@ -90,7 +102,7 @@ table 50670 "Work_Packages HeaderSOD"
         PostedDoc.Init();
         PostedDoc.TransferFields(Doc);
         PostedDoc.Insert(true);
-        DocLine.SetRange(WP_No, Doc.WP_No);
+        DocLine.SetRange(Quality_No, Doc.Quality_No);
         if DocLine.FindSet() then
             repeat
 
@@ -103,10 +115,10 @@ table 50670 "Work_Packages HeaderSOD"
         OnAfterPosting(PostedDoc);
     end;
     [IntegrationEvent(false, false)]
-   local procedure OnBeforePosting(var Doc: Record "Work_Packages HeaderSOD";var IsHandled: Boolean)
+   local procedure OnBeforePosting(var Doc: Record "Quality HeaderSOD";var IsHandled: Boolean)
    begin
    end;
-   local procedure OnAfterPosting(var Doc: Record "Posted Work_Packages HeaderSOD")
+   local procedure OnAfterPosting(var Doc: Record "Posted Quality HeaderSOD")
    begin
    end;
 }

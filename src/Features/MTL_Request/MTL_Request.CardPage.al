@@ -1,8 +1,8 @@
-page 50671 "Work_PackagesCard"
+page 50681 "MTL_RequestCard"
 {
     PageType = Document;
-    SourceTable = "Work_Packages HeaderSOD";
-    Caption = 'Work Package Card';
+    SourceTable = "MTL_Request HeaderSOD";
+    Caption = 'Material Request Card';
 
     layout
     {
@@ -11,15 +11,32 @@ page 50671 "Work_PackagesCard"
             group(GeneralGrp)
             {
                 Caption = 'General';
-                field(WP_No; Rec.WP_No)
+                field(Request_No; Rec.Request_No)
                 {
                     ApplicationArea = All;
                 }
-                field(Description; Rec.Description)
+                field(Vendor; Rec.Vendor)
                 {
                     ApplicationArea = All;
+                }
+                field(Vendor_Name; Rec.Vendor_Name)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
                 }
                 field(Status; Rec.Status)
+                {
+                    ApplicationArea = All;
+                }
+                field(Importance; Rec.Importance)
+                {
+                    ApplicationArea = All;
+                }
+                field(User; Rec.User)
+                {
+                    ApplicationArea = All;
+                }
+                field(Date_Needed; Rec.Date_Needed)
                 {
                     ApplicationArea = All;
                 }
@@ -28,20 +45,12 @@ page 50671 "Work_PackagesCard"
                     ApplicationArea = All;
                     MultiLine = true;
                 }
-                field(Drawing_No; Rec.Drawing_No)
-                {
-                    ApplicationArea = All;
-                }
-                field(Drawing_Attachment; Rec.Drawing_Attachment)
-                {
-                    ApplicationArea = All;
-                }
             }
 
-            part(LinesPart; "Work_PackagesListPart")
+            part(LinesPart; "MTL_RequestListPart")
             {
                 ApplicationArea = all;
-                SubPageLink = "WP_No" = FIELD("WP_No");
+                SubPageLink = "Request_No" = FIELD("Request_No");
             }
         }
     }
@@ -59,7 +68,7 @@ page 50671 "Work_PackagesCard"
                 Image = PostDocument;
                 trigger OnAction()
                 begin
-                    if confirm('Post Work Package') then
+                    if confirm('Post Material Request') then
                         Rec.Post(Rec);                end;
             }
         }

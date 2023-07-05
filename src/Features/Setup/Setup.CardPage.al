@@ -16,11 +16,23 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Project_Time_Number; Rec.Project_Time_Number)
+                field(Work_Packages_Number; Rec.Work_Packages_Number)
                 {
                     ApplicationArea = All;
                 }
-                field(Work_Packages_Number; Rec.Work_Packages_Number)
+                field(Material_Request_Number; Rec.Material_Request_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(MTL_Request_Number; Rec.MTL_Request_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Quality_Number; Rec.Quality_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Project_Time_Number; Rec.Project_Time_Number)
                 {
                     ApplicationArea = All;
                 }

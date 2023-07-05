@@ -1,8 +1,8 @@
-page 50674 "Posted Work_PackagesCard"
+page 50694 "Posted QualityCard"
 {
     PageType = Document;
-    SourceTable = "Posted Work_Packages HeaderSOD";
-    Caption = 'Posted Work Package Card';
+    SourceTable = "Posted Quality HeaderSOD";
+    Caption = 'Posted Quality Card';
     Editable = false;
 
     layout
@@ -12,7 +12,7 @@ page 50674 "Posted Work_PackagesCard"
             group(GeneralGrp)
             {
                 Caption = 'General';
-                field(WP_No; Rec.WP_No)
+                field(Quality_No; Rec.Quality_No)
                 {
                     ApplicationArea = All;
                 }
@@ -24,25 +24,33 @@ page 50674 "Posted Work_PackagesCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Job_No; Rec.Job_No)
+                {
+                    ApplicationArea = All;
+                }
+                field(SharePoint_Link; Rec.SharePoint_Link)
+                {
+                    ApplicationArea = All;
+                }
+                field(Drawing_Number; Rec.Drawing_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Employee; Rec.Employee)
+                {
+                    ApplicationArea = All;
+                }
                 field(Notes; Rec.Notes)
                 {
                     ApplicationArea = All;
                     MultiLine = true;
                 }
-                field(Drawing_No; Rec.Drawing_No)
-                {
-                    ApplicationArea = All;
-                }
-                field(Drawing_Attachment; Rec.Drawing_Attachment)
-                {
-                    ApplicationArea = All;
-                }
             }
 
-            part(LinesPart; "Posted Work_PackagesListPart")
+            part(LinesPart; "Posted QualityListPart")
             {
                 ApplicationArea = all;
-                SubPageLink = "WP_No" = FIELD("WP_No");
+                SubPageLink = "Quality_No" = FIELD("Quality_No");
             }
         }
     }

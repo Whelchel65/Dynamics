@@ -35,13 +35,25 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Service_Tickets Number series';
                 }
-                field(project_time_number; Rec."Project_Time_Number")
-                {
-                    Caption = 'Project_Time Number series';
-                }
                 field(work_packages_number; Rec."Work_Packages_Number")
                 {
                     Caption = 'Work_Packages Number series';
+                }
+                field(material_request_number; Rec."Material_Request_Number")
+                {
+                    Caption = 'Material_Request Number series';
+                }
+                field(mtl_request_number; Rec."MTL_Request_Number")
+                {
+                    Caption = 'MTL_Request Number series';
+                }
+                field(quality_number; Rec."Quality_Number")
+                {
+                    Caption = 'Quality Number series';
+                }
+                field(project_time_number; Rec."Project_Time_Number")
+                {
+                    Caption = 'Project_Time Number series';
                 }
             }
         }

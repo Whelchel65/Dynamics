@@ -17,15 +17,33 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
-        field(3; Project_Time_Number; Code[20])
-        {
-            Caption = 'Project_Time Number series';
-            DataClassification = ToBeClassified;
-            TableRelation = "No. Series".Code;
-        }
         field(4; Work_Packages_Number; Code[20])
         {
             Caption = 'Work_Packages Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(5; Material_Request_Number; Code[20])
+        {
+            Caption = 'Material_Request Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(6; MTL_Request_Number; Code[20])
+        {
+            Caption = 'MTL_Request Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(7; Quality_Number; Code[20])
+        {
+            Caption = 'Quality Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(8; Project_Time_Number; Code[20])
+        {
+            Caption = 'Project_Time Number series';
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }

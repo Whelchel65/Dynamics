@@ -69,6 +69,14 @@ page 50631 "Service_TicketsCard"
                     ApplicationArea = All;
                     ShowMandatory = true;
                 }
+                field(Sales_Quote; Rec.Sales_Quote)
+                {
+                    ApplicationArea = All;
+                }
+                field(Sales_Order; Rec.Sales_Order)
+                {
+                    ApplicationArea = All;
+                }
             }
             group("Contact InformationGrp")
             {

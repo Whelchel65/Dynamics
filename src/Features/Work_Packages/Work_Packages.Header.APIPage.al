@@ -47,6 +47,10 @@ page 50676 "API Work_Packages HeaderSOD"
                 {
                     Caption = 'Drawing No';
                 }
+                field(drawing_attachment; Rec."Drawing_Attachment")
+                {
+                    Caption = 'Drawing Attachment';
+                }
             }
         }
     }

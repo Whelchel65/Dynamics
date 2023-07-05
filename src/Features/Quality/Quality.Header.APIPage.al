@@ -1,4 +1,4 @@
-page 50678 "API Posted Work_Packages Heade"
+page 50696 "API Quality HeaderSOD"
 {
     PageType = API;
 
@@ -6,13 +6,13 @@ page 50678 "API Posted Work_Packages Heade"
     APIPublisher = 'hougaard';
     APIGroup = 'SOD';
 
-    EntityCaption = 'Posted Work Package Header';
-    EntitySetCaption = 'Posted Work Package Headers';
-    EntityName = 'postedwork_packagesheader';
-    EntitySetName = 'postedwork_packagesheaders';
+    EntityCaption = 'Quality Header';
+    EntitySetCaption = 'Quality Headers';
+    EntityName = 'qualityheader';
+    EntitySetName = 'qualityheaders';
 
     ODataKeyFields = SystemId;
-    SourceTable = "Posted Work_Packages HeaderSOD";
+    SourceTable = "Quality HeaderSOD";
 
     Extensible = false;
     DelayedInsert = true;
@@ -27,9 +27,9 @@ page 50678 "API Posted Work_Packages Heade"
                     Caption = 'SystemId';
                     Editable = false;
                 }
-                field(wp_no; Rec."WP_No")
+                field(quality_no; Rec."Quality_No")
                 {
-                    Caption = 'WP No';
+                    Caption = 'Quality No';
                 }
                 field(description; Rec."Description")
                 {
@@ -39,17 +39,25 @@ page 50678 "API Posted Work_Packages Heade"
                 {
                     Caption = 'Status';
                 }
+                field(sharepoint_link; Rec."SharePoint_Link")
+                {
+                    Caption = 'SharePoint Link';
+                }
+                field(drawing_number; Rec."Drawing_Number")
+                {
+                    Caption = 'Drawing Number';
+                }
                 field(notes; Rec."Notes")
                 {
                     Caption = 'Notes';
                 }
-                field(drawing_no; Rec."Drawing_No")
+                field(employee; Rec."Employee")
                 {
-                    Caption = 'Drawing No';
+                    Caption = 'Work Performed By';
                 }
-                field(drawing_attachment; Rec."Drawing_Attachment")
+                field(job_no; Rec."Job_No")
                 {
-                    Caption = 'Drawing Attachment';
+                    Caption = 'Job No';
                 }
             }
         }

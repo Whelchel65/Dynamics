@@ -1,18 +1,18 @@
-page 50674 "Posted Work_PackagesCard"
+page 50690 "QualityList"
 {
-    PageType = Document;
-    SourceTable = "Posted Work_Packages HeaderSOD";
-    Caption = 'Posted Work Package Card';
-    Editable = false;
-
+    PageType = List;
+    SourceTable = "Quality HeaderSOD";
+    Caption = 'Quality List';
+    CardPageId = "QualityCard";
+    UsageCategory = Lists;
+    ApplicationArea = all;
     layout
     {
         area(content)
         {
-            group(GeneralGrp)
+            repeater(Rep)
             {
-                Caption = 'General';
-                field(WP_No; Rec.WP_No)
+                field(Quality_No; Rec.Quality_No)
                 {
                     ApplicationArea = All;
                 }
@@ -24,25 +24,23 @@ page 50674 "Posted Work_PackagesCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Notes; Rec.Notes)
-                {
-                    ApplicationArea = All;
-                    MultiLine = true;
-                }
-                field(Drawing_No; Rec.Drawing_No)
+                field(Job_No; Rec.Job_No)
                 {
                     ApplicationArea = All;
                 }
-                field(Drawing_Attachment; Rec.Drawing_Attachment)
+                field(SharePoint_Link; Rec.SharePoint_Link)
                 {
                     ApplicationArea = All;
                 }
-            }
+                field(Drawing_Number; Rec.Drawing_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Employee; Rec.Employee)
+                {
+                    ApplicationArea = All;
+                }
 
-            part(LinesPart; "Posted Work_PackagesListPart")
-            {
-                ApplicationArea = all;
-                SubPageLink = "WP_No" = FIELD("WP_No");
             }
         }
     }

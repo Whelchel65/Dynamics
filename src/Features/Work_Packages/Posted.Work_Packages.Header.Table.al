@@ -32,6 +32,11 @@ table 50672 "Posted Work_Packages HeaderSOD"
             Caption = 'Drawing No';
             DataClassification = ToBeClassified;
         }
+        field(9; Drawing_Attachment; Media)
+        {
+            Caption = 'Drawing Attachment';
+            DataClassification = ToBeClassified;
+        }
 
 
     }

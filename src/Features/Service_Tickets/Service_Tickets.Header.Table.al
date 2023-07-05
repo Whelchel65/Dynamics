@@ -133,6 +133,18 @@ table 50630 "Service_Tickets HeaderSOD"
             Editable = false;
             CalcFormula = lookup(URLsSOD.URL where(Description = filter('Escalation Flow')));
         }
+        field(505126; Sales_Quote; Code[20])
+        {
+            Caption = 'Sales Quote';
+            DataClassification = ToBeClassified;
+            TableRelation = "Sales Header"."No.";
+        }
+        field(505127; Sales_Order; Code[20])
+        {
+            Caption = 'Sales Order';
+            DataClassification = ToBeClassified;
+            TableRelation = "Sales Header"."No.";
+        }
 
 
     }

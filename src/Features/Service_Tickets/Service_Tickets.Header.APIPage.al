@@ -111,6 +111,14 @@ page 50636 "API Service_Tickets HeaderSOD"
                 {
                     Caption = 'Send Escalation';
                 }
+                field(sales_quote; Rec."Sales_Quote")
+                {
+                    Caption = 'Sales Quote';
+                }
+                field(sales_order; Rec."Sales_Order")
+                {
+                    Caption = 'Sales Order';
+                }
             }
         }
     }
