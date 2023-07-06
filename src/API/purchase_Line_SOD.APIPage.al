@@ -1,4 +1,4 @@
-page 50701 "API P50701 SOD"
+page 50702 "API P50702 SOD"
 {
     PageType = API;
 
