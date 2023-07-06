@@ -82,6 +82,12 @@ tableextension 50500 "SODItem" extends "Item"
             Caption = 'Horse_Power';
             DataClassification = ToBeClassified;
         }
+        field(50517;"Standard_Item"; Option)
+        {
+            Caption = 'Standard_Item';
+            DataClassification = ToBeClassified;
+            OptionMembers = "","Standard";
+        }
 
     }
 }

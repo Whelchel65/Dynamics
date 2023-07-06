@@ -2,31 +2,9 @@ pageextension 50500 "SODItem_Card" extends "Item Card"
 {
     layout
     {
-        AddAfter("Description")
-        {
-            field("Search Description_SOD"; Rec."Search Description")
-            {
-                ApplicationArea = all;
-            }
-        }
-        AddAfter("Vendor No.")
-        {
-            field("Vendor_Name_SOD"; Rec."Vendor_Name")
-            {
-                ApplicationArea = all;
-                Enabled = false;
-            }
-        }
         AddBefore("Type")
         {
             field("ManfName_SOD"; Rec."ManfName")
-            {
-                ApplicationArea = all;
-            }
-        }
-        AddAfter("Vendor Item No.")
-        {
-            field("ManfPartNum_SOD"; Rec."ManfPartNum")
             {
                 ApplicationArea = all;
             }
@@ -38,74 +16,76 @@ pageextension 50500 "SODItem_Card" extends "Item Card"
                 ApplicationArea = all;
             }
         }
+        AddAfter("Description")
+        {
+            field("Search Description_SOD"; Rec."Search Description")
+            {
+                ApplicationArea = all;
+            }
+        }
         AddAfter("Sales Blocked")
         {
             field("Size_SOD"; Rec."Size")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Material_SOD"; Rec."Material")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Connection_SOD"; Rec."Connection")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Normal_Position_SOD"; Rec."Normal_Position")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Voltage_SOD"; Rec."Voltage")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Phase_SOD"; Rec."Phase")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Poles_SOD"; Rec."Poles")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Piping_Type_SOD"; Rec."Piping_Type")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Application_SOD"; Rec."Application")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Sales Blocked")
-        {
             field("Horse_Power_SOD"; Rec."Horse_Power")
             {
                 ApplicationArea = all;
+            }
+        }
+        AddAfter("Search Description")
+        {
+            field("Standard_Item_SOD"; Rec."Standard_Item")
+            {
+                ApplicationArea = all;
+            }
+        }
+        AddAfter("Vendor Item No.")
+        {
+            field("ManfPartNum_SOD"; Rec."ManfPartNum")
+            {
+                ApplicationArea = all;
+            }
+        }
+        AddAfter("Vendor No.")
+        {
+            field("Vendor_Name_SOD"; Rec."Vendor_Name")
+            {
+                ApplicationArea = all;
+                Editable = false;
             }
         }
         modify("Vendor No.")

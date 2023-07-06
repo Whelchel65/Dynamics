@@ -2,23 +2,20 @@ pageextension 50507 "SODPurchase_Order" extends "Purchase Order"
 {
     layout
     {
-        AddAfter("Vendor Order No.")
-        {
-            field("VendorQuote_SOD"; Rec."VendorQuote")
-            {
-                ApplicationArea = all;
-            }
-        }
         AddAfter("Posting Description")
         {
             field("SentToVendor_SOD"; Rec."SentToVendor")
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Posting Description")
-        {
             field("JOBNO_SOD"; Rec."JOBNO")
+            {
+                ApplicationArea = all;
+            }
+        }
+        AddAfter("Vendor Order No.")
+        {
+            field("VendorQuote_SOD"; Rec."VendorQuote")
             {
                 ApplicationArea = all;
             }

@@ -2,16 +2,16 @@ pageextension 50526 "SODOpportunity_Card" extends "Opportunity Card"
 {
     layout
     {
-        AddAfter("Creation Date")
+        AddBefore("Date Closed")
         {
-            field("NextFllwUp_SOD"; Rec."NextFllwUp")
+            field("LastInteraction_SOD"; Rec."LastInteraction")
             {
                 ApplicationArea = all;
             }
         }
-        AddBefore("Date Closed")
+        AddAfter("Creation Date")
         {
-            field("LastInteraction_SOD"; Rec."LastInteraction")
+            field("NextFllwUp_SOD"; Rec."NextFllwUp")
             {
                 ApplicationArea = all;
             }

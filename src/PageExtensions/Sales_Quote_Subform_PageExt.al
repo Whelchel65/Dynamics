@@ -2,16 +2,16 @@ pageextension 50511 "SODSales_Quote_Subform" extends "Sales Quote Subform"
 {
     layout
     {
-        AddBefore("Quantity")
+        AddBefore("No.")
         {
-            field("Line No._SOD"; Rec."Line No.")
+            field("LineNumber_SOD"; Rec."LineNumber")
             {
                 ApplicationArea = all;
             }
         }
-        AddBefore("No.")
+        AddBefore("Quantity")
         {
-            field("LineNumber_SOD"; Rec."LineNumber")
+            field("Line No._SOD"; Rec."Line No.")
             {
                 ApplicationArea = all;
             }

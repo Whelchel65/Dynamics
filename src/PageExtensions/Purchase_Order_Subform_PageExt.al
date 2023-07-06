@@ -8,9 +8,6 @@ pageextension 50509 "SODPurchase_Order_Subform" extends "Purchase Order Subform"
             {
                 ApplicationArea = all;
             }
-        }
-        AddAfter("Description")
-        {
             field("CostCode_SOD"; Rec."CostCode")
             {
                 ApplicationArea = all;

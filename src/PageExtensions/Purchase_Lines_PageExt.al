@@ -7,7 +7,7 @@ pageextension 50521 "SODPurchase_Lines" extends "Purchase Lines"
             field("Vendor_Name_SOD"; Rec."Vendor_Name")
             {
                 ApplicationArea = all;
-                Enabled = false;
+                Editable = false;
             }
         }
         AddAfter("Description")

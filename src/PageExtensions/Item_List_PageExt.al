@@ -2,6 +2,13 @@ pageextension 50501 "SODItem_List" extends "Item List"
 {
     layout
     {
+        AddBefore("Type")
+        {
+            field("ManfName_SOD"; Rec."ManfName")
+            {
+                ApplicationArea = all;
+            }
+        }
         AddAfter("Description")
         {
             field("Search Description_SOD"; Rec."Search Description")
@@ -14,14 +21,7 @@ pageextension 50501 "SODItem_List" extends "Item List"
             field("Vendor_Name_SOD"; Rec."Vendor_Name")
             {
                 ApplicationArea = all;
-                Enabled = false;
-            }
-        }
-        AddBefore("Type")
-        {
-            field("ManfName_SOD"; Rec."ManfName")
-            {
-                ApplicationArea = all;
+                Editable = false;
             }
         }
 

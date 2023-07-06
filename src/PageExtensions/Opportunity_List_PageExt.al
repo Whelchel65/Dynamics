@@ -2,16 +2,16 @@ pageextension 50525 "SODOpportunity_List" extends "Opportunity List"
 {
     layout
     {
-        AddAfter("Estimated Closing Date")
+        AddBefore("Estimated Closing Date")
         {
-            field("NextFllwUp_SOD"; Rec."NextFllwUp")
+            field("LastInteraction_SOD"; Rec."LastInteraction")
             {
                 ApplicationArea = all;
             }
         }
-        AddBefore("Estimated Closing Date")
+        AddAfter("Estimated Closing Date")
         {
-            field("LastInteraction_SOD"; Rec."LastInteraction")
+            field("NextFllwUp_SOD"; Rec."NextFllwUp")
             {
                 ApplicationArea = all;
             }

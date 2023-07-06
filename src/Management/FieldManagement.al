@@ -412,6 +412,16 @@ codeunit 50500 "Field Transfers Mgt. SOD"
    begin
 
    end;
+   [EventSubscriber(ObjectType::Codeunit, CODEUNIT::"Req. Wksh.-Make Order", 'OnAfterInitPurchOrderLine', '', true, true)]
+   local procedure OnBeforeInsertPurchOrderLine(RequisitionLine: Record "Requisition Line";var PurchaseLine: Record "Purchase Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Codeunit, CODEUNIT::"Req. Wksh.-Make Order", 'OnBeforePurchOrderHeaderInsert', '', true, true)]
+   local procedure OnInsertHeaderOnBeforeValidateSellToCustNoFromReqLine(RequisitionLine: Record "Requisition Line"; var PurchaseHeader: Record "Purchase Header")
+   begin
+
+   end;
 procedure DataCaption(VarRec: Variant): Text
     var
         Ref: RecordRef;

@@ -49,6 +49,12 @@ table 50681 "MTL_Request LineSOD"
             DataClassification = ToBeClassified;
             OptionMembers = "Requested","Review","Approved";
         }
+        field(15; UOM; Code[20])
+        {
+            Caption = 'UOM';
+            DataClassification = ToBeClassified;
+            TableRelation = Item."No." where("Base Unit of Measure" = field(Item_Number));
+        }
 
         field(99999; "Line No."; Integer)
         {

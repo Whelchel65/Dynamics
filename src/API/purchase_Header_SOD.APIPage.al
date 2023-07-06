@@ -20,7 +20,7 @@ page 50700 "API P50700 SOD"
     {
         area(content)
         {
-            repeater(Group)
+            repeater(APIRepeaterSOD)
             {
                 field(id; Rec.SystemId)
                 {

@@ -55,6 +55,10 @@ page 50689 "API Posted MTL_Request LineSOD"
                 {
                     Caption = 'Status';
                 }
+                field(uom; Rec."UOM")
+                {
+                    Caption = 'UOM';
+                }
             }
         }
     }

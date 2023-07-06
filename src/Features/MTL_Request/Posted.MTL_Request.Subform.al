@@ -20,6 +20,10 @@ page 50685 "Posted MTL_RequestListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(UOM; Rec.UOM)
+                {
+                    ApplicationArea = All;
+                }
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
