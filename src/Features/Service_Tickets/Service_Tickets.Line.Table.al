@@ -27,6 +27,12 @@ table 50631 "Service_Tickets LineSOD"
             Caption = 'Line Date';
             DataClassification = ToBeClassified;
         }
+        field(505200;Line_Status; Option)
+        {
+            Caption = 'Line Status';
+            DataClassification = ToBeClassified;
+            OptionMembers = "","New","In Progress","Completed";
+        }
 
         field(99999; "Line No."; Integer)
         {

@@ -42,6 +42,10 @@ page 50683 "Posted MTL_RequestList"
                 {
                     ApplicationArea = All;
                 }
+                field(PO_Number; Rec.PO_Number)
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }

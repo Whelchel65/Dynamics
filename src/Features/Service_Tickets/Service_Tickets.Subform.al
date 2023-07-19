@@ -23,6 +23,10 @@ page 50632 "Service_TicketsListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(Line_Status; Rec.Line_Status)
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }

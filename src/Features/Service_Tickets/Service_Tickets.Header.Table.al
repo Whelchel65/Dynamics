@@ -55,7 +55,7 @@ table 50630 "Service_Tickets HeaderSOD"
             Caption = 'Date_Service_Completed';
             DataClassification = ToBeClassified;
         }
-        field(505113; Sharepoint_URL; Text[100])
+        field(505113; Sharepoint_URL; Text[1000])
         {
             Caption = 'Sharepoint URL';
             DataClassification = ToBeClassified;
@@ -126,7 +126,7 @@ table 50630 "Service_Tickets HeaderSOD"
             DataClassification = ToBeClassified;
             OptionMembers = "","Low","High","Urgent";
         }
-        field(505125;"Send_Escalation"; Text[400])
+        field(505125;"Send_Escalation"; Text[1000])
         {
             Caption = 'Send Escalation';
             FieldClass = FlowField;

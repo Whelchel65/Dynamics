@@ -45,6 +45,10 @@ page 50681 "MTL_RequestCard"
                     ApplicationArea = All;
                     MultiLine = true;
                 }
+                field(PO_Number; Rec.PO_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
             part(LinesPart; "MTL_RequestListPart")

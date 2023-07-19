@@ -59,6 +59,10 @@ page 50688 "API Posted MTL_Request HeaderS"
                 {
                     Caption = 'Status';
                 }
+                field(po_number; Rec."PO_Number")
+                {
+                    Caption = 'PO Number';
+                }
             }
         }
     }

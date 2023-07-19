@@ -59,6 +59,10 @@ page 50686 "API MTL_Request HeaderSOD"
                 {
                     Caption = 'Status';
                 }
+                field(po_number; Rec."PO_Number")
+                {
+                    Caption = 'PO Number';
+                }
             }
         }
     }

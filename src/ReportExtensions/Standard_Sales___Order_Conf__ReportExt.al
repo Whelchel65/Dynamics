@@ -5,6 +5,18 @@ Reportextension 50507 "SODStandard_Sales___Order_Conf" extends "Standard Sales -
     {
         add("Line")
         {
+            column("Unit_of_Measure_Code_Line_SOD"; "Line"."Unit of Measure Code")
+            {
+            }
+        }
+        add("Line")
+        {
+            column("Unit_of_Measure_Code_Line_Lbl_SOD"; "Line".FieldCaption("Unit of Measure Code"))
+            {
+            }
+        }
+        add("Line")
+        {
             column("LineNumber_Line_SOD"; "Line"."LineNumber")
             {
             }

@@ -3,6 +3,18 @@ Reportextension 50506 "SODStandard_Sales___Quote" extends "Standard Sales - Quot
 
     dataset
     {
+        add("Line")
+        {
+            column("Unit_of_Measure_Code_Line_SOD"; "Line"."Unit of Measure Code")
+            {
+            }
+        }
+        add("Line")
+        {
+            column("Unit_of_Measure_Code_Line_Lbl_SOD"; "Line".FieldCaption("Unit of Measure Code"))
+            {
+            }
+        }
         add("Header")
         {
             column("Quote_Expiration_Header_SOD"; "Header"."Quote_Expiration")

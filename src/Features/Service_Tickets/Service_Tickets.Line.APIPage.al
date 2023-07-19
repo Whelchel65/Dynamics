@@ -43,6 +43,10 @@ page 50637 "API Service_Tickets LineSOD"
                 {
                     Caption = 'Line Date';
                 }
+                field(line_status; Rec."Line_Status")
+                {
+                    Caption = 'Line Status';
+                }
             }
         }
     }

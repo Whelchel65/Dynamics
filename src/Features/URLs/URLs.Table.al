@@ -17,7 +17,7 @@ table 50650 "URLsSOD"
             Caption = 'Description';
             DataClassification = ToBeClassified;
         }
-        field(505102; URL; Text[400])
+        field(505102; URL; Text[1000])
         {
             Caption = 'URL';
             DataClassification = ToBeClassified;
