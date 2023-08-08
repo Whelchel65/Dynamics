@@ -31,29 +31,33 @@ page 50699 "API Posted Quality LineSOD"
                 {
                     Caption = 'Quality No';
                 }
-                field(ncr_item; Rec."NCR_Item")
+                field(item; Rec."Item")
                 {
-                    Caption = 'NCR Item';
+                    Caption = 'Item';
                 }
-                field(fault_description; Rec."Fault_Description")
+                field(line_description; Rec."Line_Description")
                 {
-                    Caption = 'Fault Description';
+                    Caption = 'Description';
                 }
-                field(ncr_status; Rec."NCR_Status")
+                field(line_status; Rec."Line_Status")
                 {
-                    Caption = 'NCR Status';
+                    Caption = 'Item Status';
                 }
                 field(date_found; Rec."Date_Found")
                 {
-                    Caption = 'Date Found';
+                    Caption = 'Date Completed';
                 }
                 field(date_fixed; Rec."Date_Fixed")
                 {
-                    Caption = 'Date Fixed';
+                    Caption = 'Date Fault Fixed';
                 }
                 field(corrected_by; Rec."Corrected_By")
                 {
                     Caption = 'Corrected By';
+                }
+                field(solution; Rec."Solution")
+                {
+                    Caption = 'Solution/Notes';
                 }
             }
         }

@@ -55,6 +55,14 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Project_Time Number series';
                 }
+                field(sales_prospects_number; Rec."Sales_Prospects_Number")
+                {
+                    Caption = 'Sales_Prospects Number series';
+                }
+                field(sales_leads_number; Rec."Sales_Leads_Number")
+                {
+                    Caption = 'Sales_Leads Number series';
+                }
             }
         }
     }

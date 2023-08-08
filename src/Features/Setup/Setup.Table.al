@@ -47,6 +47,18 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(9; Sales_Prospects_Number; Code[20])
+        {
+            Caption = 'Sales_Prospects Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(10; Sales_Leads_Number; Code[20])
+        {
+            Caption = 'Sales_Leads Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }

@@ -1,7 +1,7 @@
 table 50631 "Service_Tickets LineSOD"
 {
     TableType = Normal;
-    Caption = 'Service Tickets';
+    Caption = 'Service Tickets Line';
     LookupPageId = 50630;
     fields
     {

@@ -24,6 +24,10 @@ page 50685 "Posted MTL_RequestListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(Desc; Rec.Desc)
+                {
+                    ApplicationArea = All;
+                }
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = All;

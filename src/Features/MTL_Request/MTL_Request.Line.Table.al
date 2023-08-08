@@ -1,7 +1,7 @@
 table 50681 "MTL_Request LineSOD"
 {
     TableType = Normal;
-    Caption = 'Material Request';
+    Caption = 'Material Request Line';
     LookupPageId = 50680;
     fields
     {
@@ -49,11 +49,17 @@ table 50681 "MTL_Request LineSOD"
             DataClassification = ToBeClassified;
             OptionMembers = "Requested","Review","Approved";
         }
-        field(15; UOM; Code[20])
+        field(15;"UOM"; Code[10])
         {
             Caption = 'UOM';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup(Item."Base Unit of Measure" where("No." = field(Item_Number)));
+        }
+        field(17; Desc; Text[500])
+        {
+            Caption = 'Notes/Description';
             DataClassification = ToBeClassified;
-            TableRelation = Item."No." where("Base Unit of Measure" = field(Item_Number));
         }
 
         field(99999; "Line No."; Integer)

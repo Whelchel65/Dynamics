@@ -1,7 +1,7 @@
 table 50680 "MTL_Request HeaderSOD"
 {
     TableType = Normal;
-    Caption = 'Material Request';
+    Caption = 'Material Request Header';
     LookupPageId = 50680;
     fields
     {

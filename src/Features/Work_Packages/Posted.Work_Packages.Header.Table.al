@@ -1,7 +1,7 @@
 table 50672 "Posted Work_Packages HeaderSOD"
 {
     TableType = Normal;
-    Caption = 'Work Package';
+    Caption = 'Posted Work Package Header';
     LookupPageId = 50670;
     fields
     {

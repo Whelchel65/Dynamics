@@ -3,7 +3,9 @@ permissionset 50500 "My Customizations"
     Caption = 'My Customizations';
     Access = Public;
     Assignable = true;
-    Permissions =                   tabledata "Cost_CodeSOD" = RIMD,
+    Permissions =                   tabledata "Asset_Maintenance HeaderSOD" = RIMD,
+                  tabledata "Asset_Maintenance LineSOD" = RIMD,
+                  tabledata "Cost_CodeSOD" = RIMD,
                   table "Cost_CodeSOD" = X,
                   tabledata "FileTypeSOD" = RIMD,
                   table "FileTypeSOD" = X,
@@ -19,6 +21,10 @@ permissionset 50500 "My Customizations"
                   tabledata "Quality LineSOD" = RIMD,
                   tabledata "Posted Quality HeaderSOD" = RIMD,
                   tabledata "Posted Quality LineSOD" = RIMD,
+                  tabledata "Sales_Leads HeaderSOD" = RIMD,
+                  tabledata "Sales_Leads LineSOD" = RIMD,
+                  tabledata "Closed Sales_Leads HeaderSOD" = RIMD,
+                  tabledata "Closed Sales_Leads LineSOD" = RIMD,
                   tabledata "Service_Tickets HeaderSOD" = RIMD,
                   tabledata "Service_Tickets LineSOD" = RIMD,
                   tabledata "SetupSOD" = RIMD,

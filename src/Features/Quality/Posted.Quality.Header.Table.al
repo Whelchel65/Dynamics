@@ -1,7 +1,7 @@
 table 50692 "Posted Quality HeaderSOD"
 {
     TableType = Normal;
-    Caption = 'Quality';
+    Caption = 'Posted Quality Header';
     LookupPageId = 50690;
     fields
     {

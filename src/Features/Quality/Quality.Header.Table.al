@@ -1,7 +1,7 @@
 table 50690 "Quality HeaderSOD"
 {
     TableType = Normal;
-    Caption = 'Quality';
+    Caption = 'Quality Header';
     LookupPageId = 50690;
     fields
     {

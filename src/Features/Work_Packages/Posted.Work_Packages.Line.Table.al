@@ -1,7 +1,7 @@
 table 50673 "Posted Work_Packages LineSOD"
 {
     TableType = Normal;
-    Caption = 'Work Package';
+    Caption = 'Posted Work Package Line';
     LookupPageId = 50670;
     fields
     {

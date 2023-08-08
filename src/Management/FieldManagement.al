@@ -422,6 +422,27 @@ codeunit 50500 "Field Transfers Mgt. SOD"
    begin
 
    end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Purchase Header", 'OnAfterTransferSavedFields', '', true, true)]
+   local procedure OnAfterTransferSavedFields(SourcePurchaseLine: Record "Purchase Line"; var DestinationPurchaseLine: Record "Purchase Line")
+   begin
+        "DestinationPurchaseLine"."Vendor_Name" := "SourcePurchaseLine"."Vendor_Name";
+        "DestinationPurchaseLine"."CostCode" := "SourcePurchaseLine"."CostCode";
+
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Purchase Header", 'OnBeforeTransferSavedFieldsDropShipment', '', true, true)]
+   local procedure OnBeforeTransferSavedFieldsDropShipment(SourcePurchaseLine: Record "Purchase Line"; var DestinationPurchaseLine: Record "Purchase Line")
+   begin
+        "DestinationPurchaseLine"."Vendor_Name" := "SourcePurchaseLine"."Vendor_Name";
+        "DestinationPurchaseLine"."CostCode" := "SourcePurchaseLine"."CostCode";
+
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Purchase Header", 'OnBeforeTransferSavedFieldsSpecialOrder', '', true, true)]
+   local procedure OnBeforeTransferSavedFieldsSpecialOrder(SourcePurchaseLine: Record "Purchase Line"; var DestinationPurchaseLine: Record "Purchase Line")
+   begin
+        "DestinationPurchaseLine"."Vendor_Name" := "SourcePurchaseLine"."Vendor_Name";
+        "DestinationPurchaseLine"."CostCode" := "SourcePurchaseLine"."CostCode";
+
+   end;
 procedure DataCaption(VarRec: Variant): Text
     var
         Ref: RecordRef;

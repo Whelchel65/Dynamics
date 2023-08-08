@@ -23,6 +23,10 @@ page 50682 "MTL_RequestListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(Desc; Rec.Desc)
+                {
+                    ApplicationArea = All;
+                }
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = All;

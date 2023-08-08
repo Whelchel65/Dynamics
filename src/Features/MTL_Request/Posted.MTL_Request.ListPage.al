@@ -49,6 +49,24 @@ page 50683 "Posted MTL_RequestList"
 
             }
         }
+        area(factboxes)
+        {
+            part("Attached Documents"; "Document Attachment Factbox")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments';
+                SubPageLink = "Table ID" = CONST(50680),"No." = FIELD(Request_No);
+            }
+            systempart(Control1900383207; Links)
+            {
+                ApplicationArea = RecordLinks;
+                Visible = false;
+            }
+            systempart(Control1905767507; Notes)
+            {
+                ApplicationArea = Notes;
+            }
+        }
     }
     actions
     {

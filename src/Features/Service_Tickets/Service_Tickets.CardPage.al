@@ -119,6 +119,24 @@ page 50631 "Service_TicketsCard"
                 SubPageLink = "Ticket_No" = FIELD("Ticket_No");
             }
         }
+        area(factboxes)
+        {
+            part("Attached Documents"; "Document Attachment Factbox")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments';
+                SubPageLink = "Table ID" = CONST(50630),"No." = FIELD(Ticket_No);
+            }
+            systempart(Control1900383207; Links)
+            {
+                ApplicationArea = RecordLinks;
+                Visible = false;
+            }
+            systempart(Control1905767507; Notes)
+            {
+                ApplicationArea = Notes;
+            }
+        }
     }
     actions
     {

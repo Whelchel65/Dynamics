@@ -44,6 +44,24 @@ page 50693 "Posted QualityList"
 
             }
         }
+        area(factboxes)
+        {
+            part("Attached Documents"; "Document Attachment Factbox")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments';
+                SubPageLink = "Table ID" = CONST(50690),"No." = FIELD(Quality_No);
+            }
+            systempart(Control1900383207; Links)
+            {
+                ApplicationArea = RecordLinks;
+                Visible = false;
+            }
+            systempart(Control1905767507; Notes)
+            {
+                ApplicationArea = Notes;
+            }
+        }
     }
     actions
     {

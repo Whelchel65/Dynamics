@@ -2,7 +2,7 @@
 "id": "AE4898B1-F15C-4478-9336-F8809D1E1301",
 "name": "My Customizations",
 "publisher": "WSI Production",
-"version": "1.0.0.299",
+"version": "1.0.0.315",
 "runtime": "8.0",
 "target": "Cloud",
 "platform": "1.0.0.0",
@@ -16,13 +16,13 @@
   {
     "id": "adc18994-073b-4840-a144-2a5e3a0d9d1e",
     "name": "DIOT - Localization for Mexico",
-    "version": "22.2.56969.57617",
+    "version": "22.3.58346.58585",
     "publisher": "Microsoft"
   },
   {
     "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
     "name": "Base Application",
-    "version": "22.2.56969.58645",
+    "version": "22.3.58346.59239",
     "publisher": "Microsoft"
   }],
 "idRanges": [

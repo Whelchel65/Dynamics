@@ -2,7 +2,7 @@ page 50695 "Posted QualityListPart"
 {
     PageType = ListPart;
     SourceTable = "Posted Quality LineSOD";
-    Caption = 'Non Conformance Lines';
+    Caption = 'Line Items';
     AutoSplitKey = true;
     Editable = false;
 
@@ -12,15 +12,15 @@ page 50695 "Posted QualityListPart"
         {
             repeater(Rep)
             {
-                field(NCR_Item; Rec.NCR_Item)
+                field(Item; Rec.Item)
                 {
                     ApplicationArea = All;
                 }
-                field(Fault_Description; Rec.Fault_Description)
+                field(Line_Description; Rec.Line_Description)
                 {
                     ApplicationArea = All;
                 }
-                field(NCR_Status; Rec.NCR_Status)
+                field(Line_Status; Rec.Line_Status)
                 {
                     ApplicationArea = All;
                 }
@@ -33,6 +33,10 @@ page 50695 "Posted QualityListPart"
                     ApplicationArea = All;
                 }
                 field(Corrected_By; Rec.Corrected_By)
+                {
+                    ApplicationArea = All;
+                }
+                field(Solution; Rec.Solution)
                 {
                     ApplicationArea = All;
                 }

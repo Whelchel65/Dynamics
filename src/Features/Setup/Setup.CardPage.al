@@ -36,6 +36,14 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Sales_Prospects_Number; Rec.Sales_Prospects_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Sales_Leads_Number; Rec.Sales_Leads_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 
@@ -47,4 +55,9 @@ page 50641 "SetupCard"
         {
         }
     }
+    trigger OnInit()
+    begin
+        if Rec.IsEmpty() then
+            Rec.Insert();
+    end;
 }

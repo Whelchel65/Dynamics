@@ -45,6 +45,24 @@ page 50674 "Posted Work_PackagesCard"
                 SubPageLink = "WP_No" = FIELD("WP_No");
             }
         }
+        area(factboxes)
+        {
+            part("Attached Documents"; "Document Attachment Factbox")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments';
+                SubPageLink = "Table ID" = CONST(50670),"No." = FIELD(WP_No);
+            }
+            systempart(Control1900383207; Links)
+            {
+                ApplicationArea = RecordLinks;
+                Visible = false;
+            }
+            systempart(Control1905767507; Notes)
+            {
+                ApplicationArea = Notes;
+            }
+        }
     }
     actions
     {
