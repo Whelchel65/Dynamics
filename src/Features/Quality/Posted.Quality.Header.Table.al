@@ -22,12 +22,6 @@ table 50692 "Posted Quality HeaderSOD"
             DataClassification = ToBeClassified;
             OptionMembers = "","In Production","Ready for Inspection","Rework Needed","Approved";
         }
-        field(4; SharePoint_Link; Text[250])
-        {
-            Caption = 'SharePoint Link';
-            DataClassification = ToBeClassified;
-            ExtendedDataType = URL;
-        }
         field(5; Drawing_Number; Text[50])
         {
             Caption = 'Drawing Number';

@@ -27,15 +27,7 @@ page 50691 "QualityCard"
                 {
                     ApplicationArea = All;
                 }
-                field(SharePoint_Link; Rec.SharePoint_Link)
-                {
-                    ApplicationArea = All;
-                }
                 field(Drawing_Number; Rec.Drawing_Number)
-                {
-                    ApplicationArea = All;
-                }
-                field(Employee; Rec.Employee)
                 {
                     ApplicationArea = All;
                 }
@@ -43,6 +35,10 @@ page 50691 "QualityCard"
                 {
                     ApplicationArea = All;
                     MultiLine = true;
+                }
+                field(Employee; Rec.Employee)
+                {
+                    ApplicationArea = All;
                 }
             }
 

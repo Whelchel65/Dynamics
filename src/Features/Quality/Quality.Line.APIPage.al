@@ -59,6 +59,10 @@ page 50697 "API Quality LineSOD"
                 {
                     Caption = 'Solution/Notes';
                 }
+                field(checked_by; Rec."Checked_By")
+                {
+                    Caption = 'Checked By';
+                }
             }
         }
     }

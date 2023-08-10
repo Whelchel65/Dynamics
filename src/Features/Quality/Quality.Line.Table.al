@@ -47,6 +47,12 @@ table 50691 "Quality LineSOD"
             Caption = 'Solution/Notes';
             DataClassification = ToBeClassified;
         }
+        field(16;Checked_By; Option)
+        {
+            Caption = 'Checked By';
+            DataClassification = ToBeClassified;
+            OptionMembers = "-","Andrew","Ben","John","Poe","Randy";
+        }
 
         field(99999; "Line No."; Integer)
         {

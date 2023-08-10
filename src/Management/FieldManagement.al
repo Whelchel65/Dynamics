@@ -443,6 +443,15 @@ codeunit 50500 "Field Transfers Mgt. SOD"
         "DestinationPurchaseLine"."CostCode" := "SourcePurchaseLine"."CostCode";
 
    end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Cust. Entry-Edit", 'OnBeforeCustLedgEntryModify', '', true,true)]
+   local procedure OnBeforeCustLedgEntryModify(FromCustLedgEntry: Record "Cust. Ledger Entry";var CustLedgEntry: Record "Cust. Ledger Entry")
+   begin
+
+   end;   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Vend. Entry-Edit", 'OnBeforeVendLedgEntryModify', '', true,true)]
+   local procedure OnBeforeVendLedgEntryModify(FromVendLedgEntry: Record "Vendor Ledger Entry";var VendLedgEntry: Record "Vendor Ledger Entry")
+   begin
+
+   end;
 procedure DataCaption(VarRec: Variant): Text
     var
         Ref: RecordRef;

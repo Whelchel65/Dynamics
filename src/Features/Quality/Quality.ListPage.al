@@ -28,10 +28,6 @@ page 50690 "QualityList"
                 {
                     ApplicationArea = All;
                 }
-                field(SharePoint_Link; Rec.SharePoint_Link)
-                {
-                    ApplicationArea = All;
-                }
                 field(Drawing_Number; Rec.Drawing_Number)
                 {
                     ApplicationArea = All;

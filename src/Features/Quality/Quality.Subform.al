@@ -19,6 +19,10 @@ page 50692 "QualityListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(Checked_By; Rec.Checked_By)
+                {
+                    ApplicationArea = All;
+                ToolTip = 'Only to be checked by user who did it';                }
                 field(Line_Status; Rec.Line_Status)
                 {
                     ApplicationArea = All;

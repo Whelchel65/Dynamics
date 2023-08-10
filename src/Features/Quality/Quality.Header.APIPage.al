@@ -39,10 +39,6 @@ page 50696 "API Quality HeaderSOD"
                 {
                     Caption = 'Status';
                 }
-                field(sharepoint_link; Rec."SharePoint_Link")
-                {
-                    Caption = 'SharePoint Link';
-                }
                 field(drawing_number; Rec."Drawing_Number")
                 {
                     Caption = 'Drawing Number';
