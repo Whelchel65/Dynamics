@@ -11,11 +11,11 @@ page 50740 "StatesList"
         {
             repeater(Rep)
             {
-                field(State; Rec.State)
+                field(State_Name; Rec.State_Name)
                 {
                     ApplicationArea = All;
                 }
-                field(State_Name; Rec.State_Name)
+                field(State; Rec.State)
                 {
                     ApplicationArea = All;
                 }

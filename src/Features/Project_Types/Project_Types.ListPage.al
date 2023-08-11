@@ -11,10 +11,6 @@ page 50730 "Project_TypesList"
         {
             repeater(Rep)
             {
-                field(no; Rec.no)
-                {
-                    ApplicationArea = All;
-                }
                 field(Item; Rec.Item)
                 {
                     ApplicationArea = All;

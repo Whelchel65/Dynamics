@@ -27,10 +27,6 @@ page 50736 "API Project_TypesSOD"
                     Caption = 'SystemId';
                     Editable = false;
                 }
-                field(no; Rec."no")
-                {
-                    Caption = 'no';
-                }
                 field(item; Rec."Item")
                 {
                     Caption = 'Item';

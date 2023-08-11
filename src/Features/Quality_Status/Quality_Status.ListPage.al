@@ -11,10 +11,6 @@ page 50720 "Quality_StatusList"
         {
             repeater(Rep)
             {
-                field(No; Rec.No)
-                {
-                    ApplicationArea = All;
-                }
                 field(Item; Rec.Item)
                 {
                     ApplicationArea = All;

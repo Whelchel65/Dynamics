@@ -65,12 +65,6 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
-        field(12; Project_Types_Number; Code[20])
-        {
-            Caption = 'Project_Types Number series';
-            DataClassification = ToBeClassified;
-            TableRelation = "No. Series".Code;
-        }
 
 
     }

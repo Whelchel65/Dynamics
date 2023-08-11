@@ -113,12 +113,11 @@ table 50710 "Sales_Leads HeaderSOD"
             Caption = 'Project Duration (weeks)';
             DataClassification = ToBeClassified;
         }
-        field(28;"Project_Type"; Text[50])
+        field(28; Project_Type; Code[20])
         {
             Caption = 'Project Type';
-            FieldClass = FlowField;
-            Editable = false;
-            CalcFormula = lookup(Project_TypesSOD.Item);
+            DataClassification = ToBeClassified;
+            TableRelation = Project_TypesSOD.Item;
         }
         field(29; Design_Flow; Integer)
         {
@@ -130,12 +129,11 @@ table 50710 "Sales_Leads HeaderSOD"
             Caption = 'Effluent Target';
             DataClassification = ToBeClassified;
         }
-        field(31;"State"; Text[50])
+        field(31; State; Code[3])
         {
             Caption = 'State';
-            FieldClass = FlowField;
-            Editable = false;
-            CalcFormula = lookup(StatesSOD.State_Name);
+            DataClassification = ToBeClassified;
+            TableRelation = StatesSOD.State;
         }
 
 

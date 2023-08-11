@@ -10,12 +10,12 @@ table 50740 "StatesSOD"
         {
             Caption = 'State';
             DataClassification = ToBeClassified;
-            NotBlank = true;
         }
-        field(2; State_Name; Text[50])
+        field(2; State_Name; Code[20])
         {
             Caption = 'State Name';
             DataClassification = ToBeClassified;
+            NotBlank = true;
         }
         field(3; Country; Text[50])
         {
@@ -27,7 +27,7 @@ table 50740 "StatesSOD"
     }
     keys
     {
-        key(PK;State)
+        key(PK;State_Name)
         {
             Clustered = true;
         }

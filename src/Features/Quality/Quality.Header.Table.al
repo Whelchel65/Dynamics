@@ -16,11 +16,11 @@ table 50690 "Quality HeaderSOD"
             Caption = 'Description';
             DataClassification = ToBeClassified;
         }
-        field(3;Status; Option)
+        field(3; Status; Code[20])
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "","In Production","Ready for Inspection","Rework Needed","Approved";
+            TableRelation = Quality_StatusSOD.Item;
         }
         field(5; Drawing_Number; Text[50])
         {

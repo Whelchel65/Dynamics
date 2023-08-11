@@ -27,10 +27,6 @@ page 50726 "API Quality_StatusSOD"
                     Caption = 'SystemId';
                     Editable = false;
                 }
-                field(no; Rec."No")
-                {
-                    Caption = 'No';
-                }
                 field(item; Rec."Item")
                 {
                     Caption = 'Description';

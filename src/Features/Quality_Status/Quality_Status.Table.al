@@ -6,12 +6,7 @@ table 50720 "Quality_StatusSOD"
     fields
     {
 
-        field(1; No; Code[20])
-        {
-            Caption = 'No';
-            DataClassification = ToBeClassified;
-        }
-        field(2; Item; Text[50])
+        field(2; Item; Code[20])
         {
             Caption = 'Description';
             DataClassification = ToBeClassified;
@@ -26,7 +21,7 @@ table 50720 "Quality_StatusSOD"
     }
     keys
     {
-        key(PK;No)
+        key(PK;Item)
         {
             Clustered = true;
         }
@@ -43,10 +38,10 @@ table 50720 "Quality_StatusSOD"
         OnBeforeInsert(Rec, IsHandled);
         if IsHandled then
             exit;
-        if Rec."No" = '' then begin
+        if Rec."Item" = '' then begin
             Setup.Get();
             Setup.TestField("Quality_Status_Number");
-            NoSeriesMgt.InitSeries(Setup.Quality_Status_Number, '', 0D, No, NewNoSeries);
+            NoSeriesMgt.InitSeries(Setup.Quality_Status_Number, '', 0D, Item, NewNoSeries);
         end;
     end;
    local procedure OnBeforeInsert(var Rec: Record "Quality_StatusSOD"; var IsHandled: Boolean)

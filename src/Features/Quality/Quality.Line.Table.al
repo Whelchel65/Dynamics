@@ -21,11 +21,11 @@ table 50691 "Quality LineSOD"
             Caption = 'Description';
             DataClassification = ToBeClassified;
         }
-        field(9;Line_Status; Option)
+        field(9; Line_Status; Code[20])
         {
             Caption = 'Item Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "Production","Fualt Identified","Rework Scheduled","Ready for Re-Inspection","Approved";
+            TableRelation = Quality_StatusSOD.Item;
         }
         field(10; Date_Found; Date)
         {
