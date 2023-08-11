@@ -43,6 +43,10 @@ page 50719 "API Closed Sales_Leads LineSOD"
                 {
                     Caption = 'Notes';
                 }
+                field(sp_code; Rec."SP_Code")
+                {
+                    Caption = 'Salesperson Code';
+                }
             }
         }
     }

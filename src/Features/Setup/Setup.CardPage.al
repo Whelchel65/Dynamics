@@ -44,6 +44,14 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Quality_Status_Number; Rec.Quality_Status_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Project_Types_Number; Rec.Project_Types_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 

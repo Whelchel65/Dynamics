@@ -113,6 +113,30 @@ table 50712 "Closed Sales_Leads HeaderSOD"
             Caption = 'Project Duration (weeks)';
             DataClassification = ToBeClassified;
         }
+        field(28;"Project_Type"; Text[50])
+        {
+            Caption = 'Project Type';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup(Project_TypesSOD.Item);
+        }
+        field(29; Design_Flow; Integer)
+        {
+            Caption = 'Design Flow (GPD)';
+            DataClassification = ToBeClassified;
+        }
+        field(30; Effluent_Target; Text[100])
+        {
+            Caption = 'Effluent Target';
+            DataClassification = ToBeClassified;
+        }
+        field(31;"State"; Text[50])
+        {
+            Caption = 'State';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup(StatesSOD.State_Name);
+        }
 
 
     }

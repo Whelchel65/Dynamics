@@ -23,6 +23,44 @@ page 50711 "Sales_LeadsCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Stage; Rec.Stage)
+                {
+                    ApplicationArea = All;
+                }
+                field(Success_Probability; Rec.Success_Probability)
+                {
+                    ApplicationArea = All;
+                }
+                field(Estimated_Value; Rec.Estimated_Value)
+                {
+                    ApplicationArea = All;
+                }
+                field(Estimated_Complete_Date; Rec.Estimated_Complete_Date)
+                {
+                    ApplicationArea = All;
+                }
+                field(Projected_Revenue; Rec.Projected_Revenue)
+                {
+                    ApplicationArea = All;
+                    Style = StrongAccent;
+                    Editable = false;
+                }
+                field(Project_Type; Rec.Project_Type)
+                {
+                    ApplicationArea = All;
+                }
+                field(Design_Flow; Rec.Design_Flow)
+                {
+                    ApplicationArea = All;
+                }
+                field(Effluent_Target; Rec.Effluent_Target)
+                {
+                    ApplicationArea = All;
+                }
+                field(State; Rec.State)
+                {
+                    ApplicationArea = All;
+                }
                 field(Contact; Rec.Contact)
                 {
                     ApplicationArea = All;
@@ -47,28 +85,6 @@ page 50711 "Sales_LeadsCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Stage; Rec.Stage)
-                {
-                    ApplicationArea = All;
-                }
-                field(Success_Probability; Rec.Success_Probability)
-                {
-                    ApplicationArea = All;
-                }
-                field(Estimated_Value; Rec.Estimated_Value)
-                {
-                    ApplicationArea = All;
-                }
-                field(Estimated_Complete_Date; Rec.Estimated_Complete_Date)
-                {
-                    ApplicationArea = All;
-                }
-                field(Projected_Revenue; Rec.Projected_Revenue)
-                {
-                    ApplicationArea = All;
-                    Style = StrongAccent;
-                    Editable = false;
-                }
                 field(Project_Duration; Rec.Project_Duration)
                 {
                     ApplicationArea = All;
@@ -77,11 +93,11 @@ page 50711 "Sales_LeadsCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Next_Follow_Up; Rec.Next_Follow_Up)
+                field(Last_Interaction; Rec.Last_Interaction)
                 {
                     ApplicationArea = All;
                 }
-                field(Last_Interaction; Rec.Last_Interaction)
+                field(Next_Follow_Up; Rec.Next_Follow_Up)
                 {
                     ApplicationArea = All;
                 }

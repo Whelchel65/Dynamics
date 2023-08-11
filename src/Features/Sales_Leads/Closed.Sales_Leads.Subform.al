@@ -20,6 +20,10 @@ page 50715 "Closed Sales_LeadsListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(SP_Code; Rec.SP_Code)
+                {
+                    ApplicationArea = All;
+                }
                 field(LineNotes; Rec.LineNotes)
                 {
                     ApplicationArea = All;

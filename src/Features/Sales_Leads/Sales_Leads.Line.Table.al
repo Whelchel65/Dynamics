@@ -27,6 +27,12 @@ table 50711 "Sales_Leads LineSOD"
             Caption = 'Notes';
             DataClassification = ToBeClassified;
         }
+        field(27; SP_Code; Code[20])
+        {
+            Caption = 'Salesperson Code';
+            DataClassification = ToBeClassified;
+            TableRelation = "Salesperson/Purchaser".Code;
+        }
 
         field(99999; "Line No."; Integer)
         {

@@ -103,6 +103,22 @@ page 50718 "API Closed Sales_Leads HeaderS"
                 {
                     Caption = 'Project Duration (weeks)';
                 }
+                field(project_type; Rec."Project_Type")
+                {
+                    Caption = 'Project Type';
+                }
+                field(design_flow; Rec."Design_Flow")
+                {
+                    Caption = 'Design Flow (GPD)';
+                }
+                field(effluent_target; Rec."Effluent_Target")
+                {
+                    Caption = 'Effluent Target';
+                }
+                field(state; Rec."State")
+                {
+                    Caption = 'State';
+                }
             }
         }
     }
