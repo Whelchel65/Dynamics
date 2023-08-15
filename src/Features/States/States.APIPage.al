@@ -1,4 +1,4 @@
-page 50746 "API StatesSOD"
+page 50776 "API StatesSOD"
 {
     PageType = API;
 
@@ -27,13 +27,13 @@ page 50746 "API StatesSOD"
                     Caption = 'SystemId';
                     Editable = false;
                 }
+                field(abbr; Rec."Abbr")
+                {
+                    Caption = 'Abbr';
+                }
                 field(state; Rec."State")
                 {
                     Caption = 'State';
-                }
-                field(state_name; Rec."State_Name")
-                {
-                    Caption = 'State Name';
                 }
                 field(country; Rec."Country")
                 {

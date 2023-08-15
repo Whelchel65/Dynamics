@@ -62,6 +62,15 @@ page 50714 "Closed Sales_LeadsCard"
                 {
                     ApplicationArea = All;
                 }
+                field(State_Name; Rec.State_Name)
+                {
+                    ApplicationArea = All;
+                }
+                field(Unit_Cost; Rec.Unit_Cost)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                }
                 field(Contact; Rec.Contact)
                 {
                     ApplicationArea = All;

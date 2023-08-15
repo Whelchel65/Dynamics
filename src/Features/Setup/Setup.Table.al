@@ -59,9 +59,9 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
-        field(11; Quality_Status_Number; Code[20])
+        field(11; Quality_Lines_Number; Code[20])
         {
-            Caption = 'Quality_Status Number series';
+            Caption = 'Quality Lines Number';
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }

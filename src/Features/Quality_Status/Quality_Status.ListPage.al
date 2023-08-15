@@ -1,8 +1,8 @@
-page 50720 "Quality_StatusList"
+page 50760 "Quality_StatusList"
 {
     PageType = List;
     SourceTable = "Quality_StatusSOD";
-    Caption = 'Quality Status';
+    Caption = 'Quality_Status';
     UsageCategory = Lists;
     ApplicationArea = all;
     layout
@@ -11,7 +11,7 @@ page 50720 "Quality_StatusList"
         {
             repeater(Rep)
             {
-                field(Item; Rec.Item)
+                field(Status; Rec.Status)
                 {
                     ApplicationArea = All;
                 }

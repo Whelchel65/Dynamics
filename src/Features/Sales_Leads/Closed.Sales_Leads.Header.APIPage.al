@@ -117,7 +117,15 @@ page 50718 "API Closed Sales_Leads HeaderS"
                 }
                 field(state; Rec."State")
                 {
-                    Caption = 'State';
+                    Caption = 'State Abbr.';
+                }
+                field(state_name; Rec."State_Name")
+                {
+                    Caption = 'State Name';
+                }
+                field(unit_cost; Rec."Unit_Cost")
+                {
+                    Caption = 'Unit Cost';
                 }
             }
         }

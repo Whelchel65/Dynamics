@@ -1,21 +1,21 @@
-table 50740 "StatesSOD"
+table 50770 "StatesSOD"
 {
     TableType = Normal;
     Caption = 'State/Region';
-    LookupPageId = 50740;
+    LookupPageId = 50770;
     fields
     {
 
-        field(1; State; Code[3])
+        field(1; Abbr; Code[20])
+        {
+            Caption = 'Abbr';
+            DataClassification = ToBeClassified;
+            NotBlank = true;
+        }
+        field(2; State; Text[50])
         {
             Caption = 'State';
             DataClassification = ToBeClassified;
-        }
-        field(2; State_Name; Code[20])
-        {
-            Caption = 'State Name';
-            DataClassification = ToBeClassified;
-            NotBlank = true;
         }
         field(3; Country; Text[50])
         {
@@ -27,7 +27,7 @@ table 50740 "StatesSOD"
     }
     keys
     {
-        key(PK;State_Name)
+        key(PK;Abbr)
         {
             Clustered = true;
         }

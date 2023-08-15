@@ -1,4 +1,4 @@
-page 50726 "API Quality_StatusSOD"
+page 50766 "API Quality_StatusSOD"
 {
     PageType = API;
 
@@ -6,8 +6,8 @@ page 50726 "API Quality_StatusSOD"
     APIPublisher = 'hougaard';
     APIGroup = 'SOD';
 
-    EntityCaption = 'Quality Status';
-    EntitySetCaption = 'Quality Statuss';
+    EntityCaption = 'Quality_Status';
+    EntitySetCaption = 'Quality_Statuss';
     EntityName = 'quality_status';
     EntitySetName = 'quality_statuss';
 
@@ -27,9 +27,9 @@ page 50726 "API Quality_StatusSOD"
                     Caption = 'SystemId';
                     Editable = false;
                 }
-                field(item; Rec."Item")
+                field(status; Rec."Status")
                 {
-                    Caption = 'Description';
+                    Caption = 'Status';
                 }
                 field(description; Rec."Description")
                 {

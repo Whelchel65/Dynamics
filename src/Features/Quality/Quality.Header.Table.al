@@ -20,7 +20,7 @@ table 50690 "Quality HeaderSOD"
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            TableRelation = Quality_StatusSOD.Item;
+            TableRelation = Quality_StatusSOD.Status;
         }
         field(5; Drawing_Number; Text[50])
         {

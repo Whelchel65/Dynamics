@@ -63,9 +63,9 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Sales_Leads Number series';
                 }
-                field(quality_status_number; Rec."Quality_Status_Number")
+                field(quality_lines_number; Rec."Quality_Lines_Number")
                 {
-                    Caption = 'Quality_Status Number series';
+                    Caption = 'Quality Lines Number';
                 }
             }
         }

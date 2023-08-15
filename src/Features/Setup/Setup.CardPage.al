@@ -20,10 +20,6 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Material_Request_Number; Rec.Material_Request_Number)
-                {
-                    ApplicationArea = All;
-                }
                 field(MTL_Request_Number; Rec.MTL_Request_Number)
                 {
                     ApplicationArea = All;
@@ -36,15 +32,11 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Sales_Prospects_Number; Rec.Sales_Prospects_Number)
-                {
-                    ApplicationArea = All;
-                }
                 field(Sales_Leads_Number; Rec.Sales_Leads_Number)
                 {
                     ApplicationArea = All;
                 }
-                field(Quality_Status_Number; Rec.Quality_Status_Number)
+                field(Quality_Lines_Number; Rec.Quality_Lines_Number)
                 {
                     ApplicationArea = All;
                 }

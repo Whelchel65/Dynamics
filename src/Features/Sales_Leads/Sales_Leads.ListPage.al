@@ -62,6 +62,10 @@ page 50710 "Sales_LeadsList"
                 {
                     ApplicationArea = All;
                 }
+                field(State_Name; Rec.State_Name)
+                {
+                    ApplicationArea = All;
+                }
                 field(Contact; Rec.Contact)
                 {
                     ApplicationArea = All;

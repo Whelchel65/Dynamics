@@ -129,11 +129,23 @@ table 50710 "Sales_Leads HeaderSOD"
             Caption = 'Effluent Target';
             DataClassification = ToBeClassified;
         }
-        field(31; State; Code[3])
+        field(31; State; Code[20])
         {
-            Caption = 'State';
+            Caption = 'State Abbr.';
             DataClassification = ToBeClassified;
-            TableRelation = StatesSOD.State;
+            TableRelation = StatesSOD.Abbr;
+        }
+        field(32;"State_Name"; Text[50])
+        {
+            Caption = 'State Name';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup(StatesSOD.State where(Abbr = field(State)));
+        }
+        field(33; Unit_Cost; Decimal)
+        {
+            Caption = 'Unit Cost';
+            DataClassification = ToBeClassified;
         }
 
 

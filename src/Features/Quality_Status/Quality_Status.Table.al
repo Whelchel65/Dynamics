@@ -1,17 +1,18 @@
-table 50720 "Quality_StatusSOD"
+table 50760 "Quality_StatusSOD"
 {
     TableType = Normal;
-    Caption = 'Quality Status';
-    LookupPageId = 50720;
+    Caption = 'Quality_Status';
+    LookupPageId = 50760;
     fields
     {
 
-        field(2; Item; Code[20])
+        field(1; Status; Code[20])
         {
-            Caption = 'Description';
+            Caption = 'Status';
             DataClassification = ToBeClassified;
+            NotBlank = true;
         }
-        field(3; Description; Text[200])
+        field(2; Description; Text[100])
         {
             Caption = 'Description';
             DataClassification = ToBeClassified;
@@ -21,31 +22,11 @@ table 50720 "Quality_StatusSOD"
     }
     keys
     {
-        key(PK;Item)
+        key(PK;Status)
         {
             Clustered = true;
         }
 
     }
-    trigger OnInsert()
-    var
-        Setup : Record "SetupSOD";
-        IsHandled: Boolean;
-        NoSeriesMgt : Codeunit NoSeriesManagement;
-        NewNoSeries : Code[20];
-    begin
-        IsHandled := false;
-        OnBeforeInsert(Rec, IsHandled);
-        if IsHandled then
-            exit;
-        if Rec."Item" = '' then begin
-            Setup.Get();
-            Setup.TestField("Quality_Status_Number");
-            NoSeriesMgt.InitSeries(Setup.Quality_Status_Number, '', 0D, Item, NewNoSeries);
-        end;
-    end;
-   local procedure OnBeforeInsert(var Rec: Record "Quality_StatusSOD"; var IsHandled: Boolean)
-   begin
-   end;
 
 }

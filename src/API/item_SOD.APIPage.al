@@ -1,4 +1,4 @@
-page 50761 "API P50761 SOD"
+page 50781 "API P50781 SOD"
 {
     PageType = API;
 
@@ -39,7 +39,7 @@ page 50761 "API P50761 SOD"
                 field(searchdescription; Rec."Search Description")
                 {
                 }
-                field(assemblybom; Rec."Assembly BOM")
+                field(description2; Rec."Description 2")
                 {
                 }
                 field(baseunitofmeasure; Rec."Base Unit of Measure")
@@ -49,6 +49,9 @@ page 50761 "API P50761 SOD"
                 {
                 }
                 field(inventorypostinggroup; Rec."Inventory Posting Group")
+                {
+                }
+                field(shelfno_; Rec."Shelf No.")
                 {
                 }
                 field(unitprice; Rec."Unit Price")
@@ -72,6 +75,9 @@ page 50761 "API P50761 SOD"
                 field(lastdirectcost; Rec."Last Direct Cost")
                 {
                 }
+                field(indirectcost_; Rec."Indirect Cost %")
+                {
+                }
                 field(vendorno_; Rec."Vendor No.")
                 {
                 }
@@ -84,37 +90,7 @@ page 50761 "API P50761 SOD"
                 field(blocked; Rec."Blocked")
                 {
                 }
-                field(blockreason; Rec."Block Reason")
-                {
-                }
-                field(datefilter; Rec."Date Filter")
-                {
-                }
                 field(inventory; Rec."Inventory")
-                {
-                }
-                field(purchases_qty__; Rec."Purchases (Qty.)")
-                {
-                }
-                field(sales_qty__; Rec."Sales (Qty.)")
-                {
-                }
-                field(positiveadjmt__qty__; Rec."Positive Adjmt. (Qty.)")
-                {
-                }
-                field(negativeadjmt__qty__; Rec."Negative Adjmt. (Qty.)")
-                {
-                }
-                field(purchases_lcy_; Rec."Purchases (LCY)")
-                {
-                }
-                field(sales_lcy_; Rec."Sales (LCY)")
-                {
-                }
-                field(positiveadjmt__lcy_; Rec."Positive Adjmt. (LCY)")
-                {
-                }
-                field(negativeadjmt__lcy_; Rec."Negative Adjmt. (LCY)")
                 {
                 }
                 field(qty_onpurch_order; Rec."Qty. on Purch. Order")
@@ -126,34 +102,28 @@ page 50761 "API P50761 SOD"
                 field(gen_prod_postinggroup; Rec."Gen. Prod. Posting Group")
                 {
                 }
-                field(picture; Rec."Picture")
-                {
-                }
                 field(no_series; Rec."No. Series")
                 {
                 }
                 field(taxgroupcode; Rec."Tax Group Code")
                 {
                 }
+                field(reserve; Rec."Reserve")
+                {
+                }
+                field(reservedqty_oninventory; Rec."Reserved Qty. on Inventory")
+                {
+                }
+                field(reservedqty_onpurch_orders; Rec."Reserved Qty. on Purch. Orders")
+                {
+                }
+                field(reservedqty_onsalesorders; Rec."Reserved Qty. on Sales Orders")
+                {
+                }
                 field(qty_onjoborder; Rec."Qty. on Job Order")
                 {
                 }
-                field(serialnos_; Rec."Serial Nos.")
-                {
-                }
-                field(taxgroupid; Rec."Tax Group Id")
-                {
-                }
-                field(salesblocked; Rec."Sales Blocked")
-                {
-                }
-                field(itemcategoryid; Rec."Item Category Id")
-                {
-                }
-                field(inventorypostinggroupid; Rec."Inventory Posting Group Id")
-                {
-                }
-                field(gen_prod_postinggroupid; Rec."Gen. Prod. Posting Group Id")
+                field(unitofmeasurefilter; Rec."Unit of Measure Filter")
                 {
                 }
                 field(vendor_name; Rec."Vendor_Name")
@@ -204,16 +174,19 @@ page 50761 "API P50761 SOD"
                 field(routingno_; Rec."Routing No.")
                 {
                 }
-                field(productionbomno_; Rec."Production BOM No.")
-                {
-                }
-                field(critical; Rec."Critical")
-                {
-                }
                 field(systemid; Rec."SystemId")
                 {
                 }
+                field(systemcreatedat; Rec."SystemCreatedAt")
+                {
+                }
                 field(systemcreatedby; Rec."SystemCreatedBy")
+                {
+                }
+                field(systemmodifiedat; Rec."SystemModifiedAt")
+                {
+                }
+                field(systemmodifiedby; Rec."SystemModifiedBy")
                 {
                 }
             }

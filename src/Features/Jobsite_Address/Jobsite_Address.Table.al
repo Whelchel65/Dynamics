@@ -33,18 +33,18 @@ table 50750 "Jobsite_AddressSOD"
             Caption = 'City';
             DataClassification = ToBeClassified;
         }
-        field(6; State; Code[3])
+        field(6; State; Code[20])
         {
             Caption = 'State';
             DataClassification = ToBeClassified;
-            TableRelation = StatesSOD.State;
+            TableRelation = StatesSOD.Abbr;
         }
         field(7;"Country"; Text[50])
         {
             Caption = 'Country';
             FieldClass = FlowField;
             Editable = false;
-            CalcFormula = lookup(StatesSOD.Country where(State = field(State)));
+            CalcFormula = lookup(StatesSOD.Country where(Abbr = field(State)));
         }
         field(8; Site_Contact; Code[20])
         {

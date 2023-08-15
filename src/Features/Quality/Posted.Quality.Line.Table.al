@@ -25,7 +25,7 @@ table 50693 "Posted Quality LineSOD"
         {
             Caption = 'Item Status';
             DataClassification = ToBeClassified;
-            TableRelation = Quality_StatusSOD.Item;
+            TableRelation = Quality_StatusSOD.Status;
         }
         field(10; Date_Found; Date)
         {

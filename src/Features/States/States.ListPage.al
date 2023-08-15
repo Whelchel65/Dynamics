@@ -1,4 +1,4 @@
-page 50740 "StatesList"
+page 50770 "StatesList"
 {
     PageType = List;
     SourceTable = "StatesSOD";
@@ -11,7 +11,7 @@ page 50740 "StatesList"
         {
             repeater(Rep)
             {
-                field(State_Name; Rec.State_Name)
+                field(Abbr; Rec.Abbr)
                 {
                     ApplicationArea = All;
                 }
