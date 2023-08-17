@@ -8,6 +8,10 @@ pageextension 50518 "SODPosted_Purchase_Receipts" extends "Posted Purchase Recei
             {
                 ApplicationArea = all;
             }
+            field("JOBNO_SOD"; Rec."JOBNO")
+            {
+                ApplicationArea = all;
+            }
         }
 
 

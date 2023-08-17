@@ -10,7 +10,6 @@ table 50750 "Jobsite_AddressSOD"
         {
             Caption = 'No';
             DataClassification = ToBeClassified;
-            NotBlank = true;
         }
         field(2; Job_No; Code[20])
         {
@@ -52,6 +51,11 @@ table 50750 "Jobsite_AddressSOD"
             DataClassification = ToBeClassified;
             TableRelation = Contact."No.";
         }
+        field(9; ZIp; Text[50])
+        {
+            Caption = 'ZIp';
+            DataClassification = ToBeClassified;
+        }
 
 
     }
@@ -63,5 +67,25 @@ table 50750 "Jobsite_AddressSOD"
         }
 
     }
+    trigger OnInsert()
+    var
+        Setup : Record "SetupSOD";
+        IsHandled: Boolean;
+        NoSeriesMgt : Codeunit NoSeriesManagement;
+        NewNoSeries : Code[20];
+    begin
+        IsHandled := false;
+        OnBeforeInsert(Rec, IsHandled);
+        if IsHandled then
+            exit;
+        if Rec."No" = '' then begin
+            Setup.Get();
+            Setup.TestField("Jobsite_Address_Number");
+            NoSeriesMgt.InitSeries(Setup.Jobsite_Address_Number, '', 0D, No, NewNoSeries);
+        end;
+    end;
+   local procedure OnBeforeInsert(var Rec: Record "Jobsite_AddressSOD"; var IsHandled: Boolean)
+   begin
+   end;
 
 }

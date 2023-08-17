@@ -11,7 +11,7 @@ table 50690 "Quality HeaderSOD"
             Caption = 'Quality No';
             DataClassification = ToBeClassified;
         }
-        field(2; Description; Text[200])
+        field(2; Description; Text[500])
         {
             Caption = 'Description';
             DataClassification = ToBeClassified;

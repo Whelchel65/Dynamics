@@ -35,6 +35,10 @@ page 50751 "Jobsite_AddressCard"
                 {
                     ApplicationArea = All;
                 }
+                field(ZIp; Rec.ZIp)
+                {
+                    ApplicationArea = All;
+                }
                 field(Country; Rec.Country)
                 {
                     ApplicationArea = All;

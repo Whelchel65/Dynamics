@@ -1,4 +1,4 @@
-tableextension 50506 "SODPurch__Inv__Line" extends "Purch. Inv. Line"
+tableextension 50507 "SODPurch__Inv__Line" extends "Purch. Inv. Line"
 {
 
     fields

@@ -1,4 +1,4 @@
-tableextension 50509 "SODDocument_Attachment" extends "Document Attachment"
+tableextension 50510 "SODDocument_Attachment" extends "Document Attachment"
 {
 
     fields

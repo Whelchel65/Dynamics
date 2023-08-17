@@ -36,6 +36,10 @@ page 50750 "Jobsite_AddressList"
                 {
                     ApplicationArea = All;
                 }
+                field(ZIp; Rec.ZIp)
+                {
+                    ApplicationArea = All;
+                }
                 field(Country; Rec.Country)
                 {
                     ApplicationArea = All;

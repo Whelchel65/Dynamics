@@ -65,6 +65,12 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(12; Jobsite_Address_Number; Code[20])
+        {
+            Caption = 'Jobsite_Address Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }

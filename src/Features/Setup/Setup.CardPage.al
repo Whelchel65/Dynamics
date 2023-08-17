@@ -40,6 +40,10 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Jobsite_Address_Number; Rec.Jobsite_Address_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 

@@ -59,6 +59,10 @@ page 50756 "API Jobsite_AddressSOD"
                 {
                     Caption = 'Site Contact';
                 }
+                field(zip; Rec."ZIp")
+                {
+                    Caption = 'ZIp';
+                }
             }
         }
     }

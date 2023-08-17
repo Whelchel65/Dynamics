@@ -67,6 +67,10 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Quality Lines Number';
                 }
+                field(jobsite_address_number; Rec."Jobsite_Address_Number")
+                {
+                    Caption = 'Jobsite_Address Number series';
+                }
             }
         }
     }

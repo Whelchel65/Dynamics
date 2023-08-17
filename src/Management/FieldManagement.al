@@ -215,6 +215,7 @@ codeunit 50500 "Field Transfers Mgt. SOD"
       [EventSubscriber(ObjectType::Codeunit,Codeunit::"Purch.-Post",'OnBeforePurchRcptHeaderInsert','',true,true)]
       local procedure OnBeforePurchRcptHeaderInsert(var PurchaseHeader: Record "Purchase Header";var PurchRcptHeader: Record "Purch. Rcpt. Header")
       begin
+        "PurchRcptHeader"."JOBNO" := "PurchaseHeader"."JOBNO";
 
       end;
       [EventSubscriber(ObjectType::Codeunit,Codeunit::ArchiveManagement,'OnBeforePurchHeaderArchiveInsert','',true,true)]
