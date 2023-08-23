@@ -50,7 +50,7 @@ table 50682 "Posted MTL_Request HeaderSOD"
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "Requested","Review","Approved","Create PO";
+            OptionMembers = "Requested","Review","Approved","Create PO","Ordered","Received";
         }
         field(16; PO_Number; Text[50])
         {

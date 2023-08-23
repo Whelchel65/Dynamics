@@ -2,6 +2,17 @@ pageextension 50507 "SODPurchase_Order" extends "Purchase Order"
 {
     layout
     {
+        AddAfter("Expected Receipt Date")
+        {
+            field("Lead_Time_SOD"; Rec."Lead_Time")
+            {
+                ApplicationArea = all;
+            }
+            field("Planned_Order_Date_SOD"; Rec."Planned_Order_Date")
+            {
+                ToolTip = 'Only use this field if building a PO that is not being sent to vendor immediately';                ApplicationArea = all;
+            }
+        }
         AddAfter("Posting Description")
         {
             field("SentToVendor_SOD"; Rec."SentToVendor")

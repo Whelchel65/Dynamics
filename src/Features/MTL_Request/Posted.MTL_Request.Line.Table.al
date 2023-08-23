@@ -47,7 +47,7 @@ table 50683 "Posted MTL_Request LineSOD"
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "Requested","Review","Approved";
+            OptionMembers = "Requested","Review","Approved","Ordered","Received";
         }
         field(15;"UOM"; Code[10])
         {

@@ -9,6 +9,14 @@ pageextension 50510 "SODJob_Card" extends "Job Card"
                 Multiline = true;
                 ApplicationArea = all;
             }
+            field("Bill_Total_SOD"; Rec."Bill_Total")
+            {
+                ApplicationArea = all;
+            }
+            field("Actual_Cost_Total_SOD"; Rec."Actual_Cost_Total")
+            {
+                ApplicationArea = all;
+            }
         }
 
 
