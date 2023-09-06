@@ -1,4 +1,4 @@
-pageextension 50509 "SODPurchase_Order_Subform" extends "Purchase Order Subform"
+pageextension 50508 "SODPurchase_Order_Subform" extends "Purchase Order Subform"
 {
     layout
     {
@@ -8,7 +8,7 @@ pageextension 50509 "SODPurchase_Order_Subform" extends "Purchase Order Subform"
             {
                 ApplicationArea = all;
             }
-            field("CostCode_SOD"; Rec."CostCode")
+            field("Cost_Code_SOD"; Rec."Cost_Code")
             {
                 ApplicationArea = all;
             }

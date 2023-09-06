@@ -73,6 +73,13 @@ pageextension 50500 "SODItem_Card" extends "Item Card"
                 ApplicationArea = all;
             }
         }
+        AddAfter("Type")
+        {
+            field("Cost_Code_SOD"; Rec."Cost_Code")
+            {
+                ApplicationArea = all;
+            }
+        }
         AddAfter("Vendor Item No.")
         {
             field("ManfPartNum_SOD"; Rec."ManfPartNum")

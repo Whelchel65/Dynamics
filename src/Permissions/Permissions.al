@@ -35,6 +35,10 @@ permissionset 50500 "My Customizations"
                   tabledata "Service_Tickets LineSOD" = RIMD,
                   tabledata "SetupSOD" = RIMD,
                   table "SetupSOD" = X,
+                  tabledata "Shop_Employees HeaderSOD" = RIMD,
+                  tabledata "Shop_Employees LineSOD" = RIMD,
+                  tabledata "x Shop_Employees HeaderSOD" = RIMD,
+                  tabledata "x Shop_Employees LineSOD" = RIMD,
                   tabledata "StatesSOD" = RIMD,
                   table "StatesSOD" = X,
                   tabledata "Tag_NumberSOD" = RIMD,
@@ -44,5 +48,9 @@ permissionset 50500 "My Customizations"
                   tabledata "Work_Packages HeaderSOD" = RIMD,
                   tabledata "Work_Packages LineSOD" = RIMD,
                   tabledata "Posted Work_Packages HeaderSOD" = RIMD,
-                  tabledata "Posted Work_Packages LineSOD" = RIMD;
+                  tabledata "Posted Work_Packages LineSOD" = RIMD,
+                  tabledata "WSI_TS_Entry HeaderSOD" = RIMD,
+                  tabledata "WSI_TS_Entry LineSOD" = RIMD,
+                  tabledata "Posted WSI_TS_Entry HeaderSOD" = RIMD,
+                  tabledata "Posted WSI_TS_Entry LineSOD" = RIMD;
 }

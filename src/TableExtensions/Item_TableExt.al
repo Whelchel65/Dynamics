@@ -88,6 +88,12 @@ tableextension 50500 "SODItem" extends "Item"
             DataClassification = ToBeClassified;
             OptionMembers = "","Standard";
         }
+        field(50518;"Cost_Code"; Text[6])
+        {
+            Caption = 'Cost_Code';
+            DataClassification = ToBeClassified;
+            TableRelation = Cost_CodeSOD.CostCode;
+        }
 
     }
 }

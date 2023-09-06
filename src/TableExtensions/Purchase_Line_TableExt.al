@@ -10,9 +10,9 @@ tableextension 50504 "SODPurchase_Line" extends "Purchase Line"
             Editable = false;
             CalcFormula = lookup(Vendor.Name where("No." = field("Buy-from Vendor No.")));
         }
-        field(50510;"CostCode"; Text[6])
+        field(50502;"Cost_Code"; Text[6])
         {
-            Caption = 'CostCode';
+            Caption = 'Cost Code';
             DataClassification = ToBeClassified;
             TableRelation = Cost_CodeSOD.CostCode;
         }

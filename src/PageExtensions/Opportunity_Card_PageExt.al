@@ -1,4 +1,4 @@
-pageextension 50526 "SODOpportunity_Card" extends "Opportunity Card"
+pageextension 50525 "SODOpportunity_Card" extends "Opportunity Card"
 {
     layout
     {

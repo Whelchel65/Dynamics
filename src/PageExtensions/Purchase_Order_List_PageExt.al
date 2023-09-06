@@ -1,4 +1,4 @@
-pageextension 50527 "SODPurchase_Order_List" extends "Purchase Order List"
+pageextension 50526 "SODPurchase_Order_List" extends "Purchase Order List"
 {
     layout
     {
@@ -20,7 +20,7 @@ pageextension 50527 "SODPurchase_Order_List" extends "Purchase Order List"
                 ApplicationArea = all;
             }
         }
-        AddAfter("no.")
+        AddAfter("No.")
         {
             field("JOBNO_SOD"; Rec."JOBNO")
             {

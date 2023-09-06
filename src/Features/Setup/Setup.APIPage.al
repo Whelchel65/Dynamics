@@ -71,6 +71,18 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Jobsite_Address Number series';
                 }
+                field(shop_employees_number; Rec."Shop_Employees_Number")
+                {
+                    Caption = 'Shop_Employees Number series';
+                }
+                field(wsi_time_entries_number; Rec."WSI_Time_Entries_Number")
+                {
+                    Caption = 'WSI_Time_Entries Number series';
+                }
+                field(wsi_ts_entry_number; Rec."WSI_TS_Entry_Number")
+                {
+                    Caption = 'WSI_TS_Entry Number series';
+                }
             }
         }
     }

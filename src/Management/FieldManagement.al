@@ -162,7 +162,7 @@ codeunit 50500 "Field Transfers Mgt. SOD"
 
       end;
       [EventSubscriber(ObjectType::Codeunit,Codeunit::"Sales-Post",'OnInsertShipmentHeaderOnAfterTransferfieldsToSalesShptHeader','',true,true)]
-      local procedure OnInsertShipmentHeaderOnAfterTransferfieldsToSalesShptHeader(SalesHeader: Record "Sales Header";SalesShptHeader: Record "Sales Shipment Header")
+      local procedure OnInsertShipmentHeaderOnAfterTransferfieldsToSalesShptHeader(SalesHeader: Record "Sales Header";var SalesShptHeader: Record "Sales Shipment Header")
       begin
 
       end;
@@ -427,21 +427,21 @@ codeunit 50500 "Field Transfers Mgt. SOD"
    local procedure OnAfterTransferSavedFields(SourcePurchaseLine: Record "Purchase Line"; var DestinationPurchaseLine: Record "Purchase Line")
    begin
         "DestinationPurchaseLine"."Vendor_Name" := "SourcePurchaseLine"."Vendor_Name";
-        "DestinationPurchaseLine"."CostCode" := "SourcePurchaseLine"."CostCode";
+        "DestinationPurchaseLine"."Cost_Code" := "SourcePurchaseLine"."Cost_Code";
 
    end;
    [EventSubscriber(ObjectType::Table, DATABASE::"Purchase Header", 'OnBeforeTransferSavedFieldsDropShipment', '', true, true)]
    local procedure OnBeforeTransferSavedFieldsDropShipment(SourcePurchaseLine: Record "Purchase Line"; var DestinationPurchaseLine: Record "Purchase Line")
    begin
         "DestinationPurchaseLine"."Vendor_Name" := "SourcePurchaseLine"."Vendor_Name";
-        "DestinationPurchaseLine"."CostCode" := "SourcePurchaseLine"."CostCode";
+        "DestinationPurchaseLine"."Cost_Code" := "SourcePurchaseLine"."Cost_Code";
 
    end;
    [EventSubscriber(ObjectType::Table, DATABASE::"Purchase Header", 'OnBeforeTransferSavedFieldsSpecialOrder', '', true, true)]
    local procedure OnBeforeTransferSavedFieldsSpecialOrder(SourcePurchaseLine: Record "Purchase Line"; var DestinationPurchaseLine: Record "Purchase Line")
    begin
         "DestinationPurchaseLine"."Vendor_Name" := "SourcePurchaseLine"."Vendor_Name";
-        "DestinationPurchaseLine"."CostCode" := "SourcePurchaseLine"."CostCode";
+        "DestinationPurchaseLine"."Cost_Code" := "SourcePurchaseLine"."Cost_Code";
 
    end;
    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Cust. Entry-Edit", 'OnBeforeCustLedgEntryModify', '', true,true)]
@@ -450,6 +450,194 @@ codeunit 50500 "Field Transfers Mgt. SOD"
 
    end;   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Vend. Entry-Edit", 'OnBeforeVendLedgEntryModify', '', true,true)]
    local procedure OnBeforeVendLedgEntryModify(FromVendLedgEntry: Record "Vendor Ledger Entry";var VendLedgEntry: Record "Vendor Ledger Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Sales Line",'OnValidateVariantCodeOnAfterChecks','',true,true)]
+   local procedure OnValidateVariantCodeOnAfterChecks(var SalesLine: Record "Sales Line";CallingFieldNo: Integer)
+   var
+      ItemVariant: Record "Item Variant";
+   begin
+      if ItemVariant.Get(SalesLine."No.",SalesLine."Variant Code") then begin
+
+      end;
+   end;
+   [EventSubscriber(ObjectType::Table, DATABASE::"Purchase Line",'OnValidateVariantCodeOnAfterValidationChecks','',true,true)]
+   local procedure OnValidateVariantCodeOnAfterValidationChecks(var PurchaseLine: Record "Purchase Line";CallingFieldNo: Integer)
+   var
+      ItemVariant: Record "Item Variant";
+   begin
+      if ItemVariant.Get(PurchaseLine."No.",PurchaseLine."Variant Code") then begin
+
+      end;
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyNewTrackingFromReservEntry', '', true, true)]
+   local procedure OnAfterCopyNewTrackingFromReservEntry(FromReservEntry: Record "Reservation Entry"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyNewTrackingFromWhseItemTrackingLine', '', true, true)]
+   local procedure OnAfterCopyNewTrackingFromWhseItemTrackingLine(WhseItemTrackingLine: Record "Whse. Item Tracking Line"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromInvtProfile', '', true, true)]
+   local procedure OnAfterCopyTrackingFromInvtProfile(InventoryProfile: Record "Inventory Profile"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromItemLedgEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromItemLedgEntry(ItemLedgerEntry: Record "Item Ledger Entry"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromItemTrackingSetup', '', true, true)]
+   local procedure OnAfterCopyTrackingFromItemTrackingSetup(ItemTrackingSetup: Record "Item Tracking Setup" temporary; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromReservEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromReservEntry(FromReservationEntry: Record "Reservation Entry"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromReservEntryNewTracking', '', true, true)]
+   local procedure OnAfterCopyTrackingFromReservEntryNewTracking(FromReservationEntry: Record "Reservation Entry"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromTrackingSpec', '', true, true)]
+   local procedure OnAfterCopyTrackingFromTrackingSpec(TrackingSpecification: Record "Tracking Specification"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromWhseActivLine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseActivLine(WarehouseActivityLine: Record "Warehouse Activity Line"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromWhseEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseEntry(WhseEntry: Record "Warehouse Entry"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Reservation Entry", 'OnAfterCopyTrackingFromWhseItemTrackingLine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseItemTrackingLine(WhseItemTrackingLine: Record "Whse. Item Tracking Line"; var ReservationEntry: Record "Reservation Entry")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Inventory Profile", 'OnAfterCopyTrackingFromInvtProfile', '', true, true)]
+   local procedure OnAfterCopyTrackingFromInvtProfile2(FromInventoryProfile: Record "Inventory Profile"; var InventoryProfile: Record "Inventory Profile")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Inventory Profile", 'OnAfterCopyTrackingFromItemLedgEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromItemLedgEntry2(ItemLedgEntry: Record "Item Ledger Entry"; var InventoryProfile: Record "Inventory Profile")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Inventory Profile", 'OnAfterCopyTrackingFromReservEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromReservEntry2(ReservEntry: Record "Reservation Entry"; var InventoryProfile: Record "Inventory Profile")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Item Tracking Setup", 'OnAfterCopyTrackingFromReservEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromReservEntry3(ReservEntry: Record "Reservation Entry"; var ItemTrackingSetup: Record "Item Tracking Setup" temporary)
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyNewTrackingFromNewTrackingSpec', '', true, true)]
+   local procedure OnAfterCopyNewTrackingFromNewTrackingSpec(FromTrackingSpecification: Record "Tracking Specification"; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyNewTrackingFromTrackingSpec', '', true, true)]
+   local procedure OnAfterCopyNewTrackingFromTrackingSpec(FromTrackingSpecification: Record "Tracking Specification"; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyTrackingFromEntrySummary', '', true, true)]
+   local procedure OnAfterCopyTrackingFromEntrySummary(EntrySummary: Record "Entry Summary" temporary; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyTrackingFromItemLedgEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromItemLedgEntry3(ItemLedgerEntry: Record "Item Ledger Entry"; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyTrackingFromItemTrackingSetup', '', true, true)]
+   local procedure OnAfterCopyTrackingFromItemTrackingSetup2(ItemTrackingSetup: Record "Item Tracking Setup" temporary; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyTrackingFromReservEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromReservEntry4(ReservEntry: Record "Reservation Entry"; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyTrackingFromTrackingSpec', '', true, true)]
+   local procedure OnAfterCopyTrackingFromTrackingSpec2(FromTrackingSpecification: Record "Tracking Specification"; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyTrackingFromWhseActivityLine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseActivityLine(WhseActivityLine: Record "Warehouse Activity Line"; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Tracking Specification", 'OnAfterCopyTrackingFromWhseItemTrackingLine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseItemTrackingLine2(WhseItemTrackingLine: Record "Whse. Item Tracking Line"; var TrackingSpecification: Record "Tracking Specification")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromEntrySummary', '', true, true)]
+   local procedure OnAfterCopyTrackingFromEntrySummary2(EntrySummary: Record "Entry Summary" temporary; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromItemLedgEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromItemLedgEntry4(ItemLedgerEntry: Record "Item Ledger Entry"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromPostedWhseRcptLine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromPostedWhseRcptLine(PostedWhseRcptLine: Record "Posted Whse. Receipt Line"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromPostedWhseReceiptine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromPostedWhseReceiptine(PostedWhseReceiptLine: Record "Posted Whse. Receipt Line"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromRelation', '', true, true)]
+   local procedure OnAfterCopyTrackingFromRelation(WhseItemEntryRelation: Record "Whse. Item Entry Relation"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromReservEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromReservEntry5(ReservationEntry: Record "Reservation Entry"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromWhseActivityLine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseActivityLine2(WhseActivityLine: Record "Warehouse Activity Line"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromWhseEntry', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseEntry2(WhseEntry: Record "Warehouse Entry"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Whse. Item Tracking Line", 'OnAfterCopyTrackingFromWhseItemTrackingLine', '', true, true)]
+   local procedure OnAfterCopyTrackingFromWhseItemTrackingLine3(FromWhseItemTrackingLine: Record "Whse. Item Tracking Line"; var WhseItemTrackingLine: Record "Whse. Item Tracking Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Table, Database::"Item Journal Line", 'OnAfterCopyTrackingFromSpec', '', true, true)]
+   local procedure OnAfterCopyTrackingFromSpec(TrackingSpecification: Record "Tracking Specification";var ItemJournalLine: Record "Item Journal Line")
    begin
 
    end;

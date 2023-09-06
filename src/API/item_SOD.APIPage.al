@@ -1,4 +1,4 @@
-page 50781 "API P50781 SOD"
+page 50811 "API P50811 SOD"
 {
     PageType = API;
 
@@ -169,6 +169,9 @@ page 50781 "API P50781 SOD"
                 {
                 }
                 field(standard_item; Rec."Standard_Item")
+                {
+                }
+                field(cost_code; Rec."Cost_Code")
                 {
                 }
                 field(routingno_; Rec."Routing No.")

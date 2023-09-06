@@ -44,6 +44,14 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Shop_Employees_Number; Rec.Shop_Employees_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(WSI_TS_Entry_Number; Rec.WSI_TS_Entry_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 

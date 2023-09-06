@@ -71,6 +71,24 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(14; Shop_Employees_Number; Code[20])
+        {
+            Caption = 'Shop_Employees Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(15; WSI_Time_Entries_Number; Code[20])
+        {
+            Caption = 'WSI_Time_Entries Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(16; WSI_TS_Entry_Number; Code[20])
+        {
+            Caption = 'WSI_TS_Entry Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }

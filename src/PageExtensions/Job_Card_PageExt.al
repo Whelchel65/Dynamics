@@ -1,4 +1,4 @@
-pageextension 50510 "SODJob_Card" extends "Job Card"
+pageextension 50509 "SODJob_Card" extends "Job Card"
 {
     layout
     {
