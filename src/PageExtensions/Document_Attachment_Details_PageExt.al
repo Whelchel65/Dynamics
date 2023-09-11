@@ -8,6 +8,10 @@ pageextension 50523 "SODDocument_Attachment_Details" extends "Document Attachmen
             {
                 ApplicationArea = all;
             }
+            field("Notes_SOD"; Rec."Notes")
+            {
+                ApplicationArea = all;
+            }
         }
 
 

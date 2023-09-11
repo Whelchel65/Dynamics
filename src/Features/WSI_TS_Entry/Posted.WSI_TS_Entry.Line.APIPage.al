@@ -53,7 +53,7 @@ page 50809 "API Posted WSI_TS_Entry LineSO"
                 }
                 field(full_name; Rec."Full_Name")
                 {
-                    Caption = 'Name';
+                    Caption = 'Full Name';
                 }
             }
         }

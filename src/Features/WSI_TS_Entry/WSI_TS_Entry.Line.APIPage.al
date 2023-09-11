@@ -53,7 +53,7 @@ page 50807 "API WSI_TS_Entry LineSOD"
                 }
                 field(full_name; Rec."Full_Name")
                 {
-                    Caption = 'Name';
+                    Caption = 'Full Name';
                 }
             }
         }

@@ -67,6 +67,10 @@ page 50666 "API Project_TimeSOD"
                 {
                     Caption = 'Date';
                 }
+                field(timesheet_reference; Rec."TimeSheet_Reference")
+                {
+                    Caption = 'TimeSheet Reference';
+                }
             }
         }
     }

@@ -56,6 +56,11 @@ table 50660 "Project_TimeSOD"
             Caption = 'Date';
             DataClassification = ToBeClassified;
         }
+        field(11; TimeSheet_Reference; Text[50])
+        {
+            Caption = 'TimeSheet Reference';
+            DataClassification = ToBeClassified;
+        }
 
 
     }

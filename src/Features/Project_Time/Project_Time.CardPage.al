@@ -15,6 +15,10 @@ page 50661 "Project_TimeCard"
                 {
                     ApplicationArea = All;
                 }
+                field(TimeSheet_Reference; Rec.TimeSheet_Reference)
+                {
+                    ApplicationArea = All;
+                }
                 field(Employee; Rec.Employee)
                 {
                     ApplicationArea = All;

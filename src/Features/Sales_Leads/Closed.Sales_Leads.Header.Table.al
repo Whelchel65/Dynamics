@@ -66,7 +66,7 @@ table 50712 "Closed Sales_Leads HeaderSOD"
         {
             Caption = 'Stage';
             DataClassification = ToBeClassified;
-            OptionMembers = "New Lead","Budgetary","Proposal","Dead";
+            OptionMembers = "New Lead","Budgetary","Proposal","Dead","Won","Lost";
         }
         field(14; Success_Probability; Integer)
         {

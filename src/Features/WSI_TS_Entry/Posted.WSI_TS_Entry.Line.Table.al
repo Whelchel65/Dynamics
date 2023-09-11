@@ -39,7 +39,7 @@ table 50803 "Posted WSI_TS_Entry LineSOD"
         }
         field(16;"Full_Name"; Text[50])
         {
-            Caption = 'Name';
+            Caption = 'Full Name';
             FieldClass = FlowField;
             Editable = false;
             CalcFormula = lookup("Shop_Employees HeaderSOD".Full_Name where(No = field(Employee_Name)));

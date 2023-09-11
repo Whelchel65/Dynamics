@@ -9,6 +9,11 @@ tableextension 50510 "SODDocument_Attachment" extends "Document Attachment"
             DataClassification = ToBeClassified;
             TableRelation = FileTypeSOD.FileType;
         }
+        field(50501;"Notes"; Text[2000])
+        {
+            Caption = 'Notes';
+            DataClassification = ToBeClassified;
+        }
 
     }
 }
