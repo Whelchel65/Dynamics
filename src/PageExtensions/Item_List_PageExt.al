@@ -1,4 +1,4 @@
-pageextension 50501 "SODItem_List" extends "Item List"
+pageextension 50501 "SODItem_List50501" extends "Item List"
 {
     layout
     {

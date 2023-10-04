@@ -47,6 +47,10 @@ page 50637 "API Service_Tickets LineSOD"
                 {
                     Caption = 'Line Status';
                 }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

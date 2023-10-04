@@ -1,4 +1,4 @@
-tableextension 50508 "SODJob" extends "Job"
+tableextension 50509 "SODJob" extends "Job"
 {
 
     fields

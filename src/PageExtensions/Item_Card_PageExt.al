@@ -1,4 +1,4 @@
-pageextension 50500 "SODItem_Card" extends "Item Card"
+pageextension 50500 "SODItem_Card50500" extends "Item Card"
 {
     layout
     {

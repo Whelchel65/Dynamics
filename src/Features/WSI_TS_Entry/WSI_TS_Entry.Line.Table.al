@@ -44,6 +44,12 @@ table 50801 "WSI_TS_Entry LineSOD"
             Editable = false;
             CalcFormula = lookup("Shop_Employees HeaderSOD".Full_Name where(No = field(Employee_Name)));
         }
+        field(17;Overtime; Option)
+        {
+            Caption = 'Overtime';
+            DataClassification = ToBeClassified;
+            OptionMembers = "No","Yes";
+        }
 
         field(99999; "Line No."; Integer)
         {

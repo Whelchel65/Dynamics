@@ -1,10 +1,17 @@
-pageextension 50514 "SODPosted_Purchase_Invoice" extends "Posted Purchase Invoice"
+pageextension 50514 "SODPosted_Purchase_Invoic50514" extends "Posted Purchase Invoice"
 {
     layout
     {
         AddBefore("Document Date")
         {
             field("User ID_SOD"; Rec."User ID")
+            {
+                ApplicationArea = all;
+            }
+        }
+        AddAfter("Order No.")
+        {
+            field("JOBNO_SOD"; Rec."JOBNO")
             {
                 ApplicationArea = all;
             }

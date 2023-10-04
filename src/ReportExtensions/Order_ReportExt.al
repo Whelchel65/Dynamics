@@ -17,4 +17,5 @@ Reportextension 50502 "SODOrder" extends "Order"
         }
 
     }
+
 }

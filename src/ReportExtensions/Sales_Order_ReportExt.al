@@ -17,4 +17,5 @@ Reportextension 50509 "SODSales_Order" extends "Sales Order"
         }
 
     }
+
 }

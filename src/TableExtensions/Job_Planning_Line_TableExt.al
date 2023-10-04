@@ -1,4 +1,4 @@
-tableextension 50509 "SODJob_Planning_Line" extends "Job Planning Line"
+tableextension 50510 "SODJob_Planning_Line" extends "Job Planning Line"
 {
 
     fields

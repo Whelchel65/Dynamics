@@ -1,4 +1,4 @@
-pageextension 50523 "SODDocument_Attachment_Details" extends "Document Attachment Details"
+pageextension 50523 "SODDocument_Attachment_De50523" extends "Document Attachment Details"
 {
     layout
     {

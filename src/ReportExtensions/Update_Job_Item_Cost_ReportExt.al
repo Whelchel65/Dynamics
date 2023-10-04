@@ -17,4 +17,5 @@ Reportextension 50505 "SODUpdate_Job_Item_Cost" extends "Update Job Item Cost"
         }
 
     }
+
 }

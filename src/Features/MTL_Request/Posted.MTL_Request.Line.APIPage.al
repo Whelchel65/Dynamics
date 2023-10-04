@@ -63,6 +63,10 @@ page 50689 "API Posted MTL_Request LineSOD"
                 {
                     Caption = 'Notes/Description';
                 }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

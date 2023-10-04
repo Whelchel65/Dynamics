@@ -43,6 +43,10 @@ page 50797 "API Shop_Employees LineSOD"
                 {
                     Caption = 'Description';
                 }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

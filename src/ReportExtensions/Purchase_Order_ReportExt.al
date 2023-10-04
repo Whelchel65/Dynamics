@@ -17,4 +17,5 @@ Reportextension 50510 "SODPurchase_Order" extends "Purchase Order"
         }
 
     }
+
 }

@@ -28,6 +28,18 @@ tableextension 50503 "SODPurchase_Header" extends "Purchase Header"
             Caption = 'Planned Order Date';
             DataClassification = ToBeClassified;
         }
+        field(50505;"TaxExempt"; Option)
+        {
+            Caption = 'For Resale (Tax Exempt)';
+            DataClassification = ToBeClassified;
+            OptionMembers = "No","Yes";
+        }
+        field(50506;"Ready_To_Post"; Option)
+        {
+            Caption = 'Ready_To_Post';
+            DataClassification = ToBeClassified;
+            OptionMembers = "No","Yes";
+        }
 
     }
 }

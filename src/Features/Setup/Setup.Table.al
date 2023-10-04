@@ -89,6 +89,12 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(17; Risk_Issue_Change_Number; Code[20])
+        {
+            Caption = 'Risk_Issue_Change Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }

@@ -63,6 +63,10 @@ page 50699 "API Posted Quality LineSOD"
                 {
                     Caption = 'Checked By';
                 }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

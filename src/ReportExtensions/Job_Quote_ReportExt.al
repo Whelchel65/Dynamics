@@ -41,4 +41,5 @@ Reportextension 50504 "SODJob_Quote" extends "Job Quote"
         }
 
     }
+
 }

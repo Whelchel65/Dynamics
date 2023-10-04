@@ -55,6 +55,14 @@ page 50807 "API WSI_TS_Entry LineSOD"
                 {
                     Caption = 'Full Name';
                 }
+                field(overtime; Rec."Overtime")
+                {
+                    Caption = 'Overtime';
+                }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

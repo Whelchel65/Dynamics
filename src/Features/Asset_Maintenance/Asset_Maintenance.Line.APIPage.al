@@ -55,6 +55,10 @@ page 50707 "API Asset_Maintenance LineSOD"
                 {
                     Caption = 'Completed by';
                 }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

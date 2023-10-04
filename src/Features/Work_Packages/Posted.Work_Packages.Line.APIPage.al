@@ -43,6 +43,10 @@ page 50679 "API Posted Work_Packages LineS"
                 {
                     Caption = 'Date Complete';
                 }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

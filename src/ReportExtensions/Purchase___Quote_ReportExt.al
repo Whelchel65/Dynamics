@@ -17,4 +17,5 @@ Reportextension 50501 "SODPurchase___Quote" extends "Purchase - Quote"
         }
 
     }
+
 }

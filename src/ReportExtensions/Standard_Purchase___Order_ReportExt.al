@@ -27,6 +27,19 @@ Reportextension 50508 "SODStandard_Purchase___Order" extends "Standard Purchase 
             {
             }
         }
+        add("Purchase Header")
+        {
+            column("TaxExempt_Purchase_Header_SOD"; "Purchase Header"."TaxExempt")
+            {
+            }
+        }
+        add("Purchase Header")
+        {
+            column("TaxExempt_Purchase_Header_Lbl_SOD"; "Purchase Header".FieldCaption("TaxExempt"))
+            {
+            }
+        }
 
     }
+
 }

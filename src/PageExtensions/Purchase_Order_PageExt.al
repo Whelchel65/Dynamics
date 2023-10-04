@@ -1,7 +1,14 @@
-pageextension 50507 "SODPurchase_Order" extends "Purchase Order"
+pageextension 50507 "SODPurchase_Order50507" extends "Purchase Order"
 {
     layout
     {
+        AddAfter("Buy-from")
+        {
+            field("TaxExempt_SOD"; Rec."TaxExempt")
+            {
+                ApplicationArea = all;
+            }
+        }
         AddAfter("Expected Receipt Date")
         {
             field("Lead_Time_SOD"; Rec."Lead_Time")
@@ -27,6 +34,13 @@ pageextension 50507 "SODPurchase_Order" extends "Purchase Order"
         AddAfter("Vendor Order No.")
         {
             field("VendorQuote_SOD"; Rec."VendorQuote")
+            {
+                ApplicationArea = all;
+            }
+        }
+        AddAfter("Your Reference")
+        {
+            field("Ready_To_Post_SOD"; Rec."Ready_To_Post")
             {
                 ApplicationArea = all;
             }

@@ -1,4 +1,4 @@
-pageextension 50505 "SODSales_Invoice_Subform" extends "Sales Invoice Subform"
+pageextension 50505 "SODSales_Invoice_Subform50505" extends "Sales Invoice Subform"
 {
     layout
     {

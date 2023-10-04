@@ -53,4 +53,5 @@ Reportextension 50506 "SODStandard_Sales___Quote" extends "Standard Sales - Quot
         }
 
     }
+
 }

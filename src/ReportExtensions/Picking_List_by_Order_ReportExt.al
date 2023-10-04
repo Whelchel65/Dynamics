@@ -29,4 +29,5 @@ Reportextension 50511 "SODPicking_List_by_Order" extends "Picking List by Order"
         }
 
     }
+
 }

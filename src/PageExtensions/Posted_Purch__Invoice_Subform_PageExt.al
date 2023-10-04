@@ -1,4 +1,4 @@
-pageextension 50515 "SODPosted_Purch__Invoice_Subfo" extends "Posted Purch. Invoice Subform"
+pageextension 50515 "SODPosted_Purch__Invoice_50515" extends "Posted Purch. Invoice Subform"
 {
     layout
     {

@@ -17,4 +17,5 @@ Reportextension 50515 "SODJob_Cost_Budget" extends "Job Cost Budget"
         }
 
     }
+
 }

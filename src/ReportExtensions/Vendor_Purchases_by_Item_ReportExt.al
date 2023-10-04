@@ -17,4 +17,5 @@ Reportextension 50512 "SODVendor_Purchases_by_Item" extends "Vendor Purchases by
         }
 
     }
+
 }

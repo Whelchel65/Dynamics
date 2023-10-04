@@ -1,4 +1,4 @@
-pageextension 50502 "SODSales_Quote" extends "Sales Quote"
+pageextension 50502 "SODSales_Quote50502" extends "Sales Quote"
 {
     layout
     {

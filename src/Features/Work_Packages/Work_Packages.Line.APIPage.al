@@ -43,6 +43,10 @@ page 50677 "API Work_Packages LineSOD"
                 {
                     Caption = 'Date Complete';
                 }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

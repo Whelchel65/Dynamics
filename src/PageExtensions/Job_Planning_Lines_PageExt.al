@@ -1,4 +1,4 @@
-pageextension 50522 "SODJob_Planning_Lines" extends "Job Planning Lines"
+pageextension 50522 "SODJob_Planning_Lines50522" extends "Job Planning Lines"
 {
     layout
     {

@@ -83,6 +83,10 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'WSI_TS_Entry Number series';
                 }
+                field(risk_issue_change_number; Rec."Risk_Issue_Change_Number")
+                {
+                    Caption = 'Risk_Issue_Change Number series';
+                }
             }
         }
     }

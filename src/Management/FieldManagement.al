@@ -171,8 +171,8 @@ codeunit 50500 "Field Transfers Mgt. SOD"
       begin
 
       end;
-      [EventSubscriber(ObjectType::Codeunit,codeunit::"Sales-Post",'OnBeforeInsertInvoiceHeader','',true,true)]
-      local procedure OnBeforeInsertInvoiceHeader(SalesHeader: Record "Sales Header";var SalesInvHeader: Record "Sales Invoice Header")
+      [EventSubscriber(ObjectType::Codeunit,codeunit::"Sales-Post",'OnBeforeSalesInvHeaderInsert','',true,true)]
+      local procedure OnBeforeSalesInvHeaderInsert(SalesHeader: Record "Sales Header";var SalesInvHeader: Record "Sales Invoice Header")
       begin
         "SalesInvHeader"."QBREF" := "SalesHeader"."QBREF";
 

@@ -55,6 +55,14 @@ page 50809 "API Posted WSI_TS_Entry LineSO"
                 {
                     Caption = 'Full Name';
                 }
+                field(overtime; Rec."Overtime")
+                {
+                    Caption = 'Overtime';
+                }
+                field(lineno; Rec."Line No.")
+                {
+                    Caption = 'Line No.';
+                }
             }
         }
     }

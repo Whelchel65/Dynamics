@@ -20,11 +20,11 @@ table 50670 "Work_Packages HeaderSOD"
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "Work Queue"," Work Package Needed"," Package Complete"," Information Needed";
+            OptionMembers = "Planning","Work Queue"," Work Package Needed"," Package Complete"," Information Needed";
         }
         field(4; Notes; Text[2000])
         {
-            Caption = 'Notes';
+            Caption = 'Planning Notes';
             DataClassification = ToBeClassified;
         }
         field(5; Drawing_No; Text[50])
@@ -32,9 +32,9 @@ table 50670 "Work_Packages HeaderSOD"
             Caption = 'Drawing No';
             DataClassification = ToBeClassified;
         }
-        field(9; Drawing_Attachment; Media)
+        field(10; Job_No; Text[50])
         {
-            Caption = 'Drawing Attachment';
+            Caption = 'Job No';
             DataClassification = ToBeClassified;
         }
 

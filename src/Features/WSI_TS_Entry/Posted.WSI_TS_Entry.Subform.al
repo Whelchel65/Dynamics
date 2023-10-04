@@ -37,6 +37,10 @@ page 50805 "Posted WSI_TS_EntryListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(Overtime; Rec.Overtime)
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }

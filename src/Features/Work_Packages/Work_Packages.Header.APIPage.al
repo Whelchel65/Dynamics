@@ -41,15 +41,15 @@ page 50676 "API Work_Packages HeaderSOD"
                 }
                 field(notes; Rec."Notes")
                 {
-                    Caption = 'Notes';
+                    Caption = 'Planning Notes';
                 }
                 field(drawing_no; Rec."Drawing_No")
                 {
                     Caption = 'Drawing No';
                 }
-                field(drawing_attachment; Rec."Drawing_Attachment")
+                field(job_no; Rec."Job_No")
                 {
-                    Caption = 'Drawing Attachment';
+                    Caption = 'Job No';
                 }
             }
         }

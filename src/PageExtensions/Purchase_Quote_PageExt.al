@@ -1,4 +1,4 @@
-pageextension 50506 "SODPurchase_Quote" extends "Purchase Quote"
+pageextension 50506 "SODPurchase_Quote50506" extends "Purchase Quote"
 {
     layout
     {

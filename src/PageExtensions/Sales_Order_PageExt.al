@@ -1,4 +1,4 @@
-pageextension 50503 "SODSales_Order" extends "Sales Order"
+pageextension 50503 "SODSales_Order50503" extends "Sales Order"
 {
     layout
     {

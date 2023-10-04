@@ -16,6 +16,10 @@ page 50674 "Posted Work_PackagesCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Job_No; Rec.Job_No)
+                {
+                    ApplicationArea = All;
+                }
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
@@ -30,10 +34,6 @@ page 50674 "Posted Work_PackagesCard"
                     MultiLine = true;
                 }
                 field(Drawing_No; Rec.Drawing_No)
-                {
-                    ApplicationArea = All;
-                }
-                field(Drawing_Attachment; Rec.Drawing_Attachment)
                 {
                     ApplicationArea = All;
                 }
