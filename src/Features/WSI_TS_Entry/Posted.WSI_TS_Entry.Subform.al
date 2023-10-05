@@ -21,6 +21,10 @@ page 50805 "Posted WSI_TS_EntryListPart"
                     ApplicationArea = All;
                     Editable = false;
                 }
+                field(Overtime; Rec.Overtime)
+                {
+                    ApplicationArea = All;
+                }
                 field(Actual_Hours_Worked; Rec.Actual_Hours_Worked)
                 {
                     ApplicationArea = All;
@@ -34,10 +38,6 @@ page 50805 "Posted WSI_TS_EntryListPart"
                     ApplicationArea = All;
                 }
                 field(Date_Complete; Rec.Date_Complete)
-                {
-                    ApplicationArea = All;
-                }
-                field(Overtime; Rec.Overtime)
                 {
                     ApplicationArea = All;
                 }

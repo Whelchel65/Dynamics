@@ -8,6 +8,10 @@ pageextension 50526 "SODPurchase_Order_List50526" extends "Purchase Order List"
             {
                 ApplicationArea = all;
             }
+            field("Ready_to_Post_SOD"; Rec."Ready_to_Post")
+            {
+                ApplicationArea = all;
+            }
         }
         AddAfter("Amount Received Not Invoiced (LCY)")
         {
@@ -23,13 +27,6 @@ pageextension 50526 "SODPurchase_Order_List50526" extends "Purchase Order List"
         AddAfter("No.")
         {
             field("JOBNO_SOD"; Rec."JOBNO")
-            {
-                ApplicationArea = all;
-            }
-        }
-        AddAfter("Status")
-        {
-            field("Ready_To_Post_SOD"; Rec."Ready_To_Post")
             {
                 ApplicationArea = all;
             }

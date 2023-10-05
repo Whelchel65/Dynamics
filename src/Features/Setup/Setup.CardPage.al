@@ -52,10 +52,6 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Risk_Issue_Change_Number; Rec.Risk_Issue_Change_Number)
-                {
-                    ApplicationArea = All;
-                }
             }
 
 

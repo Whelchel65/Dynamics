@@ -9,13 +9,6 @@ pageextension 50514 "SODPosted_Purchase_Invoic50514" extends "Posted Purchase In
                 ApplicationArea = all;
             }
         }
-        AddAfter("Order No.")
-        {
-            field("JOBNO_SOD"; Rec."JOBNO")
-            {
-                ApplicationArea = all;
-            }
-        }
 
 
     }

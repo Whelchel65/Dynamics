@@ -48,7 +48,7 @@ table 50801 "WSI_TS_Entry LineSOD"
         {
             Caption = 'Overtime';
             DataClassification = ToBeClassified;
-            OptionMembers = "No","Yes";
+            OptionMembers = "no","yes";
         }
 
         field(99999; "Line No."; Integer)

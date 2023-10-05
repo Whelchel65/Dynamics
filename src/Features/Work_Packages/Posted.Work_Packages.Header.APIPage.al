@@ -41,15 +41,15 @@ page 50678 "API Posted Work_Packages Heade"
                 }
                 field(notes; Rec."Notes")
                 {
-                    Caption = 'Planning Notes';
+                    Caption = 'Notes';
                 }
                 field(drawing_no; Rec."Drawing_No")
                 {
                     Caption = 'Drawing No';
                 }
-                field(job_no; Rec."Job_No")
+                field(drawing_attachment; Rec."Drawing_Attachment")
                 {
-                    Caption = 'Job No';
+                    Caption = 'Drawing Attachment';
                 }
             }
         }

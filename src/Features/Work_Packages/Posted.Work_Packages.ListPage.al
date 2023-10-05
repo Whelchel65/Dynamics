@@ -17,10 +17,6 @@ page 50673 "Posted Work_PackagesList"
                 {
                     ApplicationArea = All;
                 }
-                field(Job_No; Rec.Job_No)
-                {
-                    ApplicationArea = All;
-                }
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
