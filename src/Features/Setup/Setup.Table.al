@@ -89,6 +89,18 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(17; Project_Events_Number; Code[20])
+        {
+            Caption = 'Project_Events Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
+        field(18; Ops_Package_Number; Code[20])
+        {
+            Caption = 'Ops_Package Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }

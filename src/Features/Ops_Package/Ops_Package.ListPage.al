@@ -1,66 +1,67 @@
-page 50801 "WSI_TS_EntryCard"
+page 50830 "Ops_PackageList"
 {
-    PageType = Document;
-    SourceTable = "WSI_TS_Entry HeaderSOD";
-    Caption = 'WSI Time Entries Card';
-
+    PageType = List;
+    SourceTable = "Ops_Package HeaderSOD";
+    Caption = 'Operations Package List';
+    CardPageId = "Ops_PackageCard";
+    UsageCategory = Lists;
+    ApplicationArea = all;
     layout
     {
         area(content)
         {
-            group(GeneralGrp)
+            repeater(Rep)
             {
-                Caption = 'General';
                 field(no; Rec.no)
                 {
                     ApplicationArea = All;
                 }
-                field(Date_Assigned; Rec.Date_Assigned)
+                field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
                 }
-                field(Hours_Allocated; Rec.Hours_Allocated)
+                field(OStatus; Rec.OStatus)
                 {
                     ApplicationArea = All;
                 }
-                field(Job_No; Rec.Job_No)
+                field(WBS; Rec.WBS)
                 {
                     ApplicationArea = All;
                 }
-                field(Parent_Task; Rec.Parent_Task)
+                field(Work_Package; Rec.Work_Package)
                 {
                     ApplicationArea = All;
                 }
-                field(Task_Name; Rec.Task_Name)
+                field(WP_Status; Rec.WP_Status)
                 {
                     ApplicationArea = All;
                 }
-                field(Priority; Rec.Priority)
+                field(WSI_Time_Entry; Rec.WSI_Time_Entry)
                 {
                     ApplicationArea = All;
                 }
-                field(Sum; Rec.Sum)
+                field(TE_Status; Rec.TE_Status)
                 {
                     ApplicationArea = All;
                 }
-                field(Operation; Rec.Operation)
+                field(WSI_Quality; Rec.WSI_Quality)
                 {
                     ApplicationArea = All;
                 }
-                field(Drawing_Number; Rec.Drawing_Number)
+                field(Quality_Status; Rec.Quality_Status)
                 {
                     ApplicationArea = All;
                 }
-                field(Complete; Rec.Complete)
+                field(Scope; Rec.Scope)
+                {
+                    ApplicationArea = All;
+                    MultiLine = true;
+                }
+                field(Sum_of_Hours; Rec.Sum_of_Hours)
                 {
                     ApplicationArea = All;
                 }
-            }
 
-            part(LinesPart; "WSI_TS_EntryListPart")
-            {
-                ApplicationArea = all;
-                SubPageLink = "no" = FIELD("no");
             }
         }
         area(factboxes)
@@ -69,7 +70,7 @@ page 50801 "WSI_TS_EntryCard"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50800),"No." = FIELD(no);
+                SubPageLink = "Table ID" = CONST(50830),"No." = FIELD(no);
             }
             systempart(Control1900383207; Links)
             {
@@ -86,19 +87,6 @@ page 50801 "WSI_TS_EntryCard"
     {
         area(processing)
         {
-            action(Post)
-            {
-                Caption = 'Post';
-                ApplicationArea = All;
-                Promoted = true;
-                PromotedCategory = Process;
-                PromotedOnly = true;
-                Image = PostDocument;
-                trigger OnAction()
-                begin
-                    if confirm('Post WSI Time Entries') then
-                        Rec.Post(Rec);                end;
-            }
         }
     }
 }

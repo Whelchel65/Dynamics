@@ -36,6 +36,10 @@ page 50671 "Work_PackagesCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Need_By; Rec.Need_By)
+                {
+                    ApplicationArea = All;
+                }
             }
 
             part(LinesPart; "Work_PackagesListPart")

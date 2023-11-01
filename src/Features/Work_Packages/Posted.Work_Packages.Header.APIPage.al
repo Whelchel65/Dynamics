@@ -51,6 +51,10 @@ page 50678 "API Posted Work_Packages Heade"
                 {
                     Caption = 'Drawing Attachment';
                 }
+                field(need_by; Rec."Need_By")
+                {
+                    Caption = 'Need By';
+                }
             }
         }
     }

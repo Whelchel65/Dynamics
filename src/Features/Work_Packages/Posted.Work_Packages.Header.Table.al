@@ -37,6 +37,11 @@ table 50672 "Posted Work_Packages HeaderSOD"
             Caption = 'Drawing Attachment';
             DataClassification = ToBeClassified;
         }
+        field(10; Need_By; Date)
+        {
+            Caption = 'Need By';
+            DataClassification = ToBeClassified;
+        }
 
 
     }

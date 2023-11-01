@@ -67,6 +67,10 @@ page 50806 "API WSI_TS_Entry HeaderSOD"
                 {
                     Caption = 'Priority';
                 }
+                field(sum; Rec."Sum")
+                {
+                    Caption = 'Total Hours';
+                }
             }
         }
     }

@@ -16,6 +16,21 @@ pageextension 50522 "SODJob_Planning_Lines50522" extends "Job Planning Lines"
                 ApplicationArea = all;
             }
         }
+        AddAfter("No.")
+        {
+            field("Vendor_No__SOD"; Rec."Vendor_No_")
+            {
+                ApplicationArea = all;
+            }
+            field("Vendor_Item_No__SOD"; Rec."Vendor_Item_No_")
+            {
+                ApplicationArea = all;
+            }
+            field("ManfName_SOD"; Rec."ManfName")
+            {
+                ApplicationArea = all;
+            }
+        }
 
 
     }

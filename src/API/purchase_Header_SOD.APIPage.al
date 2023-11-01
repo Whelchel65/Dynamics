@@ -1,4 +1,4 @@
-page 50812 "API P50812 SOD"
+page 50842 "API P50842 SOD"
 {
     PageType = API;
 
@@ -43,6 +43,9 @@ page 50812 "API P50812 SOD"
                 {
                 }
                 field(paytoaddress; Rec."Pay-to Address")
+                {
+                }
+                field(yourreference; Rec."Your Reference")
                 {
                 }
                 field(shiptocity; Rec."Ship-to City")

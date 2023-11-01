@@ -1,8 +1,8 @@
-table 50800 "WSI_TS_Entry HeaderSOD"
+table 50830 "Ops_Package HeaderSOD"
 {
     TableType = Normal;
-    Caption = 'WSI Time Entries Header';
-    LookupPageId = 50800;
+    Caption = 'Operations Package Header';
+    LookupPageId = 50830;
     fields
     {
 
@@ -11,56 +11,63 @@ table 50800 "WSI_TS_Entry HeaderSOD"
             Caption = 'no';
             DataClassification = ToBeClassified;
         }
-        field(2; Date_Assigned; Date)
+        field(2; Description; Text[500])
         {
-            Caption = 'Date Assigned';
+            Caption = 'Description';
             DataClassification = ToBeClassified;
         }
-        field(3; Hours_Allocated; Decimal)
+        field(3;OStatus; Option)
         {
-            Caption = 'Hours Allocated';
+            Caption = 'Status';
+            DataClassification = ToBeClassified;
+            OptionMembers = "Planning","Procurement","Production","Quality","Complete";
+        }
+        field(4; WBS; Text[50])
+        {
+            Caption = 'WBS';
             DataClassification = ToBeClassified;
         }
-        field(4; Job_No; Text[50])
+        field(5; Work_Package; Code[20])
         {
-            Caption = 'Job No';
+            Caption = 'Work Package';
+            DataClassification = ToBeClassified;
+            TableRelation = "Work_Packages HeaderSOD".WP_No;
+        }
+        field(6; WP_Status; Text[50])
+        {
+            Caption = 'WP Status';
             DataClassification = ToBeClassified;
         }
-        field(5; Parent_Task; Text[50])
+        field(7; WSI_Time_Entry; Code[20])
         {
-            Caption = 'Parent Task';
+            Caption = 'WSI Time Entry';
+            DataClassification = ToBeClassified;
+            TableRelation = "WSI_TS_Entry HeaderSOD".no;
+        }
+        field(8; TE_Status; Text[50])
+        {
+            Caption = 'TE Status';
             DataClassification = ToBeClassified;
         }
-        field(6; Operation; Text[50])
+        field(9; WSI_Quality; Code[20])
         {
-            Caption = 'Operation';
+            Caption = 'WSI Quality';
+            DataClassification = ToBeClassified;
+            TableRelation = "Quality HeaderSOD".Quality_No;
+        }
+        field(10; Quality_Status; Text[50])
+        {
+            Caption = 'Quality Status';
             DataClassification = ToBeClassified;
         }
-        field(7; Drawing_Number; Text[50])
+        field(11; Scope; Text[2000])
         {
-            Caption = 'Drawing Number';
+            Caption = 'Scope';
             DataClassification = ToBeClassified;
         }
-        field(10;Complete; Option)
+        field(12; Sum_of_Hours; Decimal)
         {
-            Caption = 'Complete';
-            DataClassification = ToBeClassified;
-            OptionMembers = "No","Yes";
-        }
-        field(12; Task_Name; Text[50])
-        {
-            Caption = 'Task Name';
-            DataClassification = ToBeClassified;
-        }
-        field(15;Priority; Option)
-        {
-            Caption = 'Priority';
-            DataClassification = ToBeClassified;
-            OptionMembers = "Medium"," Low"," High"," Critical";
-        }
-        field(18; Sum; Decimal)
-        {
-            Caption = 'Total Hours';
+            Caption = 'Sum of Hours';
             DataClassification = ToBeClassified;
         }
 
@@ -76,7 +83,7 @@ table 50800 "WSI_TS_Entry HeaderSOD"
     }
     trigger OnDelete()
     var
-        Lines: Record "WSI_TS_Entry LineSOD";
+        Lines: Record "Ops_Package LineSOD";
     begin
        Lines.SetRange("no",Rec."no");
        Lines.DeleteAll();
@@ -94,19 +101,19 @@ table 50800 "WSI_TS_Entry HeaderSOD"
             exit;
         if Rec."no" = '' then begin
             Setup.Get();
-            Setup.TestField("WSI_TS_Entry_Number");
-            NoSeriesMgt.InitSeries(Setup.WSI_TS_Entry_Number, '', 0D, no, NewNoSeries);
+            Setup.TestField("Ops_Package_Number");
+            NoSeriesMgt.InitSeries(Setup.Ops_Package_Number, '', 0D, no, NewNoSeries);
         end;
     end;
-   local procedure OnBeforeInsert(var Rec: Record "WSI_TS_Entry HeaderSOD"; var IsHandled: Boolean)
+   local procedure OnBeforeInsert(var Rec: Record "Ops_Package HeaderSOD"; var IsHandled: Boolean)
    begin
    end;
 
-    procedure Post(Doc : Record "WSI_TS_Entry HeaderSOD")
+    procedure Post(Doc : Record "Ops_Package HeaderSOD")
     var
-        DocLine : Record "WSI_TS_Entry LineSOD";
-        PostedDoc : Record "Posted WSI_TS_Entry HeaderSOD";
-        PostedLine: Record "Posted WSI_TS_Entry LineSOD";
+        DocLine : Record "Ops_Package LineSOD";
+        PostedDoc : Record "Posted Ops_Package HeaderSOD";
+        PostedLine: Record "Posted Ops_Package LineSOD";
         IsHandled : Boolean;
     begin
         OnBeforePosting(Doc,IsHandled);
@@ -129,10 +136,10 @@ table 50800 "WSI_TS_Entry HeaderSOD"
         OnAfterPosting(PostedDoc);
     end;
     [IntegrationEvent(false, false)]
-   local procedure OnBeforePosting(var Doc: Record "WSI_TS_Entry HeaderSOD";var IsHandled: Boolean)
+   local procedure OnBeforePosting(var Doc: Record "Ops_Package HeaderSOD";var IsHandled: Boolean)
    begin
    end;
-   local procedure OnAfterPosting(var Doc: Record "Posted WSI_TS_Entry HeaderSOD")
+   local procedure OnAfterPosting(var Doc: Record "Posted Ops_Package HeaderSOD")
    begin
    end;
 }

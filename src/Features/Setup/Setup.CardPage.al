@@ -52,6 +52,14 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Project_Events_Number; Rec.Project_Events_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Ops_Package_Number; Rec.Ops_Package_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 

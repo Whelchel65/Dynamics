@@ -1,44 +1,42 @@
-page 50673 "Posted Work_PackagesList"
+page 50811 "Project_EventsCard"
 {
-    PageType = List;
-    SourceTable = "Posted Work_Packages HeaderSOD";
-    Caption = 'Posted Work Package List';
-    CardPageId = "Posted Work_PackagesCard";
-    Editable = false;
-    UsageCategory = Lists;
-    ApplicationArea = all;
+    PageType = Document;
+    SourceTable = "Project_Events HeaderSOD";
+    Caption = 'Project Events Card';
+
     layout
     {
         area(content)
         {
-            repeater(Rep)
+            group(GeneralGrp)
             {
-                field(WP_No; Rec.WP_No)
+                Caption = 'General';
+                field(No; Rec.No)
                 {
                     ApplicationArea = All;
                 }
-                field(Description; Rec.Description)
+                field(Job_No; Rec.Job_No)
                 {
                     ApplicationArea = All;
                 }
-                field(Status; Rec.Status)
+                field(Project_Description; Rec.Project_Description)
                 {
                     ApplicationArea = All;
                 }
-                field(Notes; Rec.Notes)
-                {
-                    ApplicationArea = All;
-                    MultiLine = true;
-                }
-                field(Drawing_No; Rec.Drawing_No)
+                field(Project_Status; Rec.Project_Status)
                 {
                     ApplicationArea = All;
                 }
-                field(Need_By; Rec.Need_By)
+                field(Project_Manager; Rec.Project_Manager)
                 {
                     ApplicationArea = All;
                 }
+            }
 
+            part(LinesPart; "Project_EventsListPart")
+            {
+                ApplicationArea = all;
+                SubPageLink = "No" = FIELD("No");
             }
         }
         area(factboxes)
@@ -47,7 +45,7 @@ page 50673 "Posted Work_PackagesList"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50670),"No." = FIELD(WP_No);
+                SubPageLink = "Table ID" = CONST(50810),"No." = FIELD(No);
             }
             systempart(Control1900383207; Links)
             {

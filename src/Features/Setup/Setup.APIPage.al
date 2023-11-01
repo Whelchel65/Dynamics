@@ -83,6 +83,14 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'WSI_TS_Entry Number series';
                 }
+                field(project_events_number; Rec."Project_Events_Number")
+                {
+                    Caption = 'Project_Events Number series';
+                }
+                field(ops_package_number; Rec."Ops_Package_Number")
+                {
+                    Caption = 'Ops_Package Number series';
+                }
             }
         }
     }

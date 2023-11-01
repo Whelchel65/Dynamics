@@ -51,6 +51,10 @@ page 50676 "API Work_Packages HeaderSOD"
                 {
                     Caption = 'Drawing Attachment';
                 }
+                field(need_by; Rec."Need_By")
+                {
+                    Caption = 'Need By';
+                }
             }
         }
     }

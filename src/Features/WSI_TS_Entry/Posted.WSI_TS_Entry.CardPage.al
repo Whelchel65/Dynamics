@@ -40,6 +40,10 @@ page 50804 "Posted WSI_TS_EntryCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Sum; Rec.Sum)
+                {
+                    ApplicationArea = All;
+                }
                 field(Operation; Rec.Operation)
                 {
                     ApplicationArea = All;

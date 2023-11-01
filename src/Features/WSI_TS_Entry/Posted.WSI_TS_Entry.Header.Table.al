@@ -58,6 +58,11 @@ table 50802 "Posted WSI_TS_Entry HeaderSOD"
             DataClassification = ToBeClassified;
             OptionMembers = "Medium"," Low"," High"," Critical";
         }
+        field(18; Sum; Decimal)
+        {
+            Caption = 'Total Hours';
+            DataClassification = ToBeClassified;
+        }
 
 
     }

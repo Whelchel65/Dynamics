@@ -40,6 +40,10 @@ page 50800 "WSI_TS_EntryList"
                 {
                     ApplicationArea = All;
                 }
+                field(Sum; Rec.Sum)
+                {
+                    ApplicationArea = All;
+                }
                 field(Operation; Rec.Operation)
                 {
                     ApplicationArea = All;

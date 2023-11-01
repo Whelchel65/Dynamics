@@ -67,6 +67,10 @@ page 50808 "API Posted WSI_TS_Entry Header"
                 {
                     Caption = 'Priority';
                 }
+                field(sum; Rec."Sum")
+                {
+                    Caption = 'Total Hours';
+                }
             }
         }
     }

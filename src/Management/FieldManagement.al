@@ -149,6 +149,9 @@ codeunit 50500 "Field Transfers Mgt. SOD"
       [EventSubscriber(ObjectType::Table, Database::"Job Planning Line",'OnAfterCopyFromItem','',true,true)]
       local procedure JobPlanLineOnAfterCopyFromItem(Item: Record Item;var JobPlanningLine: Record "Job Planning Line")
       begin
+        "JobPlanningLine"."ManfName" := "Item"."ManfName";
+        "JobPlanningLine"."Vendor_Item_No_" := "Item"."Vendor Item No.";
+        "JobPlanningLine"."Vendor_No_" := "Item"."Vendor No.";
 
       end;
       [EventSubscriber(ObjectType::Table,Database::"Sales Line",'OnAfterAssignStdTxtValues', '', true, true)]

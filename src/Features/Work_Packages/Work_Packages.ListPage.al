@@ -24,6 +24,19 @@ page 50670 "Work_PackagesList"
                 {
                     ApplicationArea = All;
                 }
+                field(Notes; Rec.Notes)
+                {
+                    ApplicationArea = All;
+                    MultiLine = true;
+                }
+                field(Drawing_No; Rec.Drawing_No)
+                {
+                    ApplicationArea = All;
+                }
+                field(Need_By; Rec.Need_By)
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }
