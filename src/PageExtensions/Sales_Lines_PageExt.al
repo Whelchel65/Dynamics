@@ -1,4 +1,4 @@
-pageextension 50519 "SODSales_Lines50519" extends "Sales Lines"
+pageextension 50520 "SODSales_Lines50520" extends "Sales Lines"
 {
     layout
     {

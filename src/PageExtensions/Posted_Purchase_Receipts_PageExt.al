@@ -1,4 +1,4 @@
-pageextension 50517 "SODPosted_Purchase_Receip50517" extends "Posted Purchase Receipts"
+pageextension 50518 "SODPosted_Purchase_Receip50518" extends "Posted Purchase Receipts"
 {
     layout
     {
