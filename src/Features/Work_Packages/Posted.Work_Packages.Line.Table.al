@@ -27,6 +27,21 @@ table 50673 "Posted Work_Packages LineSOD"
             Caption = 'Date Complete';
             DataClassification = ToBeClassified;
         }
+        field(11; Tag_No; Text[50])
+        {
+            Caption = 'Tag No';
+            DataClassification = ToBeClassified;
+        }
+        field(12; QTY; Decimal)
+        {
+            Caption = 'QTY';
+            DataClassification = ToBeClassified;
+        }
+        field(13; Supplier; Text[50])
+        {
+            Caption = 'Supplier';
+            DataClassification = ToBeClassified;
+        }
 
         field(99999; "Line No."; Integer)
         {

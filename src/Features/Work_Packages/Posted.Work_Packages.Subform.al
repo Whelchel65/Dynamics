@@ -24,6 +24,18 @@ page 50675 "Posted Work_PackagesListPart"
                 {
                     ApplicationArea = All;
                 }
+                field(Tag_No; Rec.Tag_No)
+                {
+                    ApplicationArea = All;
+                }
+                field(QTY; Rec.QTY)
+                {
+                    ApplicationArea = All;
+                }
+                field(Supplier; Rec.Supplier)
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }

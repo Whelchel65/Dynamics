@@ -25,11 +25,6 @@ page 50673 "Posted Work_PackagesList"
                 {
                     ApplicationArea = All;
                 }
-                field(Notes; Rec.Notes)
-                {
-                    ApplicationArea = All;
-                    MultiLine = true;
-                }
                 field(Drawing_No; Rec.Drawing_No)
                 {
                     ApplicationArea = All;

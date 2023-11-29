@@ -1,76 +1,62 @@
-page 50834 "Posted Ops_PackageCard"
+page 50630 "Serv_TicksList"
 {
-    PageType = Document;
-    SourceTable = "Posted Ops_Package HeaderSOD";
-    Caption = 'Posted Operations Package Card';
-    Editable = false;
-
+    PageType = List;
+    SourceTable = "Serv_Ticks HeaderSOD";
+    Caption = 'Service Tickets List';
+    CardPageId = "Serv_TicksCard";
+    UsageCategory = Lists;
+    ApplicationArea = all;
     layout
     {
         area(content)
         {
-            group(GeneralGrp)
+            repeater(Rep)
             {
-                Caption = 'General';
-                field(no; Rec.no)
+                field(Contact_Name; Rec.Contact_Name)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+                field(Ticket_No; Rec.Ticket_No)
                 {
                     ApplicationArea = All;
                 }
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
-                field(OStatus; Rec.OStatus)
+                field(Status; Rec.Status)
                 {
                     ApplicationArea = All;
                 }
-                field(WBS; Rec.WBS)
+                field(Urgency; Rec.Urgency)
                 {
                     ApplicationArea = All;
                 }
-                field(Work_Package; Rec.Work_Package)
+                field(Ticket_Stage; Rec.Ticket_Stage)
                 {
                     ApplicationArea = All;
                 }
-                field(WP_Status; Rec.WP_Status)
+                field(Job_No; Rec.Job_No)
+                {
+                    ApplicationArea = All;
+                    ShowMandatory = true;
+                }
+                field(Contact; Rec.Contact)
                 {
                     ApplicationArea = All;
                 }
-                field(WSI_Time_Entry; Rec.WSI_Time_Entry)
+                field(Date_Originated; Rec.Date_Originated)
                 {
                     ApplicationArea = All;
                 }
-                field(TE_Status; Rec.TE_Status)
+                field(Date_Service_Completed; Rec.Date_Service_Completed)
                 {
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
-                field(WSI_Quality; Rec.WSI_Quality)
-                {
-                    ApplicationArea = All;
-                }
-                field(Quality_Status; Rec.Quality_Status)
-                {
-                    ApplicationArea = All;
-                }
-                field(Scope; Rec.Scope)
-                {
-                    ApplicationArea = All;
-                    MultiLine = true;
-                }
-                field(Sum_of_Hours; Rec.Sum_of_Hours)
-                {
-                    ApplicationArea = All;
-                }
-                field(Complete; Rec.Complete)
-                {
-                    ApplicationArea = All;
-                }
-            }
 
-            part(LinesPart; "Posted Ops_PackageListPart")
-            {
-                ApplicationArea = all;
-                SubPageLink = "no" = FIELD("no");
             }
         }
         area(factboxes)
@@ -79,7 +65,7 @@ page 50834 "Posted Ops_PackageCard"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50830),"No." = FIELD(no);
+                SubPageLink = "Table ID" = CONST(50630),"No." = FIELD(Ticket_No);
             }
             systempart(Control1900383207; Links)
             {

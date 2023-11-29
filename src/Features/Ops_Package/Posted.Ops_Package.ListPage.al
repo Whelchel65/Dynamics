@@ -53,12 +53,11 @@ page 50833 "Posted Ops_PackageList"
                 {
                     ApplicationArea = All;
                 }
-                field(Scope; Rec.Scope)
+                field(Sum_of_Hours; Rec.Sum_of_Hours)
                 {
                     ApplicationArea = All;
-                    MultiLine = true;
                 }
-                field(Sum_of_Hours; Rec.Sum_of_Hours)
+                field(Complete; Rec.Complete)
                 {
                     ApplicationArea = All;
                 }

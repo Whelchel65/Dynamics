@@ -31,10 +31,6 @@ page 50697 "API Quality LineSOD"
                 {
                     Caption = 'Quality No';
                 }
-                field(item; Rec."Item")
-                {
-                    Caption = 'Item';
-                }
                 field(line_description; Rec."Line_Description")
                 {
                     Caption = 'Description';
@@ -49,19 +45,15 @@ page 50697 "API Quality LineSOD"
                 }
                 field(date_fixed; Rec."Date_Fixed")
                 {
-                    Caption = 'Date Fault Fixed';
+                    Caption = 'Last Date Complete';
                 }
-                field(corrected_by; Rec."Corrected_By")
+                field(inspected_by; Rec."Inspected_By")
                 {
-                    Caption = 'Corrected By';
+                    Caption = 'Inspected by';
                 }
-                field(solution; Rec."Solution")
+                field(date_checked; Rec."Date_Checked")
                 {
-                    Caption = 'Solution/Notes';
-                }
-                field(checked_by; Rec."Checked_By")
-                {
-                    Caption = 'Checked By';
+                    Caption = 'Check Date';
                 }
                 field(lineno; Rec."Line No.")
                 {

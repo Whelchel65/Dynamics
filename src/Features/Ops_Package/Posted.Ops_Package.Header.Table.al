@@ -70,6 +70,12 @@ table 50832 "Posted Ops_Package HeaderSOD"
             Caption = 'Sum of Hours';
             DataClassification = ToBeClassified;
         }
+        field(17;Complete; Option)
+        {
+            Caption = 'Complete';
+            DataClassification = ToBeClassified;
+            OptionMembers = "No","Yes";
+        }
 
 
     }

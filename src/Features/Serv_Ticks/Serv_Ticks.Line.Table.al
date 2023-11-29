@@ -1,4 +1,4 @@
-table 50631 "Service_Tickets LineSOD"
+table 50631 "Serv_Ticks LineSOD"
 {
     TableType = Normal;
     Caption = 'Service Tickets Line';

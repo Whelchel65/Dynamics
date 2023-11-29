@@ -60,6 +60,10 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Serv_Ticks_Number; Rec.Serv_Ticks_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 

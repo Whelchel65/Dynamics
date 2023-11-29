@@ -44,6 +44,12 @@ table 50811 "Project_Events LineSOD"
             Caption = 'Notes';
             DataClassification = ToBeClassified;
         }
+        field(12; Ops_Package; Code[20])
+        {
+            Caption = 'Ops Package';
+            DataClassification = ToBeClassified;
+            TableRelation = "Ops_Package HeaderSOD".no;
+        }
 
         field(99999; "Line No."; Integer)
         {

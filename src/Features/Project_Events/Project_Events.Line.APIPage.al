@@ -55,6 +55,10 @@ page 50817 "API Project_Events LineSOD"
                 {
                     Caption = 'Notes';
                 }
+                field(ops_package; Rec."Ops_Package")
+                {
+                    Caption = 'Ops Package';
+                }
                 field(lineno; Rec."Line No.")
                 {
                     Caption = 'Line No.';

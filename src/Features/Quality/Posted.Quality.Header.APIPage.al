@@ -55,6 +55,10 @@ page 50698 "API Posted Quality HeaderSOD"
                 {
                     Caption = 'Job No';
                 }
+                field(ops_package; Rec."Ops_Package")
+                {
+                    Caption = 'Ops Package';
+                }
             }
         }
     }

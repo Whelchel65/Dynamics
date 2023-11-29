@@ -1,4 +1,4 @@
-table 50630 "Service_Tickets HeaderSOD"
+table 50630 "Serv_Ticks HeaderSOD"
 {
     TableType = Normal;
     Caption = 'Service Tickets Header';
@@ -158,7 +158,7 @@ table 50630 "Service_Tickets HeaderSOD"
     }
     trigger OnDelete()
     var
-        Lines: Record "Service_Tickets LineSOD";
+        Lines: Record "Serv_Ticks LineSOD";
     begin
        Lines.SetRange("Ticket_No",Rec."Ticket_No");
        Lines.DeleteAll();
@@ -176,12 +176,49 @@ table 50630 "Service_Tickets HeaderSOD"
             exit;
         if Rec."Ticket_No" = '' then begin
             Setup.Get();
-            Setup.TestField("Service_Tickets_Number");
-            NoSeriesMgt.InitSeries(Setup.Service_Tickets_Number, '', 0D, Ticket_No, NewNoSeries);
+            Setup.TestField("Serv_Ticks_Number");
+            NoSeriesMgt.InitSeries(Setup.Serv_Ticks_Number, '', 0D, Ticket_No, NewNoSeries);
         end;
     end;
-   local procedure OnBeforeInsert(var Rec: Record "Service_Tickets HeaderSOD"; var IsHandled: Boolean)
+   local procedure OnBeforeInsert(var Rec: Record "Serv_Ticks HeaderSOD"; var IsHandled: Boolean)
    begin
    end;
 
+    procedure Post(Doc : Record "Serv_Ticks HeaderSOD")
+    var
+        DocLine : Record "Serv_Ticks LineSOD";
+        PostedDoc : Record "Posted Serv_Ticks HeaderSOD";
+        PostedLine: Record "Posted Serv_Ticks LineSOD";
+        IsHandled : Boolean;
+    begin
+        OnBeforePosting(Doc,IsHandled);
+        if IsHandled then
+            exit;
+        Rec.TestField(Description);
+        Rec.TestField(Job_No);
+        Rec.TestField(Date_Initial_Responded);
+        Rec.TestField(Date_Service_Completed);
+
+        PostedDoc.Init();
+        PostedDoc.TransferFields(Doc);
+        PostedDoc.Insert(true);
+        DocLine.SetRange(Ticket_No, Doc.Ticket_No);
+        if DocLine.FindSet() then
+            repeat
+
+                PostedLine.Init();
+                PostedLine.TransferFields(DocLine);
+                PostedLine.Insert(true);
+            until DocLine.Next() = 0;
+        Doc.Delete(true);
+        DocLine.DeleteAll(true);
+        OnAfterPosting(PostedDoc);
+    end;
+    [IntegrationEvent(false, false)]
+   local procedure OnBeforePosting(var Doc: Record "Serv_Ticks HeaderSOD";var IsHandled: Boolean)
+   begin
+   end;
+   local procedure OnAfterPosting(var Doc: Record "Posted Serv_Ticks HeaderSOD")
+   begin
+   end;
 }

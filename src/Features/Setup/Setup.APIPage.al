@@ -91,6 +91,10 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Ops_Package Number series';
                 }
+                field(serv_ticks_number; Rec."Serv_Ticks_Number")
+                {
+                    Caption = 'Serv_Ticks Number series';
+                }
             }
         }
     }

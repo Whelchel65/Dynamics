@@ -60,6 +60,10 @@ page 50831 "Ops_PackageCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Complete; Rec.Complete)
+                {
+                    ApplicationArea = All;
+                }
             }
 
             part(LinesPart; "Ops_PackageListPart")

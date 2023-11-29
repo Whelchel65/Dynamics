@@ -40,6 +40,12 @@ tableextension 50503 "SODPurchase_Header" extends "Purchase Header"
             DataClassification = ToBeClassified;
             OptionMembers = "No","Yes";
         }
+        field(50507;"Purchaser_Approval"; Option)
+        {
+            Caption = 'Purchaser_Approval';
+            DataClassification = ToBeClassified;
+            OptionMembers = "","no","yes";
+        }
 
     }
 }

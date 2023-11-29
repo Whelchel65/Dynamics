@@ -29,6 +29,10 @@ page 50693 "Posted QualityList"
                 {
                     ApplicationArea = All;
                 }
+                field(Ops_Package; Rec.Ops_Package)
+                {
+                    ApplicationArea = All;
+                }
                 field(Drawing_Number; Rec.Drawing_Number)
                 {
                     ApplicationArea = All;

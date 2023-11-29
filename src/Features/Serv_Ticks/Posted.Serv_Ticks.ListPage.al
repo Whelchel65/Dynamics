@@ -1,9 +1,10 @@
-page 50630 "Service_TicketsList"
+page 50633 "Posted Serv_TicksList"
 {
     PageType = List;
-    SourceTable = "Service_Tickets HeaderSOD";
-    Caption = 'Service Tickets List';
-    CardPageId = "Service_TicketsCard";
+    SourceTable = "Posted Serv_Ticks HeaderSOD";
+    Caption = 'Posted Service Tickets List';
+    CardPageId = "Posted Serv_TicksCard";
+    Editable = false;
     UsageCategory = Lists;
     ApplicationArea = all;
     layout

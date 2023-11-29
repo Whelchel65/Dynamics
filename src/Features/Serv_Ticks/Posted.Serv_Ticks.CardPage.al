@@ -1,8 +1,9 @@
-page 50631 "Service_TicketsCard"
+page 50634 "Posted Serv_TicksCard"
 {
     PageType = Document;
-    SourceTable = "Service_Tickets HeaderSOD";
-    Caption = 'Service Tickets Card';
+    SourceTable = "Posted Serv_Ticks HeaderSOD";
+    Caption = 'Posted Service Tickets Card';
+    Editable = false;
 
     layout
     {
@@ -113,7 +114,7 @@ page 50631 "Service_TicketsCard"
                 }
             }
 
-            part(LinesPart; "Service_TicketsListPart")
+            part(LinesPart; "Posted Serv_TicksListPart")
             {
                 ApplicationArea = all;
                 SubPageLink = "Ticket_No" = FIELD("Ticket_No");

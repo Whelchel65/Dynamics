@@ -43,6 +43,12 @@ table 50692 "Posted Quality HeaderSOD"
             DataClassification = ToBeClassified;
             TableRelation = Job."No.";
         }
+        field(17; Ops_Package; Code[20])
+        {
+            Caption = 'Ops Package';
+            DataClassification = ToBeClassified;
+            TableRelation = "Ops_Package HeaderSOD".no;
+        }
 
 
     }

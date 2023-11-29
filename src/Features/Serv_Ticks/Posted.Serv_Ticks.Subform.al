@@ -1,9 +1,10 @@
-page 50632 "Service_TicketsListPart"
+page 50635 "Posted Serv_TicksListPart"
 {
     PageType = ListPart;
-    SourceTable = "Service_Tickets LineSOD";
+    SourceTable = "Posted Serv_Ticks LineSOD";
     Caption = 'Tasks, Notes, Communications';
     AutoSplitKey = true;
+    Editable = false;
 
     layout
     {

@@ -20,7 +20,7 @@ table 50670 "Work_Packages HeaderSOD"
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "Work Queue"," Work Package Needed"," Package Complete"," Information Needed";
+            OptionMembers = "Work Queue"," Work Package Needed"," Package Complete"," Information Needed","Turned Over";
         }
         field(4; Notes; Text[2000])
         {

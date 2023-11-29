@@ -43,6 +43,18 @@ page 50677 "API Work_Packages LineSOD"
                 {
                     Caption = 'Date Complete';
                 }
+                field(tag_no; Rec."Tag_No")
+                {
+                    Caption = 'Tag No';
+                }
+                field(qty; Rec."QTY")
+                {
+                    Caption = 'QTY';
+                }
+                field(supplier; Rec."Supplier")
+                {
+                    Caption = 'Supplier';
+                }
                 field(lineno; Rec."Line No.")
                 {
                     Caption = 'Line No.';

@@ -63,6 +63,10 @@ page 50686 "API MTL_Request HeaderSOD"
                 {
                     Caption = 'PO Number';
                 }
+                field(user_email; Rec."User_Email")
+                {
+                    Caption = 'User Email';
+                }
             }
         }
     }

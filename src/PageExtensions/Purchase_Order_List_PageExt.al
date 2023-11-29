@@ -1,4 +1,4 @@
-pageextension 50527 "SODPurchase_Order_List50527" extends "Purchase Order List"
+pageextension 50529 "SODPurchase_Order_List50529" extends "Purchase Order List"
 {
     layout
     {
@@ -11,6 +11,10 @@ pageextension 50527 "SODPurchase_Order_List50527" extends "Purchase Order List"
             field("Ready_to_Post_SOD"; Rec."Ready_to_Post")
             {
                 ApplicationArea = all;
+            }
+            field("Purchaser_Approval_SOD"; Rec."Purchaser_Approval")
+            {
+                ToolTip = 'Only to be filled out by original purchaser';                ApplicationArea = all;
             }
         }
         AddAfter("Amount Received Not Invoiced (LCY)")

@@ -44,6 +44,10 @@ pageextension 50507 "SODPurchase_Order50507" extends "Purchase Order"
             {
                 ApplicationArea = all;
             }
+            field("Purchaser_Approval_SOD"; Rec."Purchaser_Approval")
+            {
+                ToolTip = 'Only to be filled out by original purchaser';                ApplicationArea = all;
+            }
         }
         modify("Expected Receipt Date")
         {

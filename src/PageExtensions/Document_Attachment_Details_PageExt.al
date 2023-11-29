@@ -12,6 +12,10 @@ pageextension 50524 "SODDocument_Attachment_De50524" extends "Document Attachmen
             {
                 ApplicationArea = all;
             }
+            field("Quote_Expire_SOD"; Rec."Quote_Expire")
+            {
+                ApplicationArea = all;
+            }
         }
 
 

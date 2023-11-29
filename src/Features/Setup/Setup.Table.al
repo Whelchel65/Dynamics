@@ -101,6 +101,12 @@ table 50640 "SetupSOD"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series".Code;
         }
+        field(19; Serv_Ticks_Number; Code[20])
+        {
+            Caption = 'Serv_Ticks Number series';
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code;
+        }
 
 
     }

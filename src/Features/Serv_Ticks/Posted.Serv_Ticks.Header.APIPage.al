@@ -1,4 +1,4 @@
-page 50636 "API Service_Tickets HeaderSOD"
+page 50638 "API Posted Serv_Ticks HeaderSO"
 {
     PageType = API;
 
@@ -6,13 +6,13 @@ page 50636 "API Service_Tickets HeaderSOD"
     APIPublisher = 'hougaard';
     APIGroup = 'SOD';
 
-    EntityCaption = 'Service Tickets Header';
-    EntitySetCaption = 'Service Tickets Headers';
-    EntityName = 'service_ticketsheader';
-    EntitySetName = 'service_ticketsheaders';
+    EntityCaption = 'Posted Service Tickets Header';
+    EntitySetCaption = 'Posted Service Tickets Headers';
+    EntityName = 'postedserv_ticksheader';
+    EntitySetName = 'postedserv_ticksheaders';
 
     ODataKeyFields = SystemId;
-    SourceTable = "Service_Tickets HeaderSOD";
+    SourceTable = "Posted Serv_Ticks HeaderSOD";
 
     Extensible = false;
     DelayedInsert = true;

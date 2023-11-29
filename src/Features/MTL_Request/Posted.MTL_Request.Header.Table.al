@@ -57,6 +57,13 @@ table 50682 "Posted MTL_Request HeaderSOD"
             Caption = 'PO Number';
             DataClassification = ToBeClassified;
         }
+        field(18;"User_Email"; Text[100])
+        {
+            Caption = 'User Email';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup("User Setup"."E-Mail" where("Salespers./Purch. Code" = field(User)));
+        }
 
 
     }

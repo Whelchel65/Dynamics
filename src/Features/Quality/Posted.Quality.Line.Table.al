@@ -11,11 +11,6 @@ table 50693 "Posted Quality LineSOD"
             Caption = 'Quality No';
             DataClassification = ToBeClassified;
         }
-        field(7; Item; Text[300])
-        {
-            Caption = 'Item';
-            DataClassification = ToBeClassified;
-        }
         field(8; Line_Description; Text[500])
         {
             Caption = 'Description';
@@ -34,24 +29,18 @@ table 50693 "Posted Quality LineSOD"
         }
         field(11; Date_Fixed; Date)
         {
-            Caption = 'Date Fault Fixed';
+            Caption = 'Last Date Complete';
             DataClassification = ToBeClassified;
         }
-        field(13; Corrected_By; Text[50])
+        field(13; Inspected_By; Text[50])
         {
-            Caption = 'Corrected By';
+            Caption = 'Inspected by';
             DataClassification = ToBeClassified;
         }
-        field(15; Solution; Text[1000])
+        field(16; Date_Checked; Date)
         {
-            Caption = 'Solution/Notes';
+            Caption = 'Check Date';
             DataClassification = ToBeClassified;
-        }
-        field(16;Checked_By; Option)
-        {
-            Caption = 'Checked By';
-            DataClassification = ToBeClassified;
-            OptionMembers = "-","Andrew","Ben","John","Poe","Randy";
         }
 
         field(99999; "Line No."; Integer)

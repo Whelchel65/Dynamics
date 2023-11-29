@@ -644,6 +644,11 @@ codeunit 50500 "Field Transfers Mgt. SOD"
    begin
 
    end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Create Prod. Order from Sale", 'OnAfterCreateProdOrderFromSalesLine', '', true,true)]
+   local procedure OnAfterCreateProdOrderFromSalesLine(var SalesLine: Record "Sales Line";var ProdOrder: Record "Production Order")
+   begin
+
+   end;
 procedure DataCaption(VarRec: Variant): Text
     var
         Ref: RecordRef;
@@ -693,4 +698,220 @@ procedure DataCaption(VarRec: Variant): Text
         end;
         exit(Result);
     end;
+[EventSubscriber(ObjectType::Page, Page::"Document Attachment Factbox", 'OnBeforeDrillDown', '', false, false)]
+local procedure OnBeforeDrillDown(DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef);
+var
+Asset_MaintenanceSOD: Record Asset_MaintenanceSOD;
+MTL_RequestSOD: Record MTL_RequestSOD;
+Ops_PackageSOD: Record Ops_PackageSOD;
+Project_EventsSOD: Record Project_EventsSOD;
+QualitySOD: Record QualitySOD;
+Sales_LeadsSOD: Record Sales_LeadsSOD;
+Serv_TicksSOD: Record Serv_TicksSOD;
+Shop_EmployeesSOD: Record Shop_EmployeesSOD;
+Work_PackagesSOD: Record Work_PackagesSOD;
+WSI_TS_EntrySOD: Record WSI_TS_EntrySOD;
+begin
+    case DocumentAttachment."Table ID" of
+DATABASE::Asset_MaintenanceSOD:
+    begin
+        RecRef.Open(DATABASE::Asset_MaintenanceSOD);
+        if Asset_MaintenanceSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Asset_MaintenanceSOD);
+    end;
+DATABASE::MTL_RequestSOD:
+    begin
+        RecRef.Open(DATABASE::MTL_RequestSOD);
+        if MTL_RequestSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(MTL_RequestSOD);
+    end;
+DATABASE::Ops_PackageSOD:
+    begin
+        RecRef.Open(DATABASE::Ops_PackageSOD);
+        if Ops_PackageSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Ops_PackageSOD);
+    end;
+DATABASE::Project_EventsSOD:
+    begin
+        RecRef.Open(DATABASE::Project_EventsSOD);
+        if Project_EventsSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Project_EventsSOD);
+    end;
+DATABASE::QualitySOD:
+    begin
+        RecRef.Open(DATABASE::QualitySOD);
+        if QualitySOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(QualitySOD);
+    end;
+DATABASE::Sales_LeadsSOD:
+    begin
+        RecRef.Open(DATABASE::Sales_LeadsSOD);
+        if Sales_LeadsSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Sales_LeadsSOD);
+    end;
+DATABASE::Serv_TicksSOD:
+    begin
+        RecRef.Open(DATABASE::Serv_TicksSOD);
+        if Serv_TicksSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Serv_TicksSOD);
+    end;
+DATABASE::Shop_EmployeesSOD:
+    begin
+        RecRef.Open(DATABASE::Shop_EmployeesSOD);
+        if Shop_EmployeesSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Shop_EmployeesSOD);
+    end;
+DATABASE::Work_PackagesSOD:
+    begin
+        RecRef.Open(DATABASE::Work_PackagesSOD);
+        if Work_PackagesSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Work_PackagesSOD);
+    end;
+DATABASE::WSI_TS_EntrySOD:
+    begin
+        RecRef.Open(DATABASE::WSI_TS_EntrySOD);
+        if WSI_TS_EntrySOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(WSI_TS_EntrySOD);
+    end;
+    end;
+end;
+[EventSubscriber(ObjectType::Page, Page::"Document Attachment Details", 'OnAfterOpenForRecRef', '', false, false)]
+local procedure OnAfterOpenForRecRef(var DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef);
+var
+    FieldRef: FieldRef;
+    RecNo: Code[20];
+begin
+    case RecRef.Number of
+DATABASE::Asset_MaintenanceSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::MTL_RequestSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::Ops_PackageSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::Project_EventsSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::QualitySOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::Sales_LeadsSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::Serv_TicksSOD:
+    begin
+        FieldRef := RecRef.Field(505100);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::Shop_EmployeesSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::Work_PackagesSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::WSI_TS_EntrySOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+    end;
+end;
+[EventSubscriber(ObjectType::Table, Database::"Document Attachment", 'OnAfterInitFieldsFromRecRef','', false, false)]
+local procedure OnAfterInitFieldsFromRecRef(var DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef)
+var
+    FieldRef: FieldRef;
+    RecNo: Code[20];
+begin
+    case RecRef.Number of
+DATABASE::Asset_MaintenanceSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::MTL_RequestSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::Ops_PackageSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::Project_EventsSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::QualitySOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::Sales_LeadsSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::Serv_TicksSOD:
+    begin
+        FieldRef := RecRef.Field(505100);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::Shop_EmployeesSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::Work_PackagesSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::WSI_TS_EntrySOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+    end;
+end;
+
 }

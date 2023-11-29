@@ -14,6 +14,11 @@ tableextension 50511 "SODDocument_Attachment" extends "Document Attachment"
             Caption = 'Notes';
             DataClassification = ToBeClassified;
         }
+        field(50502;"Quote_Expire"; Date)
+        {
+            Caption = 'Quote_Expire';
+            DataClassification = ToBeClassified;
+        }
 
     }
 }

@@ -15,6 +15,10 @@ page 50681 "MTL_RequestCard"
                 {
                     ApplicationArea = All;
                 }
+                field(User_Email; Rec.User_Email)
+                {
+                    ApplicationArea = All;
+                }
                 field(Vendor; Rec.Vendor)
                 {
                     ApplicationArea = All;

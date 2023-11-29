@@ -1,4 +1,4 @@
-page 50637 "API Service_Tickets LineSOD"
+page 50637 "API Serv_Ticks LineSOD"
 {
     PageType = API;
 
@@ -8,11 +8,11 @@ page 50637 "API Service_Tickets LineSOD"
 
     EntityCaption = 'Service Tickets Line';
     EntitySetCaption = 'Service Tickets Lines';
-    EntityName = 'service_ticketsline';
-    EntitySetName = 'service_ticketslines';
+    EntityName = 'serv_ticksline';
+    EntitySetName = 'serv_tickslines';
 
     ODataKeyFields = SystemId;
-    SourceTable = "Service_Tickets LineSOD";
+    SourceTable = "Serv_Ticks LineSOD";
 
     Extensible = false;
     DelayedInsert = true;

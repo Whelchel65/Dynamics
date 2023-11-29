@@ -75,6 +75,10 @@ page 50838 "API Posted Ops_Package HeaderS"
                 {
                     Caption = 'Sum of Hours';
                 }
+                field(complete; Rec."Complete")
+                {
+                    Caption = 'Complete';
+                }
             }
         }
     }
