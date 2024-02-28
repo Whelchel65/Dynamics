@@ -64,6 +64,14 @@ page 50641 "SetupCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Done_Project_Time_Number; Rec.Done_Project_Time_Number)
+                {
+                    ApplicationArea = All;
+                }
+                field(Eng_Package_Number; Rec.Eng_Package_Number)
+                {
+                    ApplicationArea = All;
+                }
             }
 
 

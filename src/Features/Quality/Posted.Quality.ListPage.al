@@ -50,7 +50,7 @@ page 50693 "Posted QualityList"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50690),"No." = FIELD(Quality_No);
+                SubPageLink = "Table ID" = CONST(50692),"No." = FIELD(Quality_No);
             }
             systempart(Control1900383207; Links)
             {

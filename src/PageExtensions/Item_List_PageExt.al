@@ -16,6 +16,13 @@ pageextension 50501 "SODItem_List50501" extends "Item List"
                 ApplicationArea = all;
             }
         }
+        AddAfter("Standard Cost")
+        {
+            field("Duplicate_SOD"; Rec."Duplicate")
+            {
+                ApplicationArea = all;
+            }
+        }
         AddAfter("Vendor No.")
         {
             field("Vendor_Name_SOD"; Rec."Vendor_Name")

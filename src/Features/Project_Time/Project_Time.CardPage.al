@@ -2,7 +2,7 @@ page 50661 "Project_TimeCard"
 {
     PageType = Card;
     SourceTable = "Project_TimeSOD";
-    Caption = 'Project Time Card';
+    Caption = 'Active Project Time Card';
 
     layout
     {
@@ -58,6 +58,24 @@ page 50661 "Project_TimeCard"
             }
 
 
+        }
+        area(factboxes)
+        {
+            part("Attached Documents"; "Document Attachment Factbox")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments';
+                SubPageLink = "Table ID" = CONST(50660),"No." = FIELD(Entry_Number);
+            }
+            systempart(Control1900383207; Links)
+            {
+                ApplicationArea = RecordLinks;
+                Visible = false;
+            }
+            systempart(Control1905767507; Notes)
+            {
+                ApplicationArea = Notes;
+            }
         }
     }
     actions

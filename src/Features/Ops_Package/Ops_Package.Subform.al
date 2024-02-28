@@ -11,7 +11,7 @@ page 50832 "Ops_PackageListPart"
         {
             repeater(Rep)
             {
-                field(Line_Type; Rec.Line_Type)
+                field(Drawing_Number; Rec.Drawing_Number)
                 {
                     ApplicationArea = All;
                 }
@@ -19,11 +19,11 @@ page 50832 "Ops_PackageListPart"
                 {
                     ApplicationArea = All;
                 }
-                field(Date_Created; Rec.Date_Created)
+                field(Eng_Package; Rec.Eng_Package)
                 {
                     ApplicationArea = All;
                 }
-                field(Line_Notes; Rec.Line_Notes)
+                field(Drawing_Rev; Rec.Drawing_Rev)
                 {
                     ApplicationArea = All;
                 }

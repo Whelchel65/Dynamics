@@ -66,7 +66,7 @@ page 50633 "Posted Serv_TicksList"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50630),"No." = FIELD(Ticket_No);
+                SubPageLink = "Table ID" = CONST(50632),"No." = FIELD(Ticket_No);
             }
             systempart(Control1900383207; Links)
             {

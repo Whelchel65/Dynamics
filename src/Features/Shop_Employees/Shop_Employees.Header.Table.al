@@ -77,6 +77,8 @@ table 50790 "Shop_Employees HeaderSOD"
 
     procedure Post(Doc : Record "Shop_Employees HeaderSOD")
     var
+        FromDocumentAttachment: Record "Document Attachment";
+        ToDocumentAttachment: Record "Document Attachment";
         DocLine : Record "Shop_Employees LineSOD";
         PostedDoc : Record "x Shop_Employees HeaderSOD";
         PostedLine: Record "x Shop_Employees LineSOD";
@@ -97,6 +99,19 @@ table 50790 "Shop_Employees HeaderSOD"
                 PostedLine.TransferFields(DocLine);
                 PostedLine.Insert(true);
             until DocLine.Next() = 0;
+        FromDocumentAttachment.Setrange("Table ID", 50790);
+        FromDocumentAttachment.Setrange("No.", Doc.No);
+       if FromDocumentAttachment.FindSet() then begin
+            repeat
+                Clear(ToDocumentAttachment);
+                ToDocumentAttachment.Init();
+                ToDocumentAttachment.TransferFields(FromDocumentAttachment);
+                ToDocumentAttachment.Validate("Table ID", 50792);
+                ToDocumentAttachment.Validate("No.", PostedDoc.No);
+                if not ToDocumentAttachment.Insert(true) then;
+            until FromDocumentAttachment.Next() = 0;
+            FromDocumentAttachment.DeleteAll();
+        end;
         Doc.Delete(true);
         DocLine.DeleteAll(true);
         OnAfterPosting(PostedDoc);

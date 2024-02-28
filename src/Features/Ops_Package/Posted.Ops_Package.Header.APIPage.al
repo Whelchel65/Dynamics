@@ -79,6 +79,18 @@ page 50838 "API Posted Ops_Package HeaderS"
                 {
                     Caption = 'Complete';
                 }
+                field(job_no; Rec."Job_No")
+                {
+                    Caption = 'Job No';
+                }
+                field(drawing_no; Rec."Drawing_No")
+                {
+                    Caption = 'Drawing No';
+                }
+                field(quality_complete; Rec."Quality_Complete")
+                {
+                    Caption = 'Quality Complete?';
+                }
             }
         }
     }

@@ -20,7 +20,7 @@ table 50670 "Work_Packages HeaderSOD"
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
-            OptionMembers = "Work Queue"," Work Package Needed"," Package Complete"," Information Needed","Turned Over";
+            OptionMembers = "Work Package Needed"," Package Complete"," Information Needed","Turned Over","In Progress","Parts on Order";
         }
         field(4; Notes; Text[2000])
         {
@@ -32,15 +32,22 @@ table 50670 "Work_Packages HeaderSOD"
             Caption = 'Drawing No';
             DataClassification = ToBeClassified;
         }
-        field(9; Drawing_Attachment; Media)
+        field(9; Ops_Package; Code[20])
         {
-            Caption = 'Drawing Attachment';
+            Caption = 'Ops_Package';
             DataClassification = ToBeClassified;
+            TableRelation = "Ops_Package HeaderSOD".no;
         }
         field(10; Need_By; Date)
         {
             Caption = 'Need By';
             DataClassification = ToBeClassified;
+        }
+        field(14; Job_No; Code[20])
+        {
+            Caption = 'Job No';
+            DataClassification = ToBeClassified;
+            TableRelation = Job."No.";
         }
 
 
@@ -83,6 +90,8 @@ table 50670 "Work_Packages HeaderSOD"
 
     procedure Post(Doc : Record "Work_Packages HeaderSOD")
     var
+        FromDocumentAttachment: Record "Document Attachment";
+        ToDocumentAttachment: Record "Document Attachment";
         DocLine : Record "Work_Packages LineSOD";
         PostedDoc : Record "Posted Work_Packages HeaderSOD";
         PostedLine: Record "Posted Work_Packages LineSOD";
@@ -103,6 +112,19 @@ table 50670 "Work_Packages HeaderSOD"
                 PostedLine.TransferFields(DocLine);
                 PostedLine.Insert(true);
             until DocLine.Next() = 0;
+        FromDocumentAttachment.Setrange("Table ID", 50670);
+        FromDocumentAttachment.Setrange("No.", Doc.WP_No);
+       if FromDocumentAttachment.FindSet() then begin
+            repeat
+                Clear(ToDocumentAttachment);
+                ToDocumentAttachment.Init();
+                ToDocumentAttachment.TransferFields(FromDocumentAttachment);
+                ToDocumentAttachment.Validate("Table ID", 50672);
+                ToDocumentAttachment.Validate("No.", PostedDoc.WP_No);
+                if not ToDocumentAttachment.Insert(true) then;
+            until FromDocumentAttachment.Next() = 0;
+            FromDocumentAttachment.DeleteAll();
+        end;
         Doc.Delete(true);
         DocLine.DeleteAll(true);
         OnAfterPosting(PostedDoc);

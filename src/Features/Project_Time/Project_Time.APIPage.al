@@ -6,8 +6,8 @@ page 50666 "API Project_TimeSOD"
     APIPublisher = 'hougaard';
     APIGroup = 'SOD';
 
-    EntityCaption = 'Project Time';
-    EntitySetCaption = 'Project Times';
+    EntityCaption = 'Active Project Time';
+    EntitySetCaption = 'Active Project Times';
     EntityName = 'project_time';
     EntitySetName = 'project_times';
 

@@ -11,26 +11,31 @@ table 50831 "Ops_Package LineSOD"
             Caption = 'no';
             DataClassification = ToBeClassified;
         }
-        field(13;Line_Type; Option)
+        field(13; Drawing_Number; Text[20])
         {
-            Caption = 'Line Type';
+            Caption = 'Drawing_Number';
             DataClassification = ToBeClassified;
-            OptionMembers = "Note","Change","Risk","Issue";
         }
         field(14; LDescription; Text[500])
         {
             Caption = 'Description';
             DataClassification = ToBeClassified;
         }
-        field(15; Date_Created; Date)
+        field(15; Eng_Package; Text[50])
         {
-            Caption = 'Date Created';
+            Caption = 'Package_Name';
             DataClassification = ToBeClassified;
         }
-        field(16; Line_Notes; Text[1000])
+        field(16; Drawing_Rev; Text[10])
         {
-            Caption = 'Line Notes';
+            Caption = 'Drawing_Rev';
             DataClassification = ToBeClassified;
+        }
+        field(21;Drawing_COmplete_; Option)
+        {
+            Caption = 'Drawing Complete?';
+            DataClassification = ToBeClassified;
+            OptionMembers = "No","Yes";
         }
 
         field(99999; "Line No."; Integer)

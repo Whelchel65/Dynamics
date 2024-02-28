@@ -51,7 +51,7 @@ page 50794 "x Shop_EmployeesCard"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50790),"No." = FIELD(No);
+                SubPageLink = "Table ID" = CONST(50792),"No." = FIELD(No);
             }
             systempart(Control1900383207; Links)
             {

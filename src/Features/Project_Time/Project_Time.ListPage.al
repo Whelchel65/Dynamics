@@ -2,7 +2,7 @@ page 50660 "Project_TimeList"
 {
     PageType = List;
     SourceTable = "Project_TimeSOD";
-    Caption = 'Project Time List';
+    Caption = 'Active Project Time List';
     CardPageId = "Project_TimeCard";
     UsageCategory = Lists;
     ApplicationArea = all;
@@ -57,6 +57,24 @@ page 50660 "Project_TimeList"
                     ApplicationArea = All;
                 }
 
+            }
+        }
+        area(factboxes)
+        {
+            part("Attached Documents"; "Document Attachment Factbox")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments';
+                SubPageLink = "Table ID" = CONST(50660),"No." = FIELD(Entry_Number);
+            }
+            systempart(Control1900383207; Links)
+            {
+                ApplicationArea = RecordLinks;
+                Visible = false;
+            }
+            systempart(Control1905767507; Notes)
+            {
+                ApplicationArea = Notes;
             }
         }
     }

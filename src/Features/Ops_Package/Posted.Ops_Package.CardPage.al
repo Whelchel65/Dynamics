@@ -20,6 +20,10 @@ page 50834 "Posted Ops_PackageCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Job_No; Rec.Job_No)
+                {
+                    ApplicationArea = All;
+                }
                 field(OStatus; Rec.OStatus)
                 {
                     ApplicationArea = All;
@@ -61,6 +65,14 @@ page 50834 "Posted Ops_PackageCard"
                 {
                     ApplicationArea = All;
                 }
+                field(Drawing_No; Rec.Drawing_No)
+                {
+                    ApplicationArea = All;
+                }
+                field(Quality_Complete; Rec.Quality_Complete)
+                {
+                    ApplicationArea = All;
+                }
                 field(Complete; Rec.Complete)
                 {
                     ApplicationArea = All;
@@ -79,7 +91,7 @@ page 50834 "Posted Ops_PackageCard"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50830),"No." = FIELD(no);
+                SubPageLink = "Table ID" = CONST(50832),"No." = FIELD(no);
             }
             systempart(Control1900383207; Links)
             {

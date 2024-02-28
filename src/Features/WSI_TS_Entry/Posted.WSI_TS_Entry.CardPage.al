@@ -70,7 +70,7 @@ page 50804 "Posted WSI_TS_EntryCard"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50800),"No." = FIELD(no);
+                SubPageLink = "Table ID" = CONST(50802),"No." = FIELD(no);
             }
             systempart(Control1900383207; Links)
             {

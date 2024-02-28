@@ -31,21 +31,25 @@ page 50837 "API Ops_Package LineSOD"
                 {
                     Caption = 'no';
                 }
-                field(line_type; Rec."Line_Type")
+                field(drawing_number; Rec."Drawing_Number")
                 {
-                    Caption = 'Line Type';
+                    Caption = 'Drawing_Number';
                 }
                 field(ldescription; Rec."LDescription")
                 {
                     Caption = 'Description';
                 }
-                field(date_created; Rec."Date_Created")
+                field(eng_package; Rec."Eng_Package")
                 {
-                    Caption = 'Date Created';
+                    Caption = 'Package_Name';
                 }
-                field(line_notes; Rec."Line_Notes")
+                field(drawing_rev; Rec."Drawing_Rev")
                 {
-                    Caption = 'Line Notes';
+                    Caption = 'Drawing_Rev';
+                }
+                field(drawing_complete_; Rec."Drawing_COmplete_")
+                {
+                    Caption = 'Drawing Complete?';
                 }
                 field(lineno; Rec."Line No.")
                 {

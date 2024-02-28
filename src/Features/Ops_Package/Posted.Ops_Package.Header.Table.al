@@ -76,6 +76,23 @@ table 50832 "Posted Ops_Package HeaderSOD"
             DataClassification = ToBeClassified;
             OptionMembers = "No","Yes";
         }
+        field(18; Job_No; Code[20])
+        {
+            Caption = 'Job No';
+            DataClassification = ToBeClassified;
+            TableRelation = Job."No.";
+        }
+        field(19; Drawing_No; Text[50])
+        {
+            Caption = 'Drawing No';
+            DataClassification = ToBeClassified;
+        }
+        field(20;Quality_Complete; Option)
+        {
+            Caption = 'Quality Complete?';
+            DataClassification = ToBeClassified;
+            OptionMembers = "No","Yes";
+        }
 
 
     }

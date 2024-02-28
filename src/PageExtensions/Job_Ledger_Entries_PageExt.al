@@ -12,10 +12,6 @@ pageextension 50510 "SODJob_Ledger_Entries50510" extends "Job Ledger Entries"
             {
                 ApplicationArea = all;
             }
-            field("Cost_Code_SOD"; Rec."Cost_Code")
-            {
-                ApplicationArea = all;
-            }
         }
 
 

@@ -73,6 +73,13 @@ pageextension 50500 "SODItem_Card50500" extends "Item Card"
                 ApplicationArea = all;
             }
         }
+        AddAfter("Standard Cost")
+        {
+            field("Duplicate_SOD"; Rec."Duplicate")
+            {
+                ApplicationArea = all;
+            }
+        }
         AddAfter("Type")
         {
             field("Cost_Code_SOD"; Rec."Cost_Code")

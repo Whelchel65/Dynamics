@@ -17,13 +17,6 @@ tableextension 50509 "SODJob_Ledger_Entry" extends "Job Ledger Entry"
             Editable = false;
             CalcFormula = lookup(Vendor.Name where("No." = field(Vendor_No)));
         }
-        field(50502;"Cost_Code"; Lookup)
-        {
-            Caption = 'Cost_Code';
-            FieldClass = FlowField;
-            Editable = false;
-            CalcFormula = lookup(Item.Cost_Code where("No." = field("No.")));
-        }
 
     }
 }

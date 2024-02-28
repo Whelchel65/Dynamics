@@ -361,6 +361,11 @@ codeunit 50500 "Field Transfers Mgt. SOD"
       begin
 
       end;
+      [EventSubscriber(ObjectType::Page, Page::"Pstd. Sales Cr. Memo - Update", 'OnAfterRecordChanged', '', true,true)]
+      local procedure OnAfterRecordChangedSalesCreditMemo(var IsChanged: Boolean;var SalesCrMemoHeader: Record "Sales Cr.Memo Header";xSalesCrMemoHeader: Record "Sales Cr.Memo Header")
+      begin
+
+     end;
      [EventSubscriber(ObjectType::Table, Database::"Purchase Line", 'OnAfterAssignItemValues', '', true, true)]
      local procedure PurchLineOnAfterAssignItemValues(Item: Record Item;var PurchLine: Record "Purchase Line")
      begin
@@ -649,6 +654,39 @@ codeunit 50500 "Field Transfers Mgt. SOD"
    begin
 
    end;
+   [EventSubscriber(ObjectType::Table, Database::"BOM Component", 'OnAfterCopyFromItem', '', true,true)]
+   local procedure OnAfterCopyFromItem(Item: Record Item;var BOMComponent: Record "BOM Component")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Whse.-Post Shipment", 'OnBeforePostedWhseShptHeaderInsert', '', true, true)]
+   local procedure OnBeforePostedWhseShptHeaderInsert(WarehouseShipmentHeader: Record "Warehouse Shipment Header";var PostedWhseShipmentHeader: Record "Posted Whse. Shipment Header")
+   begin
+
+end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Create Inventory Pick/Movement", 'OnBeforeNewWhseActivLineInsert', '', true,true)]
+   local procedure OnBeforeNewWhseActivLineInsert(WarehouseActivityHeader: Record "Warehouse Activity Header"; var WarehouseActivityLine: Record "Warehouse Activity Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Whse.-Create Source Document", 'OnBeforeCreateShptLineFromSalesLine', '', true,true)]
+   local procedure OnBeforeCreateShptLineFromSalesLine(SalesLine: Record "Sales Line";var WarehouseShipmentLine: Record "Warehouse Shipment Line")
+   begin
+
+   end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Get Drop Shpt.", 'OnCodeOnBeforeModify', '', true,true)]
+   local procedure DropOnCodeOnBeforeModify(SalesHeader: Record "Sales Header";var PurchaseHeader: Record "Purchase Header")
+   begin
+   end;
+   [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Get Drop Shpt.", 'OnBeforePurchaseLineInsert', '', true,true)]
+   local procedure DropOnBeforePurchaseLineInsert(SalesLine: Record "Sales Line";var PurchaseLine: Record "Purchase Line")
+   begin
+   end;
+   [EventSubscriber(ObjectType::Report, Report::"Get Sales Orders", 'OnBeforeInsertReqWkshLine', '', true,true)]
+   local procedure OnBeforeInsertReqWkshLine(SalesLine: Record "Sales Line"; var ReqLine: Record "Requisition Line")
+   begin
+
+   end;
 procedure DataCaption(VarRec: Variant): Text
     var
         Ref: RecordRef;
@@ -701,77 +739,161 @@ procedure DataCaption(VarRec: Variant): Text
 [EventSubscriber(ObjectType::Page, Page::"Document Attachment Factbox", 'OnBeforeDrillDown', '', false, false)]
 local procedure OnBeforeDrillDown(DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef);
 var
-Asset_MaintenanceSOD: Record Asset_MaintenanceSOD;
-MTL_RequestSOD: Record MTL_RequestSOD;
-Ops_PackageSOD: Record Ops_PackageSOD;
-Project_EventsSOD: Record Project_EventsSOD;
-QualitySOD: Record QualitySOD;
-Sales_LeadsSOD: Record Sales_LeadsSOD;
-Serv_TicksSOD: Record Serv_TicksSOD;
-Shop_EmployeesSOD: Record Shop_EmployeesSOD;
-Work_PackagesSOD: Record Work_PackagesSOD;
-WSI_TS_EntrySOD: Record WSI_TS_EntrySOD;
+"Asset_Maintenance HeaderSOD": Record "Asset_Maintenance HeaderSOD";
+Done_Project_TimeSOD: Record Done_Project_TimeSOD;
+"Eng_Package HeaderSOD": Record "Eng_Package HeaderSOD";
+"Posted Eng_Package HeaderSOD": Record "Posted Eng_Package HeaderSOD";
+"MTL_Request HeaderSOD": Record "MTL_Request HeaderSOD";
+"Posted MTL_Request HeaderSOD": Record "Posted MTL_Request HeaderSOD";
+"Ops_Package HeaderSOD": Record "Ops_Package HeaderSOD";
+"Posted Ops_Package HeaderSOD": Record "Posted Ops_Package HeaderSOD";
+"Project_Events HeaderSOD": Record "Project_Events HeaderSOD";
+Project_TimeSOD: Record Project_TimeSOD;
+"Quality HeaderSOD": Record "Quality HeaderSOD";
+"Posted Quality HeaderSOD": Record "Posted Quality HeaderSOD";
+"Sales_Leads HeaderSOD": Record "Sales_Leads HeaderSOD";
+"Closed Sales_Leads HeaderSOD": Record "Closed Sales_Leads HeaderSOD";
+"Serv_Ticks HeaderSOD": Record "Serv_Ticks HeaderSOD";
+"Posted Serv_Ticks HeaderSOD": Record "Posted Serv_Ticks HeaderSOD";
+"Shop_Employees HeaderSOD": Record "Shop_Employees HeaderSOD";
+"x Shop_Employees HeaderSOD": Record "x Shop_Employees HeaderSOD";
+"Work_Packages HeaderSOD": Record "Work_Packages HeaderSOD";
+"Posted Work_Packages HeaderSOD": Record "Posted Work_Packages HeaderSOD";
+"WSI_TS_Entry HeaderSOD": Record "WSI_TS_Entry HeaderSOD";
+"Posted WSI_TS_Entry HeaderSOD": Record "Posted WSI_TS_Entry HeaderSOD";
 begin
     case DocumentAttachment."Table ID" of
-DATABASE::Asset_MaintenanceSOD:
+DATABASE::"Asset_Maintenance HeaderSOD":
     begin
-        RecRef.Open(DATABASE::Asset_MaintenanceSOD);
-        if Asset_MaintenanceSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(Asset_MaintenanceSOD);
+        RecRef.Open(DATABASE::"Asset_Maintenance HeaderSOD");
+        if "Asset_Maintenance HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Asset_Maintenance HeaderSOD");
     end;
-DATABASE::MTL_RequestSOD:
+DATABASE::Done_Project_TimeSOD:
     begin
-        RecRef.Open(DATABASE::MTL_RequestSOD);
-        if MTL_RequestSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(MTL_RequestSOD);
+        RecRef.Open(DATABASE::Done_Project_TimeSOD);
+        if Done_Project_TimeSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Done_Project_TimeSOD);
     end;
-DATABASE::Ops_PackageSOD:
+DATABASE::"Eng_Package HeaderSOD":
     begin
-        RecRef.Open(DATABASE::Ops_PackageSOD);
-        if Ops_PackageSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(Ops_PackageSOD);
+        RecRef.Open(DATABASE::"Eng_Package HeaderSOD");
+        if "Eng_Package HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Eng_Package HeaderSOD");
     end;
-DATABASE::Project_EventsSOD:
+DATABASE::"Posted Eng_Package HeaderSOD":
     begin
-        RecRef.Open(DATABASE::Project_EventsSOD);
-        if Project_EventsSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(Project_EventsSOD);
+        RecRef.Open(DATABASE::"Posted Eng_Package HeaderSOD");
+        if "Posted Eng_Package HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Posted Eng_Package HeaderSOD");
     end;
-DATABASE::QualitySOD:
+DATABASE::"MTL_Request HeaderSOD":
     begin
-        RecRef.Open(DATABASE::QualitySOD);
-        if QualitySOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(QualitySOD);
+        RecRef.Open(DATABASE::"MTL_Request HeaderSOD");
+        if "MTL_Request HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("MTL_Request HeaderSOD");
     end;
-DATABASE::Sales_LeadsSOD:
+DATABASE::"Posted MTL_Request HeaderSOD":
     begin
-        RecRef.Open(DATABASE::Sales_LeadsSOD);
-        if Sales_LeadsSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(Sales_LeadsSOD);
+        RecRef.Open(DATABASE::"Posted MTL_Request HeaderSOD");
+        if "Posted MTL_Request HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Posted MTL_Request HeaderSOD");
     end;
-DATABASE::Serv_TicksSOD:
+DATABASE::"Ops_Package HeaderSOD":
     begin
-        RecRef.Open(DATABASE::Serv_TicksSOD);
-        if Serv_TicksSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(Serv_TicksSOD);
+        RecRef.Open(DATABASE::"Ops_Package HeaderSOD");
+        if "Ops_Package HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Ops_Package HeaderSOD");
     end;
-DATABASE::Shop_EmployeesSOD:
+DATABASE::"Posted Ops_Package HeaderSOD":
     begin
-        RecRef.Open(DATABASE::Shop_EmployeesSOD);
-        if Shop_EmployeesSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(Shop_EmployeesSOD);
+        RecRef.Open(DATABASE::"Posted Ops_Package HeaderSOD");
+        if "Posted Ops_Package HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Posted Ops_Package HeaderSOD");
     end;
-DATABASE::Work_PackagesSOD:
+DATABASE::"Project_Events HeaderSOD":
     begin
-        RecRef.Open(DATABASE::Work_PackagesSOD);
-        if Work_PackagesSOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(Work_PackagesSOD);
+        RecRef.Open(DATABASE::"Project_Events HeaderSOD");
+        if "Project_Events HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Project_Events HeaderSOD");
     end;
-DATABASE::WSI_TS_EntrySOD:
+DATABASE::Project_TimeSOD:
     begin
-        RecRef.Open(DATABASE::WSI_TS_EntrySOD);
-        if WSI_TS_EntrySOD.Get(DocumentAttachment."No.") then
-            RecRef.GetTable(WSI_TS_EntrySOD);
+        RecRef.Open(DATABASE::Project_TimeSOD);
+        if Project_TimeSOD.Get(DocumentAttachment."No.") then
+            RecRef.GetTable(Project_TimeSOD);
+    end;
+DATABASE::"Quality HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Quality HeaderSOD");
+        if "Quality HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Quality HeaderSOD");
+    end;
+DATABASE::"Posted Quality HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Posted Quality HeaderSOD");
+        if "Posted Quality HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Posted Quality HeaderSOD");
+    end;
+DATABASE::"Sales_Leads HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Sales_Leads HeaderSOD");
+        if "Sales_Leads HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Sales_Leads HeaderSOD");
+    end;
+DATABASE::"Closed Sales_Leads HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Closed Sales_Leads HeaderSOD");
+        if "Closed Sales_Leads HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Closed Sales_Leads HeaderSOD");
+    end;
+DATABASE::"Serv_Ticks HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Serv_Ticks HeaderSOD");
+        if "Serv_Ticks HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Serv_Ticks HeaderSOD");
+    end;
+DATABASE::"Posted Serv_Ticks HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Posted Serv_Ticks HeaderSOD");
+        if "Posted Serv_Ticks HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Posted Serv_Ticks HeaderSOD");
+    end;
+DATABASE::"Shop_Employees HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Shop_Employees HeaderSOD");
+        if "Shop_Employees HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Shop_Employees HeaderSOD");
+    end;
+DATABASE::"x Shop_Employees HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"x Shop_Employees HeaderSOD");
+        if "x Shop_Employees HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("x Shop_Employees HeaderSOD");
+    end;
+DATABASE::"Work_Packages HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Work_Packages HeaderSOD");
+        if "Work_Packages HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Work_Packages HeaderSOD");
+    end;
+DATABASE::"Posted Work_Packages HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Posted Work_Packages HeaderSOD");
+        if "Posted Work_Packages HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Posted Work_Packages HeaderSOD");
+    end;
+DATABASE::"WSI_TS_Entry HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"WSI_TS_Entry HeaderSOD");
+        if "WSI_TS_Entry HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("WSI_TS_Entry HeaderSOD");
+    end;
+DATABASE::"Posted WSI_TS_Entry HeaderSOD":
+    begin
+        RecRef.Open(DATABASE::"Posted WSI_TS_Entry HeaderSOD");
+        if "Posted WSI_TS_Entry HeaderSOD".Get(DocumentAttachment."No.") then
+            RecRef.GetTable("Posted WSI_TS_Entry HeaderSOD");
     end;
     end;
 end;
@@ -782,61 +904,133 @@ var
     RecNo: Code[20];
 begin
     case RecRef.Number of
-DATABASE::Asset_MaintenanceSOD:
+DATABASE::"Asset_Maintenance HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::MTL_RequestSOD:
+DATABASE::Done_Project_TimeSOD:
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::Ops_PackageSOD:
+DATABASE::"Eng_Package HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(10);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Posted Eng_Package HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(10);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"MTL_Request HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::Project_EventsSOD:
+DATABASE::"Posted MTL_Request HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::QualitySOD:
+DATABASE::"Ops_Package HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::Sales_LeadsSOD:
+DATABASE::"Posted Ops_Package HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::Serv_TicksSOD:
+DATABASE::"Project_Events HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::Project_TimeSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Quality HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Posted Quality HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Sales_Leads HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Closed Sales_Leads HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Serv_Ticks HeaderSOD":
     begin
         FieldRef := RecRef.Field(505100);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::Shop_EmployeesSOD:
+DATABASE::"Posted Serv_Ticks HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(505100);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Shop_Employees HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::Work_PackagesSOD:
+DATABASE::"x Shop_Employees HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.SetRange("No.", RecNo);
     end;
-DATABASE::WSI_TS_EntrySOD:
+DATABASE::"Work_Packages HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Posted Work_Packages HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"WSI_TS_Entry HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.SetRange("No.", RecNo);
+    end;
+DATABASE::"Posted WSI_TS_Entry HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
@@ -851,61 +1045,133 @@ var
     RecNo: Code[20];
 begin
     case RecRef.Number of
-DATABASE::Asset_MaintenanceSOD:
+DATABASE::"Asset_Maintenance HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::MTL_RequestSOD:
+DATABASE::Done_Project_TimeSOD:
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::Ops_PackageSOD:
+DATABASE::"Eng_Package HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(10);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Posted Eng_Package HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(10);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"MTL_Request HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::Project_EventsSOD:
+DATABASE::"Posted MTL_Request HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::QualitySOD:
+DATABASE::"Ops_Package HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::Sales_LeadsSOD:
+DATABASE::"Posted Ops_Package HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::Serv_TicksSOD:
+DATABASE::"Project_Events HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::Project_TimeSOD:
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Quality HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Posted Quality HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Sales_Leads HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Closed Sales_Leads HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Serv_Ticks HeaderSOD":
     begin
         FieldRef := RecRef.Field(505100);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::Shop_EmployeesSOD:
+DATABASE::"Posted Serv_Ticks HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(505100);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Shop_Employees HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::Work_PackagesSOD:
+DATABASE::"x Shop_Employees HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;
         DocumentAttachment.Validate("No.", RecNo);
     end;
-DATABASE::WSI_TS_EntrySOD:
+DATABASE::"Work_Packages HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Posted Work_Packages HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"WSI_TS_Entry HeaderSOD":
+    begin
+        FieldRef := RecRef.Field(1);
+        RecNo := FieldRef.Value;
+        DocumentAttachment.Validate("No.", RecNo);
+    end;
+DATABASE::"Posted WSI_TS_Entry HeaderSOD":
     begin
         FieldRef := RecRef.Field(1);
         RecNo := FieldRef.Value;

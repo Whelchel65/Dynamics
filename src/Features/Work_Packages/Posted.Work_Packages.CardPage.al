@@ -33,11 +33,15 @@ page 50674 "Posted Work_PackagesCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Drawing_Attachment; Rec.Drawing_Attachment)
+                field(Ops_Package; Rec.Ops_Package)
                 {
                     ApplicationArea = All;
                 }
                 field(Need_By; Rec.Need_By)
+                {
+                    ApplicationArea = All;
+                }
+                field(Job_No; Rec.Job_No)
                 {
                     ApplicationArea = All;
                 }
@@ -55,7 +59,7 @@ page 50674 "Posted Work_PackagesCard"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50670),"No." = FIELD(WP_No);
+                SubPageLink = "Table ID" = CONST(50672),"No." = FIELD(WP_No);
             }
             systempart(Control1900383207; Links)
             {

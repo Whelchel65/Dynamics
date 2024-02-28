@@ -79,6 +79,18 @@ page 50836 "API Ops_Package HeaderSOD"
                 {
                     Caption = 'Complete';
                 }
+                field(job_no; Rec."Job_No")
+                {
+                    Caption = 'Job No';
+                }
+                field(drawing_no; Rec."Drawing_No")
+                {
+                    Caption = 'Drawing No';
+                }
+                field(quality_complete; Rec."Quality_Complete")
+                {
+                    Caption = 'Quality Complete?';
+                }
             }
         }
     }

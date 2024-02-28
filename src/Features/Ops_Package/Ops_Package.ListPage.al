@@ -20,6 +20,10 @@ page 50830 "Ops_PackageList"
                 {
                     ApplicationArea = All;
                 }
+                field(Job_No; Rec.Job_No)
+                {
+                    ApplicationArea = All;
+                }
                 field(OStatus; Rec.OStatus)
                 {
                     ApplicationArea = All;
@@ -53,6 +57,14 @@ page 50830 "Ops_PackageList"
                     ApplicationArea = All;
                 }
                 field(Sum_of_Hours; Rec.Sum_of_Hours)
+                {
+                    ApplicationArea = All;
+                }
+                field(Drawing_No; Rec.Drawing_No)
+                {
+                    ApplicationArea = All;
+                }
+                field(Quality_Complete; Rec.Quality_Complete)
                 {
                     ApplicationArea = All;
                 }

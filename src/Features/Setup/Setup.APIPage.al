@@ -95,6 +95,14 @@ page 50646 "API SetupSOD"
                 {
                     Caption = 'Serv_Ticks Number series';
                 }
+                field(done_project_time_number; Rec."Done_Project_Time_Number")
+                {
+                    Caption = 'Done_Project_Time Number series';
+                }
+                field(eng_package_number; Rec."Eng_Package_Number")
+                {
+                    Caption = 'Eng_Package Number series';
+                }
             }
         }
     }

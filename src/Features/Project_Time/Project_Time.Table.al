@@ -1,7 +1,7 @@
 table 50660 "Project_TimeSOD"
 {
     TableType = Normal;
-    Caption = 'Project Time';
+    Caption = 'Active Project Time';
     LookupPageId = 50660;
     fields
     {

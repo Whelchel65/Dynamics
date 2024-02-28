@@ -55,7 +55,7 @@ page 50683 "Posted MTL_RequestList"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50680),"No." = FIELD(Request_No);
+                SubPageLink = "Table ID" = CONST(50682),"No." = FIELD(Request_No);
             }
             systempart(Control1900383207; Links)
             {

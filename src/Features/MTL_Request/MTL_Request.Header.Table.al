@@ -105,6 +105,8 @@ table 50680 "MTL_Request HeaderSOD"
 
     procedure Post(Doc : Record "MTL_Request HeaderSOD")
     var
+        FromDocumentAttachment: Record "Document Attachment";
+        ToDocumentAttachment: Record "Document Attachment";
         DocLine : Record "MTL_Request LineSOD";
         PostedDoc : Record "Posted MTL_Request HeaderSOD";
         PostedLine: Record "Posted MTL_Request LineSOD";
@@ -125,6 +127,19 @@ table 50680 "MTL_Request HeaderSOD"
                 PostedLine.TransferFields(DocLine);
                 PostedLine.Insert(true);
             until DocLine.Next() = 0;
+        FromDocumentAttachment.Setrange("Table ID", 50680);
+        FromDocumentAttachment.Setrange("No.", Doc.Request_No);
+       if FromDocumentAttachment.FindSet() then begin
+            repeat
+                Clear(ToDocumentAttachment);
+                ToDocumentAttachment.Init();
+                ToDocumentAttachment.TransferFields(FromDocumentAttachment);
+                ToDocumentAttachment.Validate("Table ID", 50682);
+                ToDocumentAttachment.Validate("No.", PostedDoc.Request_No);
+                if not ToDocumentAttachment.Insert(true) then;
+            until FromDocumentAttachment.Next() = 0;
+            FromDocumentAttachment.DeleteAll();
+        end;
         Doc.Delete(true);
         DocLine.DeleteAll(true);
         OnAfterPosting(PostedDoc);

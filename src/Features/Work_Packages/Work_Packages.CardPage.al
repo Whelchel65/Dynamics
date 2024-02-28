@@ -32,11 +32,15 @@ page 50671 "Work_PackagesCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Drawing_Attachment; Rec.Drawing_Attachment)
+                field(Ops_Package; Rec.Ops_Package)
                 {
                     ApplicationArea = All;
                 }
                 field(Need_By; Rec.Need_By)
+                {
+                    ApplicationArea = All;
+                }
+                field(Job_No; Rec.Job_No)
                 {
                     ApplicationArea = All;
                 }

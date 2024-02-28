@@ -90,6 +90,8 @@ table 50690 "Quality HeaderSOD"
 
     procedure Post(Doc : Record "Quality HeaderSOD")
     var
+        FromDocumentAttachment: Record "Document Attachment";
+        ToDocumentAttachment: Record "Document Attachment";
         DocLine : Record "Quality LineSOD";
         PostedDoc : Record "Posted Quality HeaderSOD";
         PostedLine: Record "Posted Quality LineSOD";
@@ -110,6 +112,19 @@ table 50690 "Quality HeaderSOD"
                 PostedLine.TransferFields(DocLine);
                 PostedLine.Insert(true);
             until DocLine.Next() = 0;
+        FromDocumentAttachment.Setrange("Table ID", 50690);
+        FromDocumentAttachment.Setrange("No.", Doc.Quality_No);
+       if FromDocumentAttachment.FindSet() then begin
+            repeat
+                Clear(ToDocumentAttachment);
+                ToDocumentAttachment.Init();
+                ToDocumentAttachment.TransferFields(FromDocumentAttachment);
+                ToDocumentAttachment.Validate("Table ID", 50692);
+                ToDocumentAttachment.Validate("No.", PostedDoc.Quality_No);
+                if not ToDocumentAttachment.Insert(true) then;
+            until FromDocumentAttachment.Next() = 0;
+            FromDocumentAttachment.DeleteAll();
+        end;
         Doc.Delete(true);
         DocLine.DeleteAll(true);
         OnAfterPosting(PostedDoc);

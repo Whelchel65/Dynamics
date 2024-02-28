@@ -28,7 +28,15 @@ page 50670 "Work_PackagesList"
                 {
                     ApplicationArea = All;
                 }
+                field(Ops_Package; Rec.Ops_Package)
+                {
+                    ApplicationArea = All;
+                }
                 field(Need_By; Rec.Need_By)
+                {
+                    ApplicationArea = All;
+                }
+                field(Job_No; Rec.Job_No)
                 {
                     ApplicationArea = All;
                 }

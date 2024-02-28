@@ -1,4 +1,4 @@
-page 50852 "API P50852 SOD"
+page 50872 "API P50872 SOD"
 {
     PageType = API;
 
@@ -112,6 +112,12 @@ page 50852 "API P50852 SOD"
                 {
                 }
                 field(planned_order_date; Rec."Planned_Order_Date")
+                {
+                }
+                field(ready_to_post; Rec."Ready_to_Post")
+                {
+                }
+                field(purchaser_approval; Rec."Purchaser_Approval")
                 {
                 }
                 field(systemid; Rec."SystemId")

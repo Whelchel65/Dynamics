@@ -104,6 +104,8 @@ table 50800 "WSI_TS_Entry HeaderSOD"
 
     procedure Post(Doc : Record "WSI_TS_Entry HeaderSOD")
     var
+        FromDocumentAttachment: Record "Document Attachment";
+        ToDocumentAttachment: Record "Document Attachment";
         DocLine : Record "WSI_TS_Entry LineSOD";
         PostedDoc : Record "Posted WSI_TS_Entry HeaderSOD";
         PostedLine: Record "Posted WSI_TS_Entry LineSOD";
@@ -124,6 +126,19 @@ table 50800 "WSI_TS_Entry HeaderSOD"
                 PostedLine.TransferFields(DocLine);
                 PostedLine.Insert(true);
             until DocLine.Next() = 0;
+        FromDocumentAttachment.Setrange("Table ID", 50800);
+        FromDocumentAttachment.Setrange("No.", Doc.no);
+       if FromDocumentAttachment.FindSet() then begin
+            repeat
+                Clear(ToDocumentAttachment);
+                ToDocumentAttachment.Init();
+                ToDocumentAttachment.TransferFields(FromDocumentAttachment);
+                ToDocumentAttachment.Validate("Table ID", 50802);
+                ToDocumentAttachment.Validate("No.", PostedDoc.no);
+                if not ToDocumentAttachment.Insert(true) then;
+            until FromDocumentAttachment.Next() = 0;
+            FromDocumentAttachment.DeleteAll();
+        end;
         Doc.Delete(true);
         DocLine.DeleteAll(true);
         OnAfterPosting(PostedDoc);

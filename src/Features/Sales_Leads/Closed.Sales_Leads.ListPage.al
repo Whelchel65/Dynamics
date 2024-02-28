@@ -120,7 +120,7 @@ page 50713 "Closed Sales_LeadsList"
             {
                 ApplicationArea = All;
                 Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(50710),"No." = FIELD(No);
+                SubPageLink = "Table ID" = CONST(50712),"No." = FIELD(No);
             }
             systempart(Control1900383207; Links)
             {

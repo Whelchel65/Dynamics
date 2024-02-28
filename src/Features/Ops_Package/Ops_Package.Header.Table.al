@@ -76,6 +76,23 @@ table 50830 "Ops_Package HeaderSOD"
             DataClassification = ToBeClassified;
             OptionMembers = "No","Yes";
         }
+        field(18; Job_No; Code[20])
+        {
+            Caption = 'Job No';
+            DataClassification = ToBeClassified;
+            TableRelation = Job."No.";
+        }
+        field(19; Drawing_No; Text[50])
+        {
+            Caption = 'Drawing No';
+            DataClassification = ToBeClassified;
+        }
+        field(20;Quality_Complete; Option)
+        {
+            Caption = 'Quality Complete?';
+            DataClassification = ToBeClassified;
+            OptionMembers = "No","Yes";
+        }
 
 
     }
@@ -117,6 +134,8 @@ table 50830 "Ops_Package HeaderSOD"
 
     procedure Post(Doc : Record "Ops_Package HeaderSOD")
     var
+        FromDocumentAttachment: Record "Document Attachment";
+        ToDocumentAttachment: Record "Document Attachment";
         DocLine : Record "Ops_Package LineSOD";
         PostedDoc : Record "Posted Ops_Package HeaderSOD";
         PostedLine: Record "Posted Ops_Package LineSOD";
@@ -137,6 +156,19 @@ table 50830 "Ops_Package HeaderSOD"
                 PostedLine.TransferFields(DocLine);
                 PostedLine.Insert(true);
             until DocLine.Next() = 0;
+        FromDocumentAttachment.Setrange("Table ID", 50830);
+        FromDocumentAttachment.Setrange("No.", Doc.no);
+       if FromDocumentAttachment.FindSet() then begin
+            repeat
+                Clear(ToDocumentAttachment);
+                ToDocumentAttachment.Init();
+                ToDocumentAttachment.TransferFields(FromDocumentAttachment);
+                ToDocumentAttachment.Validate("Table ID", 50832);
+                ToDocumentAttachment.Validate("No.", PostedDoc.no);
+                if not ToDocumentAttachment.Insert(true) then;
+            until FromDocumentAttachment.Next() = 0;
+            FromDocumentAttachment.DeleteAll();
+        end;
         Doc.Delete(true);
         DocLine.DeleteAll(true);
         OnAfterPosting(PostedDoc);

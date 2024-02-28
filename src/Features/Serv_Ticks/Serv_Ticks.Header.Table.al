@@ -186,6 +186,8 @@ table 50630 "Serv_Ticks HeaderSOD"
 
     procedure Post(Doc : Record "Serv_Ticks HeaderSOD")
     var
+        FromDocumentAttachment: Record "Document Attachment";
+        ToDocumentAttachment: Record "Document Attachment";
         DocLine : Record "Serv_Ticks LineSOD";
         PostedDoc : Record "Posted Serv_Ticks HeaderSOD";
         PostedLine: Record "Posted Serv_Ticks LineSOD";
@@ -210,6 +212,19 @@ table 50630 "Serv_Ticks HeaderSOD"
                 PostedLine.TransferFields(DocLine);
                 PostedLine.Insert(true);
             until DocLine.Next() = 0;
+        FromDocumentAttachment.Setrange("Table ID", 50630);
+        FromDocumentAttachment.Setrange("No.", Doc.Ticket_No);
+       if FromDocumentAttachment.FindSet() then begin
+            repeat
+                Clear(ToDocumentAttachment);
+                ToDocumentAttachment.Init();
+                ToDocumentAttachment.TransferFields(FromDocumentAttachment);
+                ToDocumentAttachment.Validate("Table ID", 50632);
+                ToDocumentAttachment.Validate("No.", PostedDoc.Ticket_No);
+                if not ToDocumentAttachment.Insert(true) then;
+            until FromDocumentAttachment.Next() = 0;
+            FromDocumentAttachment.DeleteAll();
+        end;
         Doc.Delete(true);
         DocLine.DeleteAll(true);
         OnAfterPosting(PostedDoc);

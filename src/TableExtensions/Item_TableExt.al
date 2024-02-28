@@ -94,6 +94,12 @@ tableextension 50500 "SODItem" extends "Item"
             DataClassification = ToBeClassified;
             TableRelation = Cost_CodeSOD.CostCode;
         }
+        field(50519;"Duplicate"; Option)
+        {
+            Caption = 'Possible Duplicate';
+            DataClassification = ToBeClassified;
+            OptionMembers = "","Yes","no";
+        }
 
     }
 }

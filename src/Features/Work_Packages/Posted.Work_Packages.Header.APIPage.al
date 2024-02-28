@@ -47,13 +47,17 @@ page 50678 "API Posted Work_Packages Heade"
                 {
                     Caption = 'Drawing No';
                 }
-                field(drawing_attachment; Rec."Drawing_Attachment")
+                field(ops_package; Rec."Ops_Package")
                 {
-                    Caption = 'Drawing Attachment';
+                    Caption = 'Ops_Package';
                 }
                 field(need_by; Rec."Need_By")
                 {
                     Caption = 'Need By';
+                }
+                field(job_no; Rec."Job_No")
+                {
+                    Caption = 'Job No';
                 }
             }
         }
