@@ -147,6 +147,12 @@ table 50710 "Sales_Leads HeaderSOD"
             Caption = 'Unit Cost';
             DataClassification = ToBeClassified;
         }
+        field(34; Equipment_Type; Text[50])
+        {
+            Caption = 'Equipment Type';
+            DataClassification = ToBeClassified;
+            TableRelation = Equipment_TypeSOD.Type;
+        }
 
 
     }

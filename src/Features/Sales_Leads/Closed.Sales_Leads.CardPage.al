@@ -50,26 +50,9 @@ page 50714 "Closed Sales_LeadsCard"
                 {
                     ApplicationArea = All;
                 }
-                field(Design_Flow; Rec.Design_Flow)
+                field(Equipment_Type; Rec.Equipment_Type)
                 {
                     ApplicationArea = All;
-                }
-                field(Effluent_Target; Rec.Effluent_Target)
-                {
-                    ApplicationArea = All;
-                }
-                field(State; Rec.State)
-                {
-                    ApplicationArea = All;
-                }
-                field(State_Name; Rec.State_Name)
-                {
-                    ApplicationArea = All;
-                }
-                field(Unit_Cost; Rec.Unit_Cost)
-                {
-                    ApplicationArea = All;
-                    Editable = false;
                 }
                 field(Contact; Rec.Contact)
                 {
@@ -98,6 +81,27 @@ page 50714 "Closed Sales_LeadsCard"
                 field(Project_Duration; Rec.Project_Duration)
                 {
                     ApplicationArea = All;
+                }
+                field(Design_Flow; Rec.Design_Flow)
+                {
+                    ApplicationArea = All;
+                }
+                field(Effluent_Target; Rec.Effluent_Target)
+                {
+                    ApplicationArea = All;
+                }
+                field(State; Rec.State)
+                {
+                    ApplicationArea = All;
+                }
+                field(State_Name; Rec.State_Name)
+                {
+                    ApplicationArea = All;
+                }
+                field(Unit_Cost; Rec.Unit_Cost)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
                 }
                 field(Creation_Date; Rec.Creation_Date)
                 {

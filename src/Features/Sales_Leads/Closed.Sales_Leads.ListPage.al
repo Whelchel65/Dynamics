@@ -51,19 +51,7 @@ page 50713 "Closed Sales_LeadsList"
                 {
                     ApplicationArea = All;
                 }
-                field(Design_Flow; Rec.Design_Flow)
-                {
-                    ApplicationArea = All;
-                }
-                field(Effluent_Target; Rec.Effluent_Target)
-                {
-                    ApplicationArea = All;
-                }
-                field(State; Rec.State)
-                {
-                    ApplicationArea = All;
-                }
-                field(State_Name; Rec.State_Name)
+                field(Equipment_Type; Rec.Equipment_Type)
                 {
                     ApplicationArea = All;
                 }
@@ -92,6 +80,22 @@ page 50713 "Closed Sales_LeadsList"
                     ApplicationArea = All;
                 }
                 field(Project_Duration; Rec.Project_Duration)
+                {
+                    ApplicationArea = All;
+                }
+                field(Design_Flow; Rec.Design_Flow)
+                {
+                    ApplicationArea = All;
+                }
+                field(Effluent_Target; Rec.Effluent_Target)
+                {
+                    ApplicationArea = All;
+                }
+                field(State; Rec.State)
+                {
+                    ApplicationArea = All;
+                }
+                field(State_Name; Rec.State_Name)
                 {
                     ApplicationArea = All;
                 }

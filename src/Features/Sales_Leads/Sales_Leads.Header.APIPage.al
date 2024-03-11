@@ -127,6 +127,10 @@ page 50716 "API Sales_Leads HeaderSOD"
                 {
                     Caption = 'Unit Cost';
                 }
+                field(equipment_type; Rec."Equipment_Type")
+                {
+                    Caption = 'Equipment Type';
+                }
             }
         }
     }

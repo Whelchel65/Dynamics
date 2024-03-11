@@ -127,6 +127,10 @@ page 50718 "API Closed Sales_Leads HeaderS"
                 {
                     Caption = 'Unit Cost';
                 }
+                field(equipment_type; Rec."Equipment_Type")
+                {
+                    Caption = 'Equipment Type';
+                }
             }
         }
     }

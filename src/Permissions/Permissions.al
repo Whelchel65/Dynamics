@@ -13,6 +13,8 @@ permissionset 50500 "My Customizations"
                   tabledata "Eng_Package LineSOD" = RIMD,
                   tabledata "Posted Eng_Package HeaderSOD" = RIMD,
                   tabledata "Posted Eng_Package LineSOD" = RIMD,
+                  tabledata "Equipment_TypeSOD" = RIMD,
+                  table "Equipment_TypeSOD" = X,
                   tabledata "FileTypeSOD" = RIMD,
                   table "FileTypeSOD" = X,
                   tabledata "Jobsite_AddressSOD" = RIMD,
